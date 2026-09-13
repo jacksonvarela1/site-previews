@@ -3,8 +3,9 @@
 img,svg{display:block;max-width:100%}
 a{color:inherit}
 :focus-visible{outline:3px solid currentColor;outline-offset:3px}
-section[id]{scroll-margin-top:52px}
-#preview-bar{position:sticky;top:0;z-index:100;padding:8px 20px;text-align:center;font:500 13px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+[id]{scroll-margin-top:60px}
+#preview-bar{position:sticky;top:0;z-index:100;padding:8px 20px;text-align:center;font:500 13px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+#preview-bar a{font-weight:700;text-underline-offset:2px}
 .wrap{max-width:1200px;margin:0 auto;padding-left:48px;padding-right:48px}
 nav{display:flex;align-items:center;gap:28px;padding-top:18px;padding-bottom:18px}
 nav .brand{margin-right:auto;text-decoration:none}
@@ -12,18 +13,22 @@ nav .links{display:flex;gap:24px}
 nav .links a{text-decoration:none}
 nav .links a:hover{text-decoration:underline;text-underline-offset:4px}
 .call,.btn,.btn2{display:inline-block;text-decoration:none;white-space:nowrap}
-.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px}
+.note{margin-top:16px;font-weight:600;font-size:16px;letter-spacing:.01em}
+.list{list-style:none}
+.dir{display:inline-block;margin-top:14px;font-weight:700;text-underline-offset:4px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;padding-top:26px;padding-bottom:26px;font-size:15px}
 footer a{text-decoration:none}
 @media (max-width:760px){
+ [id]{scroll-margin-top:120px}
+ #preview-bar{font-size:12px;padding:6px 14px}
  .wrap{padding-left:20px;padding-right:20px}
  nav{flex-wrap:wrap;gap:10px 18px;padding-top:14px;padding-bottom:14px}
  nav .brand{flex-basis:100%}
  nav .links{gap:18px;margin-right:auto}
  .hero h1{font-size:clamp(30px,9vw,var(--h1)) !important}
- h1,h2,p{overflow-wrap:break-word}
+ h1,h2,p,li{overflow-wrap:break-word}
  .contact .num{font-size:clamp(28px,8.5vw,44px) !important}
- .sign,.plate{max-width:100%}
 }
 
 body{background:#F6F7F9;color:#1F2937;font:400 18px/1.65 Inter,"Segoe UI",system-ui,sans-serif}
@@ -31,20 +36,24 @@ body{background:#F6F7F9;color:#1F2937;font:400 18px/1.65 Inter,"Segoe UI",system
 .top{background:#1F2937;color:#F9FAFB}
 .brand{font:800 20px/1.1 Inter,"Segoe UI",sans-serif;letter-spacing:-.01em}
 nav .links a{font-weight:600;font-size:15px;color:#D1D5DB}
-.call{border:2px solid #8FA3BF;padding:9px 16px;border-radius:8px;font-weight:700;font-size:15px}
+.call{border:2px solid #8FA3BF;padding:9px 18px;border-radius:8px;font-weight:700;font-size:15px}
 .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding-top:52px;padding-bottom:84px}
 .hero h1{font:800 var(--h1)/1 Inter,"Segoe UI",system-ui,sans-serif;letter-spacing:-.035em;max-width:14ch}
-.hero .kind{margin-top:22px;font-size:22px;font-weight:600;color:#8FA3BF}
-.hero .lede{margin-top:8px;color:#D1D5DB;max-width:44ch}
+.hero .kind{margin-top:22px;font-size:24px;font-weight:600;color:#8FA3BF}
 .btn{background:#F9FAFB;color:#1F2937;font-weight:800;padding:16px 26px;border-radius:8px}
-.art{border:2px solid #374151;border-radius:18px;aspect-ratio:1;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,#374151 0 38%,transparent 38.5%)}
-.art .mono{font:800 190px/1 Inter,"Segoe UI",system-ui,sans-serif;letter-spacing:-.06em;color:#F9FAFB}
+.art{border-radius:50%;aspect-ratio:1;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle,#374151 0 58%,transparent 58.5%);box-shadow:inset 0 0 0 3px #E2B340,0 0 0 14px rgba(226,179,64,.12)}
+.art .icon{width:52%;max-width:100%}
 .about .wrap,.contact .wrap{padding-top:78px;padding-bottom:78px}
-.about .wrap{display:grid;grid-template-columns:320px 1fr;gap:56px;border-bottom:1px solid #D5DBE3}
+.about .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:36px 64px;border-bottom:1px solid #D5DBE3}
 h2{font:800 40px/1.1 Inter,"Segoe UI",sans-serif;letter-spacing:-.025em}
-.about p{font-size:21px;max-width:46ch}
-.about p+p{margin-top:14px;font-size:18px;color:#374151}
+.about .label{margin-top:10px;font-size:22px;font-weight:600;color:#374151}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;list-style:none;max-width:560px}
+.chips li{background:#fff;border:1px solid #D5DBE3;border-radius:999px;padding:8px 18px;font-weight:600}
+.addr{font-size:22px;line-height:1.45}
+.dir{color:#1F2937}
+.card{margin-top:22px}
+.card h3{font:800 20px/1.2 Inter,sans-serif;margin-bottom:6px}
 .contact .num{display:inline-block;margin-top:14px;font:800 64px/1 Inter,"Segoe UI",sans-serif;letter-spacing:-.03em;text-decoration:none}
 footer{color:#374151}
-@media (max-width:760px){.hero,.about .wrap{grid-template-columns:1fr;gap:24px}.art{max-width:180px}h2{font-size:30px}.contact .num{font-size:40px}}
-</style></head><body id="top"><div id="preview-bar" role="note">Preview built for Knight Times Tattoo by Jackson Varela. Not affiliated with or endorsed by Knight Times Tattoo.</div><header class="top"><nav class="wrap"><a class="brand" href="#top">Knight Times Tattoo</a><div class="links"><a href="#about">About</a><a href="#contact">Contact</a></div><a class="call" href="tel:+14795714465">Call (479) 571-4465</a></nav><div class="wrap hero" style="--h1:82px"><div><h1>Knight Times Tattoo</h1><p class="kind">Tattoos in Fayetteville, Arkansas</p><p class="lede">Find Knight Times Tattoo on N College Ave.</p><div class="actions"><a class="btn" href="tel:+14795714465">Call (479) 571-4465</a></div></div><div class="art" aria-hidden="true"><span class="mono">K</span></div></div></header><section id="about" class="about"><div class="wrap"><h2>Who we are</h2><div><p>Knight Times Tattoo is a tattoo shop in Fayetteville, Arkansas.</p><p>Visit 3014 N College Ave, or call (479) 571-4465 first with questions.</p></div></div></section><section id="contact" class="contact"><div class="wrap"><h2>Get in touch</h2><a class="num" href="tel:+14795714465">(479) 571-4465</a></div></section><footer><div class="wrap"><span>Knight Times Tattoo</span><span>Fayetteville, Arkansas</span><a href="tel:+14795714465">(479) 571-4465</a></div></footer></body></html>
+@media (max-width:760px){.hero{grid-template-columns:1fr;gap:24px}.art{max-width:170px}h2{font-size:30px}}
+</style></head><body id="top"><div id="preview-bar" role="note">Preview built by Jackson Varela, a student in Fayetteville, AR. Not affiliated with or endorsed by Knight Times Tattoo. Want it finished? Call or text <a href="tel:+15018176397">501-817-6397</a>.</div><header class="top"><nav class="wrap"><a class="brand" href="#top">Knight Times Tattoo</a><div class="links"><a href="#about">About</a><a href="#contact">Contact</a></div><a class="call" href="tel:+14795714465">Call</a></nav><div class="wrap hero" style="--h1:82px"><div><h1>Knight Times Tattoo</h1><p class="kind">Tattoos in Fayetteville, Arkansas</p><div class="actions"><a class="btn" href="tel:+14795714465">Call (479) 571-4465</a></div></div><div class="art" aria-hidden="true"><svg class="icon" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#F9FAFB" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M60 12 94 60 60 108 26 60z"/><path d="M60 36 77 60 60 84 43 60z"/><path d="M6 60h14M100 60h14M60 0v4M60 116v4"/></g></svg></div></div></header><section id="about" class="about"><div class="wrap"><div><h2>About</h2><p class="label">Tattoos</p></div><div><p class="addr">3014 N College Ave<br>Fayetteville, AR 72703</p><a class="dir" href="https://www.google.com/maps/search/?api=1&amp;query=Knight+Times+Tattoo%2C+3014+N+College+Ave%2C+Fayetteville%2C+AR+72703">Get directions</a></div></div></section><section id="contact" class="contact"><div class="wrap"><h2>Get in touch</h2><a class="num" href="tel:+14795714465">(479) 571-4465</a></div></section><footer><div class="wrap"><span>Knight Times Tattoo</span><span>Fayetteville, Arkansas</span><a href="tel:+14795714465">(479) 571-4465</a></div></footer></body></html>
