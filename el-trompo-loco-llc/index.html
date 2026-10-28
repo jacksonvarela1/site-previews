@@ -15,7 +15,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--maroon:#781529;--maroon2:#5e0f20;--plum:#2b1d29;--bone:#f7eff1;--rose:#eee4e6;--steel:#a9a5a4;--ink:#24161f}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-body{overflow-x:clip;font:400 18px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bone);color:var(--ink)}
+body{font:400 18px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bone);color:var(--ink)}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 :focus-visible{outline:3px solid #f2b8c4;outline-offset:3px}
@@ -54,7 +54,7 @@ a{color:inherit}
 @media (prefers-reduced-motion:no-preference){.spin .ring{animation:turn 28s linear infinite}}
 @keyframes turn{to{transform:rotate(360deg)}}
 .spin .disc{position:absolute;inset:15%;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 10px var(--maroon2),0 30px 60px -20px rgba(0,0,0,.55)}
-.spin .disc{overflow:hidden}.spin .disc img{width:70%;border-radius:50%}
+header.top,main{overflow-x:clip}.spin .disc{overflow:hidden}.spin .disc img{width:70%;border-radius:50%}
 
 .facts{background:var(--plum);color:var(--bone)}
 .facts ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
