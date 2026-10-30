@@ -4,280 +4,382 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Block Street Records | Indie Record Shops in Fayetteville and Bentonville, AR</title>
-<meta name="description" content="Locally owned indie record shops in Fayetteville and Bentonville. New and vintage vinyl, CDs, tapes, t-shirts, posters and more. Call Fayetteville (479) 966-0623 or Bentonville (479) 966-6232.">
+<title>Block Street Records | Indie Record Shop in Downtown Fayetteville, AR</title>
+<meta name="description" content="Indie record shop in downtown Fayetteville, Arkansas, at 17 N Block Ave. New and vintage vinyl, CDs, tapes, t-shirts and posters. Buy, sell and trade. Second shop in Bentonville.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jacksonvarela1.github.io/site-previews/block-street-records/">
-<meta property="og:title" content="Block Street Records | Fayetteville and Bentonville, AR">
-<meta property="og:description" content="Locally owned indie record shops. New and vintage vinyl, CDs, tapes, t-shirts, posters and more.">
+<meta property="og:title" content="Block Street Records | Downtown Fayetteville, AR">
+<meta property="og:description" content="New and vintage vinyl, CDs, tapes, t-shirts, posters and more. Buy, sell and trade at 17 N Block Ave, plus a second shop in Bentonville.">
 <meta property="og:image" content="https://jacksonvarela1.github.io/site-previews/block-street-records/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Preview of a website for Block Street Records in Northwest Arkansas">
+<meta property="og:image:alt" content="Preview of a website for Block Street Records, an indie record shop in Fayetteville, Arkansas">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b0b0b">
+<meta name="theme-color" content="#0d0c0b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Archivo:wght@400;500;700;800&amp;display=swap">
-<link rel="preload" as="image" href="brand/cover.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap">
 <style>
-:root{
-  --black:#0b0b0b;--coal:#171717;--line:#2a2a2a;--paper:#f3efe6;--white:#fff;--mute:#a9a39a;--ink:#111;
-  --r:#e8412c;--o:#f39a1e;--y:#f5d020;--g:#3bb54a;--b:#2a7de1;--v:#7b4bd6;
-  --prism:linear-gradient(90deg,var(--r),var(--o),var(--y),var(--g),var(--b),var(--v));
-  --display:"Bebas Neue",Impact,"Arial Narrow",sans-serif;--body:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-}
 *{margin:0;padding:0;box-sizing:border-box}
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-html{-webkit-text-size-adjust:100%}
-body{background:var(--black);color:var(--white);font:400 17px/1.6 var(--body);overflow-x:hidden}
-img,svg{display:block;max-width:100%}
-img{height:auto}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--y);outline-offset:3px}
-[id]{scroll-margin-top:70px}
-#preview-bar{position:sticky;top:0;z-index:100;padding:8px 16px;text-align:center;font:600 13px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#fff;color:#111}
-#preview-bar a{font-weight:800;text-underline-offset:2px}
-.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
-.nav{display:flex;align-items:center;gap:26px;padding:16px 0}
-.brand{display:flex;align-items:center;gap:14px;margin-right:auto;text-decoration:none}
-.brand img{width:64px;height:64px;border-radius:50%;transition:transform .6s ease}
-.brand:hover img{transform:rotate(360deg)}
-.brand span{font:400 30px/1 var(--display);letter-spacing:.04em}
-.links{display:flex;gap:24px;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
-.links a{text-decoration:none;position:relative}
-.links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;background:var(--prism);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
-.links a:hover::after{transform:scaleX(1)}
-.btn{display:inline-flex;align-items:center;gap:10px;font:800 16px/1 var(--body);text-decoration:none;border-radius:999px;padding:15px 22px;transition:transform .18s ease,background .18s ease,color .18s ease;white-space:nowrap}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-white{background:var(--white);color:var(--ink)}
-.btn-white:hover{transform:translateY(-2px)}
-.btn-ghost{border:2px solid rgba(255,255,255,.55);color:var(--white)}
-.btn-ghost:hover{background:var(--white);color:var(--ink)}
-.prism{height:6px;background:var(--prism)}
-.cover{position:relative;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#000}
-.cover img{width:100%;max-height:430px;object-fit:cover}
-.hero{padding:56px 0 72px}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.kicker{display:inline-block;font-weight:800;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
-h1{font:400 clamp(64px,9vw,128px)/.88 var(--display);letter-spacing:.01em;margin:14px 0 18px}
-h1 em{font-style:normal;background:var(--prism);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lede{font-size:20px;max-width:34ch;color:#e7e2d8}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.shops-mini{display:flex;gap:28px;margin-top:28px;font-size:15px;color:var(--mute)}
-.shops-mini b{display:block;color:var(--white);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
-.shops-mini a{text-decoration:none}
-.stack{position:relative}
-.stack .main{border-radius:18px;overflow:hidden;transform:rotate(1.5deg);box-shadow:0 30px 60px rgba(0,0,0,.6)}
-.stack .side{position:absolute;left:-36px;bottom:-40px;width:46%;border-radius:14px;overflow:hidden;border:5px solid var(--black);transform:rotate(-4deg)}
-.stack .disc{position:absolute;right:-26px;top:-30px;width:120px;height:120px;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#1d1d1d 2px 4px);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.6)}
-.stack .disc::after{content:"";width:40px;height:40px;border-radius:50%;background:var(--prism)}
-@media (prefers-reduced-motion:no-preference){.stack .disc{animation:spin 6s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}}
-section{padding:84px 0}
-.eyebrow{font-weight:800;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
-h2{font:400 clamp(44px,6vw,72px)/.95 var(--display);letter-spacing:.01em;margin:10px 0 18px}
-.light{background:var(--paper);color:var(--ink)}
-.light .eyebrow{color:#6b645a}
-.stock{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-.tile{background:var(--white);border-radius:16px;padding:26px;border:1px solid #e3ddd1}
-.tile .dot{width:42px;height:42px;border-radius:50%;background:var(--black);display:grid;place-items:center;margin-bottom:14px}
-.tile .dot svg{width:22px;height:22px;color:var(--white)}
-.tile h3{font:400 32px/1 var(--display);letter-spacing:.02em;margin-bottom:8px}
-.crates{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
-.crates figure{border-radius:14px;overflow:hidden;background:#000;aspect-ratio:1/1}
-.crates img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
-.crates figure:hover img{transform:scale(1.05)}
-.events{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px}
-.event{display:grid;grid-template-columns:180px 1fr;gap:22px;align-items:center;background:var(--coal);border:1px solid var(--line);border-radius:18px;padding:18px}
-.event img{border-radius:10px}
-.event .date{font:400 22px/1 var(--display);letter-spacing:.06em;color:var(--y)}
-.event h3{font:400 36px/1 var(--display);letter-spacing:.02em;margin:6px 0 8px}
-.event p{color:#d5d0c7;font-size:15px}
-.note{margin-top:18px;color:var(--mute);font-size:14px}
-.shops{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px}
-.shop{background:var(--white);border:1px solid #e3ddd1;border-radius:18px;overflow:hidden}
-.shop .body{padding:26px}
-.shop h3{font:400 42px/1 var(--display);letter-spacing:.02em}
-.shop dl{margin:14px 0 20px;display:grid;gap:8px}
-.shop dt{font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6b645a}
-.shop dd a{font-weight:700}
-.shop iframe{width:100%;height:230px;border:0;display:block}
-.btn-black{background:var(--black);color:var(--white)}
-.btn-black:hover{transform:translateY(-2px)}
-.btn-line{border:2px solid var(--ink);color:var(--ink)}
-.btn-line:hover{background:var(--ink);color:var(--white)}
-.closer{text-align:center}
-.closer img{width:150px;height:150px;border-radius:50%;margin:0 auto 22px}
-.closer .actions{justify-content:center}
-footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mute);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center}
-footer .fb{font:400 24px/1 var(--display);letter-spacing:.04em;color:var(--white);margin-right:auto}
-footer a{text-decoration:none}
-.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
-.js .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
-@media (max-width:900px){
-  .hero-grid,.events,.shops{grid-template-columns:1fr}
-  .stock{grid-template-columns:1fr}
-  .crates{grid-template-columns:repeat(2,1fr)}
-  .links{display:none}
-  .stack{margin:20px 30px 40px}
+:root{
+  --ink:#0d0c0b;--ink2:#171513;--ink3:#211e1b;--paper:#f3eee3;--white:#fff;
+  --tab:#f6c71e;--r:#ec3b5a;--o:#f5863a;--y:#f7d046;--g:#69c25a;--b:#3a8bd6;--v:#7b52c6;
+  --mute:#b9b0a1;--mute2:#5b544a;--line:rgba(255,255,255,.14);
+  --display:Anton,Impact,"Arial Narrow Bold","Helvetica Neue",sans-serif;
+  --body:Archivo,"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  --mono:"Space Mono",ui-monospace,Consolas,"Courier New",monospace;
+  --prism:linear-gradient(180deg,var(--r) 0 16.67%,var(--o) 16.67% 33.33%,var(--y) 33.33% 50%,var(--g) 50% 66.67%,var(--b) 66.67% 83.33%,var(--v) 83.33% 100%);
+  --prism-x:linear-gradient(90deg,var(--r) 0 16.67%,var(--o) 16.67% 33.33%,var(--y) 33.33% 50%,var(--g) 50% 66.67%,var(--b) 66.67% 83.33%,var(--v) 83.33% 100%);
 }
-@media (max-width:560px){
-  .wrap{padding:0 20px}
-  .nav .btn{display:none}
-  .event{grid-template-columns:110px 1fr}
-  .shops-mini{flex-direction:column;gap:14px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{font-family:var(--body);background:var(--ink);color:var(--white);line-height:1.6;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tab);outline-offset:3px;border-radius:4px}
+[id]{scroll-margin-top:70px}
+#preview-bar{position:sticky;top:0;z-index:100;padding:8px 16px;text-align:center;font:600 13px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#1a120b;color:#fff}
+#preview-bar a{font-weight:800;text-underline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* header */
+.top{display:flex;align-items:center;gap:14px;padding:14px 0}
+.logo{margin-right:auto;display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:54px;height:54px;border-radius:50%;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.logo:hover img{transform:rotate(-30deg)}
+.logo span{font:400 21px/1 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.nav{display:none;gap:28px;font:700 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.nav a{text-decoration:none;position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--prism-x);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:800 16px/1 var(--body);text-decoration:none;border-radius:999px;padding:15px 22px;border:2px solid var(--white);transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-hot{background:var(--tab);color:var(--ink);border-color:var(--tab);box-shadow:4px 4px 0 var(--r)}
+.btn-hot:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--r)}
+.btn-line{background:transparent;color:var(--white)}
+.btn-line:hover{background:var(--white);color:var(--ink)}
+.btn-ink{background:var(--ink);color:var(--white);border-color:var(--ink);box-shadow:4px 4px 0 var(--b)}
+.btn-ink:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--b)}
+.btn-sm{padding:11px 16px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-bottom:56px;background:radial-gradient(110% 70% at 85% 0%,#221e1a 0,var(--ink) 62%)}
+.hero-grid{position:relative;display:grid;gap:44px;padding:20px 0 0}
+.kicker{display:flex;align-items:center;gap:10px;font:700 12px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--tab)}
+.kicker i{width:28px;height:2px;background:var(--tab);flex:none}
+h1{font:400 clamp(68px,20vw,104px)/.92 var(--display);text-transform:uppercase;letter-spacing:.005em;margin-top:18px}
+h1 span{display:block}
+h1 .prism{color:var(--y);padding-bottom:.04em}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){h1 .prism{background:var(--prism);-webkit-background-clip:text;background-clip:text;color:transparent}}
+.lede{margin-top:24px;font-size:19px;color:#e9e3d8;max-width:32ch}
+.lede b{color:#fff}
+.lede small{display:block;margin-top:10px;font:700 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+.deck{position:relative;width:100%;max-width:560px;justify-self:center;padding-bottom:21%}
+.photo{position:relative;margin:0;overflow:hidden;border-radius:4px;box-shadow:0 30px 70px -24px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.1)}
+.photo img{width:100%;aspect-ratio:4/3.5;object-fit:cover;object-position:38% 46%}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.1),transparent 28%,transparent 70%,rgba(0,0,0,.28));pointer-events:none}
+.photo figcaption{position:absolute;left:10px;top:10px;z-index:1;font:700 10.5px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:6px 9px}
+.beam{position:absolute;left:78%;width:100vw;bottom:13%;height:9.5%;display:none;flex-direction:column;z-index:0;opacity:.95}
+.beam i{flex:1}
+.beam i:nth-child(1){background:var(--r)}.beam i:nth-child(2){background:var(--o)}.beam i:nth-child(3){background:var(--y)}
+.beam i:nth-child(4){background:var(--g)}.beam i:nth-child(5){background:var(--b)}.beam i:nth-child(6){background:var(--v)}
+.vinyl{position:absolute;right:0;bottom:0;width:47%;aspect-ratio:1;z-index:2}
+.disc{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,transparent 0 26.5%,#060606 26.5% 28.5%,transparent 28.5%),repeating-radial-gradient(circle,#141414 0 1.4px,#1f1f1f 1.4px 2.6px);box-shadow:0 24px 50px -14px rgba(0,0,0,.9),inset 0 0 0 3px #050505,inset 0 0 0 7px #161616}
+.disc img{position:absolute;left:23%;top:23%;width:54%;height:54%;border-radius:50%}
+.sheen{position:absolute;inset:0;border-radius:50%;pointer-events:none;background:conic-gradient(from 25deg,transparent 0deg,rgba(255,255,255,.17) 28deg,transparent 58deg,transparent 180deg,rgba(255,255,255,.12) 208deg,transparent 238deg);-webkit-mask:radial-gradient(circle,transparent 0 28.5%,#000 29%);mask:radial-gradient(circle,transparent 0 28.5%,#000 29%)}
+.arm{position:absolute;inset:0;overflow:visible;pointer-events:none}
+@media (prefers-reduced-motion:no-preference){
+  .vinyl{animation:drop 1.2s cubic-bezier(.2,.8,.2,1) .15s both}
+  .disc{animation:spin 7s linear infinite}
+  .beam{animation:beam 1.1s cubic-bezier(.2,.8,.2,1) .6s both}
+}
+@keyframes drop{from{opacity:0;transform:translate(22%,12%) rotate(-50deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes beam{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+/* marquee */
+.band{background:var(--tab);color:var(--ink);overflow:hidden;white-space:nowrap;border-block:2px solid var(--ink)}
+.track{display:inline-flex;align-items:center;padding:14px 0;font:400 26px/1 var(--display);text-transform:uppercase;letter-spacing:.03em}
+.track span{display:inline-flex;align-items:center;gap:22px;padding-right:22px}
+.track span::after{content:"";width:16px;height:16px;border-radius:50%;background:var(--c,var(--r));box-shadow:0 0 0 5px var(--ink)}
+.track span:nth-child(6n+2){--c:var(--o)}.track span:nth-child(6n+3){--c:var(--y)}.track span:nth-child(6n+4){--c:var(--g)}
+.track span:nth-child(6n+5){--c:var(--b)}.track span:nth-child(6n){--c:var(--v)}
+@media (prefers-reduced-motion:no-preference){.track{animation:slide 38s linear infinite}}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* stats */
+.proof{padding:60px 0 8px}
+.stats{display:grid;gap:14px}
+.stat{position:relative;overflow:hidden;background:var(--ink2);border:1px solid var(--line);border-radius:6px;padding:30px 22px 22px}
+.stat::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--prism-x)}
+.stat small{font:700 11px/1 var(--mono);letter-spacing:.16em;color:var(--mute);text-transform:uppercase}
+.stat b{display:block;font:400 clamp(52px,14vw,72px)/1 var(--display);margin-top:12px;letter-spacing:.01em}
+.stat p{margin-top:6px;color:var(--mute);font-weight:600}
+
+section{padding:76px 0}
+.eyebrow{display:flex;align-items:center;gap:10px;font:700 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;color:var(--tab)}
+.eyebrow::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--r);box-shadow:0 0 0 3px currentColor}
+h2{font:400 clamp(46px,12vw,86px)/.9 var(--display);text-transform:uppercase;letter-spacing:.005em}
+h2 em{font-style:normal;color:var(--tab)}
+.light{background:var(--paper);color:var(--ink)}
+.light .eyebrow{color:var(--ink)}
+.light h2 em{color:var(--r)}
+.intro{margin-top:18px;max-width:46ch;font-size:18px}
+.light .intro{color:var(--mute2)}
+
+/* bins */
+.dividers{display:grid;gap:38px 18px;margin-top:58px}
+.dv{position:relative;background:#fff;border:2px solid var(--ink);border-radius:3px 3px 12px 12px;padding:34px 22px 24px;transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s ease}
+.dv:hover{transform:translateY(-6px);box-shadow:0 14px 0 -6px var(--ink)}
+.dv .tab{position:absolute;top:-22px;left:16px;background:var(--tab);border:2px solid var(--ink);border-bottom:0;border-radius:8px 8px 0 0;padding:7px 14px 7px;font:700 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.dv:nth-child(2) .tab{left:30%}.dv:nth-child(3) .tab{left:46%}.dv:nth-child(4) .tab{left:auto;right:16px}
+.dv h3{font:400 32px/1 var(--display);text-transform:uppercase;margin-bottom:10px;padding-right:44px}
+.dv p{color:var(--mute2)}
+.dv svg{position:absolute;right:18px;top:26px;width:34px;height:34px;color:var(--ink);opacity:.9}
+.dv:nth-child(4) svg{right:auto;left:22px;top:auto;bottom:22px;display:none}
+.spotted{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:15px;color:var(--mute2)}
+.spotted b{font:700 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-right:4px}
+.spotted span{font:700 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--tab);padding:8px 11px;border-radius:3px}
+
+/* fresh */
+.fresh{overflow:hidden}
+.fresh-grid{display:grid;gap:64px;align-items:center}
+.wallfig{position:relative;margin:0 auto;max-width:440px;width:100%;padding-right:8%}
+.wallfig .main{position:relative;border-radius:4px;overflow:hidden;box-shadow:0 30px 60px -24px rgba(0,0,0,.9)}
+.wallfig .main::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--prism);z-index:1}
+.wallfig .main img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.wallfig .arr{position:absolute;right:0;bottom:-34px;width:44%;border:7px solid var(--paper);border-bottom-width:26px;box-shadow:0 20px 40px -14px rgba(0,0,0,.9);transform:rotate(5deg);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.wallfig:hover .arr{transform:rotate(1deg) translateY(-6px)}
+.wallfig .arr img{width:100%;aspect-ratio:1;object-fit:cover}
+.wallfig figcaption{position:absolute;left:10px;bottom:10px;z-index:1;font:700 10.5px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:6px 9px}
+blockquote{margin-top:30px;padding:4px 0 4px 22px;position:relative}
+blockquote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--prism)}
+blockquote p{font:400 clamp(28px,7vw,40px)/1.06 var(--display);text-transform:uppercase;letter-spacing:.01em}
+blockquote cite{display:block;margin-top:12px;font:700 11px/1.4 var(--mono);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.fresh p.note{margin-top:22px;color:var(--mute);max-width:44ch}
+
+/* shops */
+.cover{margin-top:40px;background:#000;border:2px solid var(--ink);border-radius:4px;overflow:hidden}
+.cover img{width:100%;aspect-ratio:1600/735;object-fit:cover}
+.shops{display:grid;gap:18px;margin-top:18px}
+.shop{position:relative;background:#fff;border:2px solid var(--ink);border-radius:4px;padding:26px 22px 24px;overflow:hidden}
+.shop::after{content:"";position:absolute;right:-46px;top:-46px;width:120px;height:120px;border-radius:50%;background:repeating-radial-gradient(circle,#161616 0 1.4px,#262626 1.4px 2.6px);box-shadow:inset 0 0 0 34px transparent}
+.shop::before{content:"";position:absolute;right:-6px;top:-6px;width:40px;height:40px;border-radius:50%;background:var(--c,var(--tab));z-index:1}
+.shop:nth-child(2){--c:var(--b)}
+.shop small{font:700 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute2)}
+.shop h3{font:400 clamp(40px,10vw,54px)/1 var(--display);text-transform:uppercase;margin:10px 0 14px}
+.shop ul{list-style:none;display:grid;gap:8px}
+.shop li{display:flex;gap:12px;align-items:flex-start}
+.shop li svg{width:20px;height:20px;flex:none;margin-top:3px}
+.shop a{font-weight:800}
+.shop li>span,.shop li>a{min-width:0;overflow-wrap:anywhere}
+.ticket{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;background:var(--ink);color:#fff;border-radius:4px;padding:18px 22px}
+.ticket p{font:400 clamp(24px,6vw,32px)/1.05 var(--display);text-transform:uppercase}
+.ticket cite{font:700 11px/1.4 var(--mono);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+
+/* visit */
+.visit{display:grid;gap:40px;align-items:stretch}
+.addr{font:400 clamp(42px,11vw,66px)/.95 var(--display);text-transform:uppercase;margin:18px 0 26px}
+.facts{list-style:none;display:grid;gap:14px}
+.facts li{display:flex;gap:14px;align-items:flex-start}
+.facts svg{width:22px;height:22px;flex:none;margin-top:3px;color:var(--tab)}
+.facts a{font-weight:800}
+.facts .q{color:var(--mute)}
+.map{position:relative;border-radius:4px;overflow:hidden;min-height:340px;background:var(--ink2);border:2px solid #fff}
+.map::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:var(--prism-x);z-index:1}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) contrast(1.05)}
+
+/* closer */
+.closer{position:relative;text-align:center;padding:110px 0 96px;overflow:hidden;background:var(--ink)}
+.closer .stripes{position:absolute;left:0;right:0;top:0;height:48px;display:flex;flex-direction:column}
+.closer .stripes i{flex:1}
+.closer .stripes i:nth-child(1){background:var(--r)}.closer .stripes i:nth-child(2){background:var(--o)}.closer .stripes i:nth-child(3){background:var(--y)}
+.closer .stripes i:nth-child(4){background:var(--g)}.closer .stripes i:nth-child(5){background:var(--b)}.closer .stripes i:nth-child(6){background:var(--v)}
+.closer img{width:110px;height:110px;border-radius:50%;margin:0 auto 26px}
+@media (prefers-reduced-motion:no-preference){.closer img{animation:spin 12s linear infinite}}
+.closer h2{font-size:clamp(50px,13vw,112px)}
+.closer p{font-size:19px;max-width:520px;margin:18px auto 30px;color:#e9e3d8}
+.closer .cta{justify-content:center}
+footer{background:#060505;color:var(--mute);padding:28px 0;font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
+footer a{color:#fff}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .rv.in{opacity:1;transform:none}
+}
+
+@media (max-width:379px){.logo span{display:none}}
+@media (min-width:640px){
+  .wrap{padding:0 28px}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .dividers{grid-template-columns:repeat(2,1fr)}
+  .shops{grid-template-columns:repeat(2,1fr)}
+  .wallfig .arr{right:-4%}
+}
+@media (min-width:960px){
+  .nav{display:flex}
+  .beam{display:flex}
+  .logo img{width:62px;height:62px}
+  .logo span{font-size:24px}
+  .hero{padding-bottom:84px}
+  .hero-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:34px 0 0}
+  h1{font-size:clamp(96px,9.6vw,140px);line-height:.88}
+  .lede{font-size:21px}
+  .deck{padding-bottom:20%}
+  .vinyl{right:-7%;width:50%}
+  .track{font-size:30px}
+  section{padding:104px 0}
+  .dividers{grid-template-columns:repeat(4,1fr)}
+  .fresh-grid{grid-template-columns:.9fr 1.1fr;gap:80px}
+  .visit{grid-template-columns:.9fr 1.1fr;gap:48px}
+  .map{min-height:440px}
+  .closer .stripes{height:60px}
 }
 </style>
 </head>
 <body>
-<div id="preview-bar">Preview built by Jackson Varela, a student in Fayetteville, AR. Not affiliated with or endorsed by Block Street Records. Want it finished? Call or text <a href="tel:+15018176397">501-817-6397</a>.</div>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Block Street Records home"><img src="brand/logo.jpg" alt="Block St. Records eye logo" width="480" height="479"><span>Block St. Records</span></a>
-    <nav class="links" aria-label="Main"><a href="#stock">In the bins</a><a href="#events">Events</a><a href="#shops">The shops</a></nav>
-    <a class="btn btn-white" href="tel:+14799660623"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the shop</a>
+<div id="preview-bar">Preview built by Jackson Varela, a student in Fayetteville, AR. Not affiliated with or endorsed by Block Street Records. Want it finished? $299 founding price, nothing due until it is live. Call or text <a href="tel:+15018176397">501-817-6397</a>.</div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="#top" aria-label="Block Street Records, back to top"><img src="brand/logo.png" width="560" height="560" alt="Block St. Records logo: an eye with lightning bolts inside a round record-label badge"><span>Block St. Records</span></a>
+      <nav class="nav" aria-label="Sections"><a href="#bins">The bins</a><a href="#fresh">New releases</a><a href="#shops">Two shops</a><a href="#visit">Find us</a></nav>
+      <a class="btn btn-hot btn-sm" href="tel:+14799660623"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <span class="kicker"><i></i>17 N Block Ave &middot; Fayetteville, AR</span>
+        <h1><span>Racks are</span><span class="prism">packed.</span></h1>
+        <p class="lede">Indie record shop in <b>beautiful downtown Fayetteville</b>, Arkansas. Open 7 days a week. <b>Buy / Sell / Trade.</b><small>In their own words, from @blockstreetrecords</small></p>
+        <div class="cta">
+          <a class="btn btn-hot" href="tel:+14799660623"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(479) 966-0623</a>
+          <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=17+N+Block+Ave,+Fayetteville,+AR+72701"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Get directions</a>
+        </div>
+      </div>
+      <div class="deck">
+        <div class="beam" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <figure class="photo"><img src="brand/bins.jpg" width="1400" height="1050" alt="Inside Block Street Records: wooden bins full of vinyl under yellow New Releases and Americana divider tabs, with a staff picks wall behind" fetchpriority="high"><figcaption>The bins, from Block Street's Facebook</figcaption></figure>
+        <div class="vinyl" aria-hidden="true">
+          <div class="disc"><img src="brand/logo.png" width="560" height="560" alt=""></div>
+          <div class="sheen"></div>
+          <svg class="arm" viewBox="0 0 100 100"><circle cx="97" cy="3" r="8.5" fill="#2b2824" stroke="#d9d4ca" stroke-width="1.6"/><circle cx="97" cy="3" r="3" fill="#d9d4ca"/><path d="M97 3 L92 26 L80 40" fill="none" stroke="#d9d4ca" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="74" y="37" width="9" height="6" rx="1.2" transform="rotate(-38 78.5 40)" fill="#d9d4ca"/></svg>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="prism"></div>
-  <div class="cover"><img src="brand/cover.jpg" alt="Block St. Records cover art: the eye logo with a rainbow beam" width="1600" height="735"></div>
 </header>
 
+<div class="band" aria-hidden="true"><div class="track"><span>New &amp; vintage vinyl</span><span>CDs</span><span>Tapes</span><span>T-shirts</span><span>Posters</span><span>Buy / Sell / Trade</span><span>Open 7 days a week</span><span>Curbside pickup</span><span>Fayetteville + Bentonville</span><span>New Release Friday</span><span>Racks are packed</span><span>Stop by</span><span>New &amp; vintage vinyl</span><span>CDs</span><span>Tapes</span><span>T-shirts</span><span>Posters</span><span>Buy / Sell / Trade</span><span>Open 7 days a week</span><span>Curbside pickup</span><span>Fayetteville + Bentonville</span><span>New Release Friday</span><span>Racks are packed</span><span>Stop by</span></div></div>
+
 <main>
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div class="rv">
-      <span class="kicker">Fayetteville + Bentonville, Arkansas</span>
-      <h1>Block Street <em>Records</em></h1>
-      <p class="lede">Locally owned indie record shops. New &amp; vintage vinyl, CDs, tapes, t-shirts, posters and more!</p>
-      <div class="actions">
-        <a class="btn btn-white" href="#shops">Find a shop</a>
-        <a class="btn btn-ghost" href="https://www.instagram.com/blockstreetrecordsbentonville/">See the new arrivals</a>
-      </div>
-      <div class="shops-mini">
-        <div><b>Fayetteville</b><a href="tel:+14799660623">(479) 966-0623</a></div>
-        <div><b>Bentonville</b><a href="tel:+14799666232">(479) 966-6232</a></div>
-      </div>
+  <div class="proof"><div class="wrap">
+    <div class="stats">
+      <div class="stat rv"><small>Side A &middot; 01</small><b>100%</b><p>of 302 people on Facebook recommend Block Street</p></div>
+      <div class="stat rv"><small>Side A &middot; 02</small><b>14.3K</b><p>followers on Instagram</p></div>
+      <div class="stat rv"><small>Side A &middot; 03</small><b>1,394</b><p>check-ins on Facebook</p></div>
     </div>
-    <div class="stack rv">
-      <div class="main"><img src="brand/new-releases.jpg" alt="The New Releases wall of records at Block Street Records" width="480" height="640"></div>
-      <div class="side"><img src="brand/in-the-shop.jpg" alt="Holding up a Swervedriver record in the shop" width="640" height="480" loading="lazy"></div>
-      <div class="disc" aria-hidden="true"></div>
-    </div>
-  </div>
-</section>
+  </div></div>
 
-<section class="light" id="stock">
-  <div class="wrap">
-    <div class="rv">
-      <p class="eyebrow">In the bins</p>
-      <h2>New &amp; vintage, every format</h2>
+  <section class="light" id="bins">
+    <div class="wrap">
+      <div class="rv">
+        <div class="eyebrow">What's in the bins</div>
+        <h2>New &amp; vintage. <em>And more!</em></h2>
+        <p class="intro">Locally owned indie record shops. New &amp; vintage vinyl, CDs, tapes, t-shirts, posters and more. That is the whole pitch, straight from Block Street's own page.</p>
+      </div>
+      <div class="dividers">
+        <article class="dv rv"><span class="tab">Vinyl</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r=".6" fill="currentColor"/></svg><h3>New &amp; vintage</h3><p>New releases up front and vintage finds in the bins. In their words: racks are packed!</p></article>
+        <article class="dv rv"><span class="tab">CDs + tapes</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><circle cx="8" cy="12.5" r="2"/><circle cx="16" cy="12.5" r="2"/><path d="M6 19l2-3h8l2 3"/></svg><h3>CDs &amp; cassettes</h3><p>New CDs and cassettes come in with the vinyl. One recent post: &quot;tons of new cassettes in.&quot;</p></article>
+        <article class="dv rv"><span class="tab">Merch</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M8 3l-5 3 2 4 2-1v12h10V9l2 1 2-4-5-3a4 4 0 0 1-8 0z"/></svg><h3>T-shirts &amp; posters</h3><p>T-shirts, posters and more, for the walls and the closet.</p></article>
+        <article class="dv rv"><span class="tab">Trade</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h13l-4-4M17 17H4l4 4"/></svg><h3>Buy / Sell / Trade</h3><p>Got a stack of records to move? Block Street buys, sells and trades. Give the shop a call.</p></article>
+      </div>
+      <div class="spotted rv"><b>Spotted on the dividers</b><span>New Releases</span><span>Americana</span><span>Folk</span><span>Comedy</span><span>Staff picks</span></div>
     </div>
-    <div class="stock">
-      <div class="tile rv"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Vinyl</h3><p>New and vintage records, with new releases up front.</p></div>
-      <div class="tile rv"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/></svg></div><h3>CDs &amp; tapes</h3><p>CDs and cassettes alongside the vinyl.</p></div>
-      <div class="tile rv"><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.4 6.6 16 3h-1a3 3 0 0 1-6 0H8L3.6 6.6 6 10l2-1v12h8V9l2 1z"/></svg></div><h3>Shirts &amp; posters</h3><p>T-shirts, posters and more.</p></div>
-    </div>
-    <div class="crates">
-      <figure class="rv"><img src="brand/crate-1.jpg" alt="Records including Cocteau Twins, Stereolab and Porco Rosso" width="640" height="611" loading="lazy"></figure>
-      <figure class="rv"><img src="brand/crate-2.jpg" alt="Records including Colter Wall, Lana Del Rey and Avenged Sevenfold" width="639" height="640" loading="lazy"></figure>
-      <figure class="rv"><img src="brand/crate-3.jpg" alt="Records including KISS, Neil Young and Fleetwood Mac" width="640" height="625" loading="lazy"></figure>
-      <figure class="rv"><img src="brand/crate-4.jpg" alt="Records including Sonic Youth, Leonard Cohen and Jungle" width="603" height="640" loading="lazy"></figure>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="events">
-  <div class="wrap">
-    <div class="rv">
-      <p class="eyebrow">Coming up</p>
-      <h2>Giveaways &amp; release events</h2>
-    </div>
-    <div class="events">
-      <div class="event rv">
-        <img src="brand/the-faint.jpg" alt="The Faint ticket giveaway poster" width="512" height="640" loading="lazy">
-        <div><span class="date">Fri, Nov 6</span><h3>The Faint ticket giveaway</h3><p>The Faint with Cut Copy (DJ) and Messy Sparkles at The Momentary Rode House, Bentonville.</p></div>
+  <section class="fresh" id="fresh">
+    <div class="wrap fresh-grid">
+      <figure class="wallfig rv">
+        <div class="main"><img src="brand/wall.jpg" width="1100" height="1467" loading="lazy" alt="The New Releases wall at Block Street Records, rows of new vinyl faced out under a big yellow New Releases sign"></div>
+        <div class="arr"><img src="brand/arrivals.jpg" width="524" height="590" loading="lazy" alt="A spread of fresh vinyl arrivals laid out at Block Street Records"></div>
+        <figcaption>The New Releases wall</figcaption>
+      </figure>
+      <div class="rv">
+        <div class="eyebrow">New Release Friday</div>
+        <h2>Fresh arrivals hit the <em>racks.</em></h2>
+        <blockquote><p>"Thursday is prime picking day! Both stores loaded up with lots of new vinyl, CDs and cassettes this week."</p><cite>Block Street Records on Facebook</cite></blockquote>
+        <p class="note">For New Release Friday, Block Street posts a preview of what is landing, like this week's limited editions, indie exclusives and anniversary reissues. A site would keep that list one tap away.</p>
+        <div class="cta"><a class="btn btn-line" href="https://www.facebook.com/blockstreetrecords/">See this week's preview</a></div>
       </div>
-      <div class="event rv">
-        <img src="brand/u2-event.jpg" alt="U2 Carnaval de Luz record store album event poster" width="512" height="640" loading="lazy">
-        <div><span class="date">Nov 12 to 15</span><h3>U2 Carnaval de Luz</h3><p>Record store album events for the new U2 album. Giveaways and prizes while supplies last.</p></div>
-      </div>
     </div>
-    <p class="note rv">Details for each event are on the shop's Facebook and Instagram.</p>
-  </div>
-</section>
+  </section>
 
-<section class="light" id="shops">
-  <div class="wrap">
-    <div class="rv">
-      <p class="eyebrow">Visit us</p>
-      <h2>Two shops, one crate-digging crew</h2>
-    </div>
-    <div class="shops">
-      <div class="shop rv">
-        <iframe title="Map of 17 N Block Ave, Fayetteville, AR" src="https://maps.google.com/maps?q=17+N+Block+Ave,+Fayetteville,+AR+72701&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="body">
-          <h3>Fayetteville</h3>
-          <dl>
-            <div><dt>Address</dt><dd>17 N Block Ave, Fayetteville, AR 72701</dd></div>
-            <div><dt>Phone</dt><dd><a href="tel:+14799660623">(479) 966-0623</a></dd></div>
-          </dl>
-          <div class="actions">
-            <a class="btn btn-black" href="tel:+14799660623">Call Fayetteville</a>
-            <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=17+N+Block+Ave,+Fayetteville,+AR+72701">Directions</a>
-          </div>
-        </div>
+  <section class="light" id="shops">
+    <div class="wrap">
+      <div class="rv">
+        <div class="eyebrow">Two shops</div>
+        <h2>Fayetteville. <em>Bentonville.</em></h2>
+        <p class="intro">Same badge, two towns. Block Street's own cover art says it best.</p>
       </div>
-      <div class="shop rv">
-        <iframe title="Map of 100 NW 2nd St, Bentonville, AR" src="https://maps.google.com/maps?q=100+NW+2nd+St,+Bentonville,+AR&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="body">
-          <h3>Bentonville</h3>
-          <dl>
-            <div><dt>Address</dt><dd>100 NW 2nd St, Bentonville, AR</dd></div>
-            <div><dt>Phone</dt><dd><a href="tel:+14799666232">(479) 966-6232</a></dd></div>
-          </dl>
-          <div class="actions">
-            <a class="btn btn-black" href="tel:+14799666232">Call Bentonville</a>
-            <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=100+NW+2nd+St,+Bentonville,+AR">Directions</a>
-          </div>
-        </div>
+      <figure class="cover rv"><img src="brand/cover.jpg" width="1600" height="735" loading="lazy" alt="Block Street's cover art: two Block St. Records badges, one for Fayetteville and one for Bentonville, each with a tonearm and a rainbow prism beam"></figure>
+      <div class="shops">
+        <article class="shop rv"><small>Shop 01</small><h3>Fayetteville</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>17 N Block Ave, Fayetteville, AR 72701</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+14799660623">(479) 966-0623</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></svg><a href="https://www.instagram.com/blockstreetrecords/">@blockstreetrecords</a></li>
+          </ul>
+        </article>
+        <article class="shop rv"><small>Shop 02</small><h3>Bentonville</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+14799666232">(479) 966-6232</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></svg><a href="https://www.instagram.com/blockstreetrecordsbentonville/">@blockstreetrecordsbentonville</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg><span>Second shop, same badge</span></li>
+          </ul>
+        </article>
       </div>
+      <div class="ticket rv"><p>"Both stores open 12-6pm every Sunday."</p><cite>Block Street Records on Facebook</cite></div>
     </div>
-    <p class="note rv" style="color:#6b645a">Email <a href="mailto:blockstreetrecords@gmail.com">blockstreetrecords@gmail.com</a>. Shop hours are posted on Facebook.</p>
-  </div>
-</section>
+  </section>
 
-<section class="closer">
-  <div class="wrap rv">
-    <img src="brand/logo.jpg" alt="" width="480" height="479" loading="lazy">
-    <h2>Come dig the crates</h2>
-    <div class="actions">
-      <a class="btn btn-white" href="tel:+14799660623">Call Fayetteville</a>
-      <a class="btn btn-ghost" href="https://www.facebook.com/blockstreetrecords/">Message us on Facebook</a>
+  <section id="visit">
+    <div class="wrap visit">
+      <div class="rv">
+        <div class="eyebrow">Find us</div>
+        <h2>Come <em>dig.</em></h2>
+        <p class="addr">17 N Block Ave<br>Fayetteville, AR</p>
+        <ul class="facts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span><a href="tel:+14799660623">(479) 966-0623</a></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><span><a href="mailto:blockstreetrecords@gmail.com">blockstreetrecords@gmail.com</a></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Open 7 days a week. Sundays, both stores open 12-6pm. <span class="q">Today's hours are on <a href="https://www.facebook.com/blockstreetrecords/">Facebook</a>.</span></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14v-5l-2-5H7l-2 5z"/><path d="M5 12h14"/><circle cx="8" cy="17" r="2"/><circle cx="16" cy="17" r="2"/></svg><span>Curbside pickup</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M15 8h-2a2 2 0 0 0-2 2v11M9 13h6"/></svg><span><a href="https://www.facebook.com/blockstreetrecords/">Facebook</a> and <a href="https://www.instagram.com/blockstreetrecords/">Instagram</a> for what just came in</span></li>
+        </ul>
+        <div class="cta"><a class="btn btn-hot" href="https://www.google.com/maps/dir/?api=1&amp;destination=17+N+Block+Ave,+Fayetteville,+AR+72701">Get directions</a></div>
+      </div>
+      <div class="map rv"><iframe title="Map of 17 N Block Ave, Fayetteville, AR" src="https://maps.google.com/maps?q=17+N+Block+Ave,+Fayetteville,+AR+72701&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="closer">
+    <div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap rv">
+      <img src="brand/logo.png" width="560" height="560" loading="lazy" alt="">
+      <h2>Stop by or shoot<br><em>us a call.</em></h2>
+      <p>17 N Block Ave in downtown Fayetteville, plus the Bentonville shop. Racks are packed.</p>
+      <div class="cta"><a class="btn btn-hot" href="tel:+14799660623">Fayetteville (479) 966-0623</a><a class="btn btn-line" href="tel:+14799666232">Bentonville (479) 966-6232</a></div>
+    </div>
+  </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span class="fb">Block St. Records</span>
-    <a href="tel:+14799660623">Fayetteville (479) 966-0623</a>
-    <a href="tel:+14799666232">Bentonville (479) 966-6232</a>
-    <a href="https://www.facebook.com/blockstreetrecords/">Facebook</a>
-    <a href="https://www.instagram.com/blockstreetrecordsbentonville/">Instagram</a>
-    <span>Logo and photos: Block Street Records on Facebook and Instagram</span>
-  </div>
-</footer>
-
+<footer><div class="wrap"><span>Block Street Records &middot; 17 N Block Ave, Fayetteville, AR 72701</span><span>Photos: Block Street Records on <a href="https://www.facebook.com/blockstreetrecords/">Facebook</a></span></div></footer>
 <script>
 document.documentElement.classList.add('js');
-(function(){
-  var els=document.querySelectorAll('.rv');
-  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
-  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
-  els.forEach(function(e){io.observe(e)});
-})();
+(function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})})();
 </script>
 </body>
 </html>
