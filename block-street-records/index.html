@@ -158,6 +158,15 @@ blockquote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;
 blockquote p{font:400 clamp(28px,7vw,40px)/1.06 var(--display);text-transform:uppercase;letter-spacing:.01em}
 blockquote cite{display:block;margin-top:12px;font:700 11px/1.4 var(--mono);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 .fresh p.note{margin-top:22px;color:var(--mute);max-width:44ch}
+.crates-head{margin-top:96px}
+.crates{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:32px}
+.crate{position:relative;margin:0;overflow:hidden;background:var(--ink2);border:1px solid var(--line);border-radius:4px}
+.crate::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--prism-x);z-index:1}
+.crate img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.crate:hover img{transform:scale(1.04)}
+.crate figcaption{position:relative;background:var(--ink2);padding:11px 12px 12px;font:700 10.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.crate figcaption span{display:block;color:var(--tab)}
+.fresh p.crates-more{margin-top:24px;max-width:none}
 
 /* shops */
 .cover{margin-top:40px;background:#000;border:2px solid var(--ink);border-radius:4px;overflow:hidden}
@@ -186,6 +195,12 @@ blockquote cite{display:block;margin-top:12px;font:700 11px/1.4 var(--mono);font
 .facts svg{width:22px;height:22px;flex:none;margin-top:3px;color:var(--tab)}
 .facts a{font-weight:800}
 .facts .q{color:var(--mute)}
+.hours{display:grid;margin:10px 0 12px;max-width:340px;border-top:1px solid var(--line)}
+.hours div{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid var(--line)}
+.hours dt{font:700 12px/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.hours dd{font-weight:800;text-align:right}
+.hours small{display:block;font:700 10.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.q-block{display:block}
 .map{position:relative;border-radius:4px;overflow:hidden;min-height:340px;background:var(--ink2);border:2px solid #fff}
 .map::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:var(--prism-x);z-index:1}
 .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) contrast(1.05)}
@@ -232,6 +247,8 @@ footer a{color:#fff}
   .track{font-size:30px}
   section{padding:104px 0}
   .dividers{grid-template-columns:repeat(4,1fr)}
+  .crates{grid-template-columns:repeat(4,1fr);gap:18px}
+  .crates-head{margin-top:120px}
   .fresh-grid{grid-template-columns:.9fr 1.1fr;gap:80px}
   .visit{grid-template-columns:.9fr 1.1fr;gap:48px}
   .map{min-height:440px}
@@ -315,6 +332,19 @@ footer a{color:#fff}
         <div class="cta"><a class="btn btn-line" href="https://www.facebook.com/blockstreetrecords/">See this week's preview</a></div>
       </div>
     </div>
+    <div class="wrap">
+      <div class="crates-head rv">
+        <div class="eyebrow">Fresh from the crates</div>
+        <h2>Top picks. <em>Going out now.</em></h2>
+      </div>
+      <div class="crates">
+        <figure class="crate rv"><img src="brand/crate-1.jpg" width="640" height="611" loading="lazy" alt="A top picks spread of vinyl on the counter, including Cocteau Twins, Stereolab, The Sundays and the Porco Rosso soundtrack"><figcaption><span>Wednesday</span>First of the weekly new shipments</figcaption></figure>
+        <figure class="crate rv"><img src="brand/crate-2.jpg" width="639" height="640" loading="lazy" alt="New vinyl fanned out, including Colter Wall, Cyndi Lauper, The B-52's and Avenged Sevenfold"><figcaption><span>Thursday</span>More new vinyl hitting the racks</figcaption></figure>
+        <figure class="crate rv"><img src="brand/crate-3.jpg" width="640" height="625" loading="lazy" alt="Original pressings laid out in rows, including Judas Priest, KISS, Neil Young, Fleetwood Mac and Type O Negative"><figcaption><span>Tuesday</span>Fresh arrivals, an OG collection</figcaption></figure>
+        <figure class="crate rv"><img src="brand/crate-4.jpg" width="603" height="640" loading="lazy" alt="More new vinyl fanned out, including Herbie Hancock, Leonard Cohen, Sonic Youth and Jungle"><figcaption><span>Thursday</span>More new vinyl going out</figcaption></figure>
+      </div>
+      <p class="note crates-more rv">Photos from Block Street's Instagram, <a href="https://www.instagram.com/blockstreetrecords/">@blockstreetrecords</a>.</p>
+    </div>
   </section>
 
   <section class="light" id="shops">
@@ -354,7 +384,14 @@ footer a{color:#fff}
         <ul class="facts">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span><a href="tel:+14799660623">(479) 966-0623</a></span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><span><a href="mailto:blockstreetrecords@gmail.com">blockstreetrecords@gmail.com</a></span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Open 7 days a week. Sundays, both stores open 12-6pm. <span class="q">Today's hours are on <a href="https://www.facebook.com/blockstreetrecords/">Facebook</a>.</span></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Open 7 days a week.
+            <dl class="hours">
+              <div><dt>Tuesday</dt><dd>11am-7pm</dd></div>
+              <div><dt>Wednesday</dt><dd>11am-7pm</dd></div>
+              <div><dt>Thursday</dt><dd>11am-7pm</dd></div>
+              <div><dt>Sunday</dt><dd>12-6pm<small>Both stores</small></dd></div>
+            </dl>
+            <span class="q q-block">As posted by Block Street. For Monday, Friday and Saturday, check <a href="https://www.facebook.com/blockstreetrecords/">Facebook</a>.</span></span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14v-5l-2-5H7l-2 5z"/><path d="M5 12h14"/><circle cx="8" cy="17" r="2"/><circle cx="16" cy="17" r="2"/></svg><span>Curbside pickup</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M15 8h-2a2 2 0 0 0-2 2v11M9 13h6"/></svg><span><a href="https://www.facebook.com/blockstreetrecords/">Facebook</a> and <a href="https://www.instagram.com/blockstreetrecords/">Instagram</a> for what just came in</span></li>
         </ul>
@@ -375,7 +412,7 @@ footer a{color:#fff}
   </section>
 </main>
 
-<footer><div class="wrap"><span>Block Street Records &middot; 17 N Block Ave, Fayetteville, AR 72701</span><span>Photos: Block Street Records on <a href="https://www.facebook.com/blockstreetrecords/">Facebook</a></span></div></footer>
+<footer><div class="wrap"><span>Block Street Records &middot; 17 N Block Ave, Fayetteville, AR 72701</span><span>Photos: Block Street Records on <a href="https://www.facebook.com/blockstreetrecords/">Facebook</a> and <a href="https://www.instagram.com/blockstreetrecords/">Instagram</a></span></div></footer>
 <script>
 document.documentElement.classList.add('js');
 (function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
