@@ -51,7 +51,7 @@ setTimeout(chk,4000);})();
   --sans:"Archivo","Arial Narrow",Arial,sans-serif;
   --gut:clamp(16px,4vw,48px);--gap:clamp(16px,2vw,28px);
   --sp-xl:clamp(96px,11vw,160px);--sp-l:clamp(80px,9vw,128px);--sp-m:clamp(64px,7vw,96px);
-  --bar:40px;--hdr:64px;--pipw:clamp(132px,13vw,200px);
+  --bar:0px;--hdr:64px;--pipw:clamp(132px,13vw,200px);
   color-scheme:light;
 }
 @media (max-width:767px){:root{--hdr:56px}}
@@ -700,6 +700,7 @@ html.js .nojs{display:none}
 .f-privacy[open] summary::after{content:"\2212"}
 .f-privacy p{font-size:.8125rem;line-height:1.5}
 .f-privacy p+p{margin-top:8px}
+.f-note{grid-column:1/-1;margin:0;font-size:.75rem;line-height:1.5;color:var(--on-deep);opacity:.55}
 .f-bottom{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;padding-top:24px;box-shadow:inset 0 1px 0 rgba(238,241,239,.12);font-size:.875rem}
 .f-lock{color:var(--on-deep);font-weight:650;font-stretch:95%;font-size:1rem;display:flex;align-items:center;gap:10px;margin-right:auto}
 .f-lock i{width:1px;height:1em;background:currentColor;opacity:.45}
@@ -865,7 +866,7 @@ html.lenis,html.lenis body{height:auto}
   <symbol id="i-x" viewBox="0 0 256 256"><path fill="currentColor" d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.690l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
 </svg>
 
-<div id="preview-bar">Preview built by Jackson Varela, a student in Fayetteville, AR. Not affiliated with or endorsed by Brandon Still or Collier&nbsp;&amp;&nbsp;Associates. <br class="bar-br">Want it finished? $299 to launch, then $50 a month for hosting and updates. Nothing due until it is live. Call or <a href="sms:+15018176397">text</a> <a href="tel:+15018176397">501-817-6397</a>.</div>
+<div id="preview-bar" hidden></div>
 <script>/* the bar's real height before first paint, so the sticky header never drops into place */document.documentElement.style.setProperty('--bar',document.getElementById('preview-bar').offsetHeight+'px')</script>
 <a class="skip" href="#top">Skip to content</a>
 
@@ -1656,6 +1657,7 @@ html.lenis,html.lenis body{height:auto}
       </nav>
       <p class="eho"><img src="brand/eho.svg" width="28" height="28" alt="" loading="lazy" decoding="async">Equal Housing Opportunity</p>
     </div>
+    <p class="f-note">Preview made for Brandon Still by Jackson Varela. Not yet reviewed or approved by Brandon Still or Collier&nbsp;&amp;&nbsp;Associates.</p>
   </div>
 </footer>
 <div class="act-bar" id="act-bar" role="group" aria-label="Contact Brandon" hidden>
