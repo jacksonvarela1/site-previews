@@ -21,7 +21,11 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script>
 (function(){var h=document.documentElement;h.classList.add('js');
-try{var force=/[?&]motion=1(&|$)/.test(location.search);if(matchMedia('(prefers-reduced-motion: no-preference)').matches&&(force||!navigator.webdriver)){h.classList.add('motion-ok')}}catch(e){}
+try{var force=/[?&]motion=1(&|$)/.test(location.search),calm=/[?&]motion=reduce(&|$)/.test(location.search);
+/* Reduce Motion gets the dissolve version (fades only); ?motion=reduce previews it in any browser. If the dissolve
+   script has not run within 3s, everything simply shows. */
+if(calm||(matchMedia('(prefers-reduced-motion: reduce)').matches&&!navigator.webdriver)){h.classList.add('dissolve');setTimeout(function(){if(!window.__dzReady)h.classList.add('dz-off')},3000)}
+else if(matchMedia('(prefers-reduced-motion: no-preference)').matches&&(force||!navigator.webdriver)){h.classList.add('motion-ok')}}catch(e){}
 /* ?shots=1: review captures load and decode every image up front, so full-page screenshots never show empty frames */
 if(/[?&]shots=1(&|$)/.test(location.search)){document.addEventListener('DOMContentLoaded',function(){Array.prototype.forEach.call(document.querySelectorAll('img'),function(i){i.loading='eager';i.decoding='sync'})})}
 /* motion gives up only if its scripts never arrive: while the parser is still waiting on them the check waits to 8s,
@@ -726,6 +730,41 @@ html:not(.js) .act-bar{display:none}
   .town[data-n="48"] .ring,.town[data-n="33"] .ring,.town[data-n="27"] .ring,.town[data-n="23"] .ring{opacity:.15;transform:scale(1.6)}
 }
 
+/* ================= still layout =================
+   Without the motion layer (Reduce Motion, no JS, automated captures) two scenes that were composed for pinned
+   scrolling are set as finished pages instead. Scoped to html:not(.motion-ok), so the motion version never sees it. */
+@media (min-width:900px){
+  /* owner's eye: the four words finish his sentence right under it, the clip sits level with them */
+  html:not(.motion-ok) .owner-scene{align-items:center}
+  html:not(.motion-ok) .owner-text{justify-content:center;gap:clamp(28px,3vw,44px)}
+  html:not(.motion-ok) .owner-fig{align-self:center}
+  /* buy, sell, invest: each row beside its own photo, in the same columns as the sticky frame */
+  html:not(.motion-ok) .ix-grid{row-gap:var(--sp-m);align-items:center}
+  html:not(.motion-ok) .ix-frame,html:not(.motion-ok) .ix-sticky,html:not(.motion-ok) .ix-stage{display:contents}
+  html:not(.motion-ok) .ix-row{min-height:0;padding:0}
+  html:not(.motion-ok) .ix-grid [data-i="0"]{grid-row:1}
+  html:not(.motion-ok) .ix-grid [data-i="1"]{grid-row:2}
+  html:not(.motion-ok) .ix-grid [data-i="2"]{grid-row:3}
+  html:not(.motion-ok) .ix-fig{position:relative;inset:auto;grid-column:8/13;opacity:1;visibility:visible;pointer-events:auto}
+  html:not(.motion-ok) .ix-media{position:relative;inset:auto;aspect-ratio:4/5}
+  html:not(.motion-ok) .split-caps{position:static;margin-top:14px}
+  html:not(.motion-ok) .ix-grid .ix-row .ix-word{opacity:1}
+  html:not(.motion-ok) .ix-row .ix-word::before{transform:none}
+  html:not(.motion-ok) .services{padding-bottom:var(--sp-l)}
+}
+/* phones and tablets: Invest is the last row, so it ends on the section's own padding like every other section */
+@media (max-width:899px){html:not(.motion-ok) .ix-row#invest{padding-bottom:0}}
+
+/* ================= dissolve =================
+   Reduce Motion (html.dissolve): what moves in the motion version fades in instead, opacity only, once, as it comes
+   into view (the script after the hero). Nothing is hidden without that script, after dz-off, or in print. */
+@keyframes dz-in{from{opacity:0}}
+html.dissolve:not(.dz-off) [data-dz]:not(.dz-in){opacity:0}
+html.dissolve:not(.dz-off) [data-dz].dz-in:not(.dz-done){animation-name:dz-in;animation-duration:640ms!important;animation-timing-function:ease-out;animation-delay:var(--dz-d,0ms);animation-fill-mode:both}
+@media print{html.dissolve [data-dz]{opacity:1!important;animation:none!important}}
+/* ?motion=reduce previews the same still map that Reduce Motion visitors get */
+html.dissolve .town[data-n="48"] .ring,html.dissolve .town[data-n="33"] .ring,html.dissolve .town[data-n="27"] .ring,html.dissolve .town[data-n="23"] .ring{opacity:.15;transform:scale(1.6)}
+
 /* ================= motion layer =================
    One language, three verbs: SETTLE (long decelerating arrivals), SURFACE (things rise through a hard
    horizon), DEPTH (media drifts slower than the page). Everything here only changes how things arrive.
@@ -876,24 +915,56 @@ html.lenis,html.lenis body{height:auto}
   <div class="hero-dim" aria-hidden="true"></div>
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero-end" aria-hidden="true"></div>
-  <div class="wrap hero-in">
+  <div class="wrap hero-in" data-dz-group>
     <div class="hero-copy">
-      <h1 data-surface="lines"><span class="l">Investor-Focused,</span> <span class="l">Homeowner-Friendly.</span></h1>
-      <p class="hero-sub">Helping homebuyers, sellers, and investors navigate Northwest Arkansas with confidence.</p>
-      <div class="hero-ctas">
+      <h1 data-surface="lines" data-dz><span class="l">Investor-Focused,</span> <span class="l">Homeowner-Friendly.</span></h1>
+      <p class="hero-sub" data-dz>Helping homebuyers, sellers, and investors navigate Northwest Arkansas with confidence.</p>
+      <div class="hero-ctas" data-dz>
         <a class="btn btn-red" href="https://calendly.com/brandonstillnwa/30min" target="_blank" rel="noopener" aria-describedby="nt">Book a call</a>
         <a class="btn btn-line on-deep" href="https://www.brandonstillrealtor.com/listing" target="_blank" rel="noopener" aria-describedby="nt">Search homes</a>
       </div>
     </div>
-    <button class="vbtn hero-pause" type="button" data-what="video" aria-label="Pause video"><svg class="ic i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="ic i-pause" aria-hidden="true"><use href="#i-pause"/></svg><span class="vt vt-play" aria-hidden="true">Play video</span><span class="vt vt-pause" aria-hidden="true">Pause video</span></button>
+    <button class="vbtn hero-pause" type="button" data-dz data-what="video" aria-label="Pause video"><svg class="ic i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="ic i-pause" aria-hidden="true"><use href="#i-pause"/></svg><span class="vt vt-play" aria-hidden="true">Play video</span><span class="vt vt-pause" aria-hidden="true">Pause video</span></button>
   </div>
 </section>
+<script>
+/* DISSOLVE (html.dissolve only). Each [data-dz] fades in once as it comes into view; the members of a
+   [data-dz-group] fade together, 60ms apart. It runs here so the hero never waits on the rest of the page; the
+   rest is picked up as it parses. If the observer never answers, focus lands in a hidden part, or the page is
+   printed, everything shows (dz-off). */
+(function(){
+  var d=document,de=d.documentElement,W=window,sl=Array.prototype.slice;
+  if(!de.classList.contains('dissolve')||de.classList.contains('dz-off')){W.__dzReady=true;return}
+  var off=function(){de.classList.add('dz-off')};
+  /* any error anywhere in here simply shows everything; the ready flag is only set once setup has worked */
+  try{
+  if(typeof W.IntersectionObserver!=='function'){off();W.__dzReady=true;return}
+  var seen=false,io;
+  /* once its fade has finished the element drops the animation, so it renders exactly like the still page; the
+     timer covers a fade that never reports its end (paused or held animations) */
+  var done=function(e){if(e.target===this&&e.animationName==='dz-in'){this.removeEventListener('animationend',done);this.removeEventListener('animationcancel',done);this.classList.add('dz-done')}};
+  var show=function(list){var k=0;list.forEach(function(el){if(el._dzIn)return;el._dzIn=1;io.unobserve(el);el.style.setProperty('--dz-d',Math.min(k++,4)*60+'ms');el.addEventListener('animationend',done);el.addEventListener('animationcancel',done);el.classList.add('dz-in');setTimeout(function(){el.classList.add('dz-done')},1400)})};
+  var members=function(el){var g=el.closest('[data-dz-group]');return g?sl.call(g.querySelectorAll('[data-dz]')):[el]};
+  io=new IntersectionObserver(function(es){seen=true;try{es.forEach(function(e){if(e.isIntersecting&&!e.target._dzIn)show(members(e.target))})}catch(x){off()}},{rootMargin:'0px 0px -8% 0px'});
+  var scan=function(){try{sl.call(d.querySelectorAll('[data-dz]')).forEach(function(el){if(el._dzOb)return;el._dzOb=1;io.observe(el)})}catch(x){off()}};
+  scan();W.__dzScan=scan;
+  d.addEventListener('DOMContentLoaded',scan);
+  d.addEventListener('focusin',function(e){try{var t=e.target&&e.target.closest&&e.target.closest('[data-dz]');if(t&&!t._dzIn)show(members(t))}catch(x){off()}});
+  W.addEventListener('beforeprint',off);
+  var wd=function(){if(d.visibilityState==='hidden'){d.addEventListener('visibilitychange',wd,{once:true});return}setTimeout(function(){if(!seen)off()},2500)};
+  wd();
+  /* whatever is already on screen (the hero) starts its fade in this same pass, before the first paint */
+  var vh=innerHeight*.92;sl.call(d.querySelectorAll('[data-dz]')).forEach(function(el){if(el._dzIn)return;var r=el.getBoundingClientRect();if(r.height&&r.top<vh&&r.bottom>0)show(members(el))});
+  W.__dzReady=true
+  }catch(x){off();W.__dzReady=true}
+})();
+</script>
 
 <section class="record" id="record" aria-label="Track record">
-  <div class="wrap">
+  <div class="wrap" data-dz-group>
     <p class="rec-line"><em>150+</em> homes sold and <em>$75M+</em> in sales across <em>16</em> Northwest Arkansas towns.</p>
-    <div class="rec-rule" aria-hidden="true"></div>
-    <div class="rec-foot">
+    <div class="rec-rule" aria-hidden="true" data-dz></div>
+    <div class="rec-foot" data-dz>
       <p class="rec-note small">Closed sales, buyer and listing side, Nov 2018 to Oct 2026, as shown on my Zillow agent profile.</p>
       <p class="rec-pod small">Co-host of NWA Investing. <a class="tlink" href="#podcast">Hear the show</a></p>
     </div>
@@ -902,11 +973,11 @@ html.lenis,html.lenis body{height:auto}
 
 <section class="about" id="about" aria-labelledby="about-h">
   <div class="wrap g12 about-grid">
-    <div class="about-media">
-      <figure class="portrait" data-waterline data-depth>
+    <div class="about-media" data-dz-group>
+      <figure class="portrait" data-waterline data-depth data-dz>
         <img data-waterline-img src="brand/about.jpg" width="1200" height="1199" alt="Brandon Still in a red Razorbacks polo, arms crossed, in front of a brick building" loading="lazy" decoding="async">
       </figure>
-      <div class="pip vtile" data-pip data-threshold="0.6">
+      <div class="pip vtile" data-pip data-threshold="0.6" data-dz>
         <img src="media/brandon-on-location.jpg" width="540" height="960" alt="Brandon greeting the camera on a home tour under spring trees in Fayetteville" loading="lazy" decoding="async">
         <video muted loop playsinline preload="none" data-captions data-seam aria-hidden="true" tabindex="-1">
           <source data-src="media/brandon-on-location.mp4" type="video/mp4">
@@ -944,15 +1015,15 @@ html.lenis,html.lenis body{height:auto}
     <div class="owner-text">
       <h2 class="h2 owner-lead" id="owner-h">I own rentals here too, so I look at every deal the way an owner does:</h2>
       <p class="sr">I own rental properties in the Bentonville area and multifamily properties across Northwest Arkansas, so I look at every deal the way an owner does: rents, cash flow, condition, and long-term value.</p>
-      <ul class="owner-grid" aria-hidden="true">
-        <li>rents.</li><li>cash flow.</li><li>condition.</li><li><span class="nowrap">long-term</span> value.</li>
+      <ul class="owner-grid" aria-hidden="true" data-dz-group>
+        <li data-dz>rents.</li><li data-dz>cash flow.</li><li data-dz>condition.</li><li data-dz><span class="nowrap">long-term</span> value.</li>
       </ul>
       <div class="owner-stage" aria-hidden="true">
         <span class="owner-word" data-i="0">rents.</span><span class="owner-word" data-i="1">cash flow.</span><span class="owner-word" data-i="2">condition.</span><span class="owner-word" data-i="3">long-term value.</span>
       </div>
     </div>
     <figure class="owner-fig">
-    <div class="owner-video vtile" data-threshold="0.4">
+    <div class="owner-video vtile" data-threshold="0.4" data-dz>
       <img src="brand/owner-units.jpg" width="720" height="900" alt="Brandon on the lawn of an apartment property, facing the camera with a microphone" loading="lazy" decoding="async">
       <video muted loop playsinline preload="none" data-seam aria-hidden="true" tabindex="-1">
         <source data-src="media/owner-units.mp4" type="video/mp4">
@@ -1013,12 +1084,12 @@ html.lenis,html.lenis body{height:auto}
       </article>
       <div class="ix-frame">
         <div class="ix-sticky"><div class="ix-stage">
-          <figure class="ix-fig is-active" style="--o:1" data-i="0">
+          <figure class="ix-fig is-active" style="--o:1" data-i="0" data-dz>
             <div class="ix-media">
               <img src="brand/listing-springdale-510-720.webp" srcset="brand/listing-springdale-510-720.webp 720w, brand/listing-springdale-510.webp 1085w" sizes="(max-width: 899px) 100vw, 1000px" width="1085" height="724" alt="White brick home with gray trim, a three-car garage and a green lawn in Springdale, a home Brandon listed and sold in 2025" loading="lazy" decoding="async" style="object-position:45% 50%">
             </div>
           </figure>
-          <figure class="ix-fig" style="--o:3" data-i="1">
+          <figure class="ix-fig" style="--o:3" data-i="1" data-dz>
             <div class="ix-media">
               <picture>
                 <source media="(max-width: 899px)" srcset="brand/sell-bv-dusk-wide-720.webp 720w, brand/sell-bv-dusk-wide.webp 1292w" sizes="100vw">
@@ -1026,7 +1097,7 @@ html.lenis,html.lenis body{height:auto}
               </picture>
             </div>
           </figure>
-          <figure class="ix-fig split" style="--o:5;--wall:50%" data-i="2" data-split>
+          <figure class="ix-fig split" style="--o:5;--wall:50%" data-i="2" data-split data-dz>
             <div class="ix-media">
               <div class="half half-l"><picture><source media="(max-width: 899px)" srcset="brand/invest-duplex-wide-720.webp 720w, brand/invest-duplex-wide.webp 900w" sizes="100vw"><img src="brand/invest-duplex.webp" width="470" height="588" alt="A new duplex in Bentonville with two garages side by side, one of the duplexes Brandon sold" loading="lazy" decoding="async"></picture></div>
               <div class="half half-r" aria-hidden="true"><picture><source media="(max-width: 899px)" srcset="brand/invest-duplex-wide-720.webp 720w, brand/invest-duplex-wide.webp 900w" sizes="100vw"><img src="brand/invest-duplex.webp" width="470" height="588" alt="" loading="lazy" decoding="async"></picture></div>
@@ -1083,12 +1154,12 @@ html.lenis,html.lenis body{height:auto}
         <div class="res-row">
           <span class="res-lbl">As a price cut</span>
           <b class="fig"><span id="o-cut">$57</span><span class="per">/mo</span></b>
-          <span class="bar" aria-hidden="true"><i id="f-cut" style="transform:scaleX(0.3506)"></i></span>
+          <span class="bar" aria-hidden="true" data-dz><i id="f-cut" style="transform:scaleX(0.3506)"></i></span>
         </div>
         <div class="res-row">
           <span class="res-lbl">As a rate buydown</span>
           <b class="fig"><span id="o-buy">$162</span><span class="per">/mo</span></b>
-          <span class="bar" aria-hidden="true"><i id="f-buy" class="win" style="transform:scaleX(1)"></i></span>
+          <span class="bar" aria-hidden="true" data-dz><i id="f-buy" class="win" style="transform:scaleX(1)"></i></span>
         </div>
         <p class="verdict" id="verdict" aria-live="polite">The buydown wins: about 2.9 times as much saved each month. A $10,000 buydown takes the rate from 6.50% to about 5.92%.</p>
         <div class="calc-acts">
@@ -1182,14 +1253,14 @@ html.lenis,html.lenis body{height:auto}
       </div>
     </div>
     <div class="rail" tabindex="0" role="region" aria-label="Homes Brandon has listed and sold, scroll sideways" data-lenis-prevent>
-      <ul class="homes-track">
-        <li class="home-card">
+      <ul class="homes-track" data-dz-group>
+        <li class="home-card" data-dz>
           <div class="home-frame"><div class="home-zoom"><img class="home-img" src="brand/home-fay-4bd-720.webp" srcset="brand/home-fay-4bd-720.webp 720w, brand/home-fay-4bd.webp 960w" sizes="(max-width: 899px) 98vw, 49vw" width="960" height="639" alt="Two-story brick and white-sided home with a columned entry under tall trees in Fayetteville" loading="lazy" decoding="async"></div></div>
           <h3 class="home-title">Fayetteville four-bedroom sold <em>for $1,699,900</em></h3>
           <p class="home-spec">4 bed, 4 bath, 5,500 sq ft. Sold Sep 2025.</p>
           <p class="home-note">My largest listing so far.</p>
         </li>
-        <li class="home-card">
+        <li class="home-card" data-dz>
           <div class="home-frame vtile" data-autoplay="off" data-threshold="0.6">
             <div class="home-zoom">
               <img class="home-img" src="brand/listing-bv-modern-720.webp" srcset="brand/listing-bv-modern-720.webp 720w, brand/listing-bv-modern.webp 1292w" sizes="(max-width: 899px) 98vw, 49vw" width="1292" height="861" alt="Drone view of a black modern new build in the woods in Bella Vista" loading="lazy" decoding="async">
@@ -1200,38 +1271,38 @@ html.lenis,html.lenis body{height:auto}
           <p class="home-spec">3 bed, 2.5 bath plus office, new build. Sold May 2024.</p>
           <button class="vlink" type="button" data-what="the walkthrough of this Bella Vista home" aria-label="Play the walkthrough of this Bella Vista home"><svg class="ic i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="ic i-pause" aria-hidden="true"><use href="#i-pause"/></svg><span class="t-play" aria-hidden="true">Play the walkthrough</span><span class="t-pause" aria-hidden="true">Pause the walkthrough</span></button>
         </li>
-        <li class="home-card">
+        <li class="home-card" data-dz>
           <div class="home-frame"><div class="home-zoom"><img class="home-img" src="brand/home-fay-fourplex-720.webp" srcset="brand/home-fay-fourplex-720.webp 720w, brand/home-fay-fourplex.webp 1086w" sizes="(max-width: 899px) 98vw, 49vw" width="1086" height="724" alt="Two-story fourplex with tan siding and covered entries in Fayetteville" loading="lazy" decoding="async"></div></div>
           <h3 class="home-title">Fayetteville fourplex sold <em>for $705,500</em></h3>
           <p class="home-spec">Four units, 4,260 sq ft. Sold Jun 2026.</p>
         </li>
-        <li class="home-card">
+        <li class="home-card" data-dz>
           <div class="home-frame"><div class="home-zoom"><img class="home-img" src="brand/home-btv-5bd-720.webp" srcset="brand/home-btv-5bd-720.webp 720w, brand/home-btv-5bd.webp 1086w" sizes="(max-width: 899px) 98vw, 49vw" width="1086" height="724" alt="Brick and stone home with a three-car garage in Bentonville" loading="lazy" decoding="async"></div></div>
           <h3 class="home-title">Bentonville five-bedroom sold <em>for $579,900</em></h3>
           <p class="home-spec">5 bed, 3 bath, 2,841 sq ft. Sold Jul 2026.</p>
         </li>
-        <li class="home-card">
+        <li class="home-card" data-dz>
           <div class="home-frame"><div class="home-zoom"><img class="home-img" src="brand/home-rogers-4bd-720.webp" srcset="brand/home-rogers-4bd-720.webp 720w, brand/home-rogers-4bd.webp 1086w" sizes="(max-width: 899px) 98vw, 49vw" width="1086" height="724" alt="Brick home with dark trim, a green front door and a three-car garage in Rogers" loading="lazy" decoding="async"></div></div>
           <h3 class="home-title">Rogers four-bedroom sold <em>for $599,900</em></h3>
           <p class="home-spec">4 bed, 3 bath, 2,529 sq ft. Sold Nov 2025.</p>
         </li>
-        <li class="home-card">
+        <li class="home-card" data-dz>
           <div class="home-frame"><div class="home-zoom"><img class="home-img" src="brand/home-centerton-3bd-720.webp" srcset="brand/home-centerton-3bd-720.webp 720w, brand/home-centerton-3bd.webp 1086w" sizes="(max-width: 899px) 98vw, 49vw" width="1086" height="724" alt="White brick home with a black roof and tall front windows in Centerton" loading="lazy" decoding="async"></div></div>
           <h3 class="home-title">Centerton three-bedroom sold <em>for $419,999</em></h3>
           <p class="home-spec">3 bed, 2 bath, 2,017 sq ft. Sold Sep 2025.</p>
         </li>
-        <li class="home-card">
+        <li class="home-card" data-dz>
           <div class="home-frame"><div class="home-zoom"><img class="home-img" src="brand/home-farmington-4bd-720.webp" srcset="brand/home-farmington-4bd-720.webp 720w, brand/home-farmington-4bd.webp 960w" sizes="(max-width: 899px) 98vw, 49vw" width="960" height="640" alt="Brick and stone ranch home on a wide lawn with a shade tree in Farmington" loading="lazy" decoding="async"></div></div>
           <h3 class="home-title">Farmington four-bedroom sold <em>for $519,000</em></h3>
           <p class="home-spec">4 bed, 2 bath, 2,302 sq ft. Sold Jun 2026.</p>
         </li>
-        <li class="home-card">
+        <li class="home-card" data-dz>
           <div class="home-frame"><div class="home-zoom"><img class="home-img" src="brand/listing-bentonville-720.webp" srcset="brand/listing-bentonville-720.webp 720w, brand/listing-bentonville.webp 1292w" sizes="(max-width: 899px) 98vw, 49vw" width="1292" height="861" alt="Ranch home with dark siding and a two-car garage in downtown Bentonville" loading="lazy" decoding="async"></div></div>
           <h3 class="home-title">Downtown Bentonville three-bedroom sold <em>for $550,000</em></h3>
           <p class="home-spec">3 bed, 2 bath, near Bogle Park. Sold May 2024.</p>
           <p class="home-note">A leisurely stroll to the vibrant Bentonville square.</p>
         </li>
-        <li class="homes-end">
+        <li class="homes-end" data-dz>
           <a class="btn btn-red" href="https://www.brandonstillrealtor.com/listing" target="_blank" rel="noopener" aria-describedby="nt">Search homes</a>
           <a class="tlink" href="https://www.brandonstillrealtor.com/featured-listing" target="_blank" rel="noopener" aria-describedby="nt">See what I have listed now</a>
         </li>
@@ -1244,9 +1315,9 @@ html.lenis,html.lenis body{height:auto}
 <section class="watch" id="watch" aria-labelledby="watch-h">
   <div class="wrap">
     <h2 class="h2" id="watch-h">Follow along for more updates!</h2>
-    <ul class="reels" data-lenis-prevent>
+    <ul class="reels" data-lenis-prevent data-dz-group>
       <li class="reel-item">
-        <div class="reel vtile" data-reel="0" data-threshold="0.6">
+        <div class="reel vtile" data-reel="0" data-dz data-threshold="0.6">
           <img src="brand/reel-fayetteville.webp" width="540" height="960" alt="Brandon in his office chair under the title Fayetteville areas, highest appreciation" loading="lazy" decoding="async">
           <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="media/reel-fayetteville.mp4" type="video/mp4"></video>
           <button class="vbtn" type="button" data-what="the Fayetteville reel" aria-label="Play the Fayetteville reel"><svg class="ic i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="ic i-pause" aria-hidden="true"><use href="#i-pause"/></svg></button>
@@ -1255,7 +1326,7 @@ html.lenis,html.lenis body{height:auto}
         <a class="tlink" href="https://www.instagram.com/reel/DeuaGpRBIep/" target="_blank" rel="noopener" aria-describedby="nt">Watch on Instagram</a>
       </li>
       <li class="reel-item">
-        <div class="reel vtile" data-reel="1" data-threshold="0.6">
+        <div class="reel vtile" data-reel="1" data-dz data-threshold="0.6">
           <img src="brand/reel-lowell.webp" width="540" height="960" alt="Brandon in his office talking about Lowell and Cave Springs" loading="lazy" decoding="async">
           <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="media/reel-lowell.mp4" type="video/mp4"></video>
           <button class="vbtn" type="button" data-what="the Lowell and Cave Springs reel" aria-label="Play the Lowell and Cave Springs reel"><svg class="ic i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="ic i-pause" aria-hidden="true"><use href="#i-pause"/></svg></button>
@@ -1264,7 +1335,7 @@ html.lenis,html.lenis body{height:auto}
         <a class="tlink" href="https://www.instagram.com/reel/DecuR8jNv7M/" target="_blank" rel="noopener" aria-describedby="nt">Watch on Instagram</a>
       </li>
       <li class="reel-item">
-        <div class="reel vtile" data-reel="2" data-threshold="0.6">
+        <div class="reel vtile" data-reel="2" data-dz data-threshold="0.6">
           <img src="brand/reel-refresh.webp" width="540" height="960" alt="Brandon standing in an empty unit under the title What a $5K renovation budget looks like" loading="lazy" decoding="async">
           <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="media/reel-refresh.mp4" type="video/mp4"></video>
           <button class="vbtn" type="button" data-what="the renovation reel" aria-label="Play the renovation reel"><svg class="ic i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="ic i-pause" aria-hidden="true"><use href="#i-pause"/></svg></button>
@@ -1273,7 +1344,7 @@ html.lenis,html.lenis body{height:auto}
         <a class="tlink" href="https://www.instagram.com/reel/DehkPEtBoxY/" target="_blank" rel="noopener" aria-describedby="nt">Watch on Instagram</a>
       </li>
       <li class="reel-item">
-        <div class="reel vtile" data-reel="3" data-threshold="0.6">
+        <div class="reel vtile" data-reel="3" data-dz data-threshold="0.6">
           <img src="brand/reel-sellers.webp" width="540" height="960" alt="Brandon talking in the corner of the frame over a kitchen with a copper range hood" loading="lazy" decoding="async">
           <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="media/reel-sellers.mp4" type="video/mp4"></video>
           <button class="vbtn" type="button" data-what="the sellers reel" aria-label="Play the sellers reel"><svg class="ic i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="ic i-pause" aria-hidden="true"><use href="#i-pause"/></svg></button>
@@ -1296,14 +1367,14 @@ html.lenis,html.lenis body{height:auto}
       <p class="sub">Tap a town to see where I&rsquo;d be looking right now.</p>
     </div>
     <aside class="mkt" aria-labelledby="mkt-h">
-      <span class="mkt-rule" aria-hidden="true"></span>
+      <span class="mkt-rule" aria-hidden="true" data-dz></span>
       <p class="mkt-k" id="mkt-h">My read on the market, Oct 2026</p>
       <blockquote class="mkt-q"><p>&ldquo;Northwest Arkansas isn&rsquo;t slowing down, it&rsquo;s recalibrating.&rdquo;</p></blockquote>
       <p class="mkt-fig">Median existing single-family price, 2025: <b class="num">$375,100</b>, up 65.8% from 2020.</p>
       <p class="fine mkt-src">Figure from the 2026 State of the Northwest Arkansas Region report. <a class="tlink" href="https://www.linkedin.com/posts/brandon-still-991b88111_nwarealestate-bentonville-rogers-activity-7521216857408888832-qZzk" target="_blank" rel="noopener" aria-describedby="nt">From my LinkedIn, Oct 28, 2026</a></p>
     </aside>
     <div class="map-col">
-      <svg class="nwa-map" viewBox="0 0 632 725" preserveAspectRatio="xMinYMin meet" role="group" aria-labelledby="map-cap"><path class="county" data-fips="05143" d="M66.9 383.8L184.8 386.2L187.4 346.5L227.6 346.5L230.3 279.8L466 285.3L498.1 289.3L498.1 267L562.4 260.7L519.6 394.2L516.9 579.3L506.2 699.2L385.6 696L385.6 708.8L109.7 700.8L66.9 383.8Z"/><path class="county" data-fips="05007" d="M16 16L578.5 16.8L581.2 164.6L616 194.8L575.8 194L575.8 260.7L562.4 260.7L498.1 267L498.1 289.3L466 285.3L230.3 279.8L227.6 346.5L187.4 346.5L184.8 386.2L66.9 383.8L16 16Z"/><text class="county-name" x="40" y="66">Benton County</text><text class="county-name" x="124" y="660">Washington County</text><g class="town" data-town="bella-vista" data-n="10" data-lat="36.481" tabindex="-1" role="button" aria-label="Bella Vista, 10 closed sales" style="--cx:274.6px;--cy:33.2px"><circle class="hit" cx="274.6" cy="33.2" r="26"/><circle class="ring" cx="274.6" cy="33.2" r="15.1"/><circle class="dot" cx="274.6" cy="33.2" r="15.1"/><text class="town-label" x="295.7" y="38.2" text-anchor="start">Bella Vista</text></g><g class="town" data-town="pea-ridge" data-n="1" data-lat="36.454" tabindex="-1" role="button" aria-label="Pea Ridge, 1 closed sale" style="--cx:391px;--cy:58.2px"><circle class="hit" cx="391" cy="58.2" r="26"/><circle class="ring" cx="391" cy="58.2" r="8.2"/><circle class="dot" cx="391" cy="58.2" r="8.2"/><text class="town-label is-minor" x="405.2" y="63.2" text-anchor="start">Pea Ridge</text></g><g class="town" data-town="little-flock" data-n="1" data-lat="36.386" tabindex="-1" role="button" aria-label="Little Flock, 1 closed sale" style="--cx:377.5px;--cy:121.1px"><circle class="hit" cx="377.5" cy="121.1" r="26"/><circle class="ring" cx="377.5" cy="121.1" r="8.2"/><circle class="dot" cx="377.5" cy="121.1" r="8.2"/><text class="town-label is-minor" x="391.7" y="126.1" text-anchor="start">Little Flock</text></g><g class="town" data-town="bentonville" data-n="33" data-lat="36.373" tabindex="-1" role="button" aria-label="Bentonville, 33 closed sales" style="--cx:322.3px;--cy:133.1px"><circle class="hit" cx="322.3" cy="133.1" r="26"/><circle class="ring" cx="322.3" cy="133.1" r="23.4"/><circle class="dot" cx="322.3" cy="133.1" r="23.4"/><text class="town-label" x="322.3" y="101.7" text-anchor="middle">Bentonville</text></g><g class="town" data-town="centerton" data-n="6" data-lat="36.36" tabindex="-1" role="button" aria-label="Centerton, 6 closed sales" style="--cx:265.6px;--cy:145.1px"><circle class="hit" cx="265.6" cy="145.1" r="26"/><circle class="ring" cx="265.6" cy="145.1" r="12.8"/><circle class="dot" cx="265.6" cy="145.1" r="12.8"/><text class="town-label" x="246.8" y="150.1" text-anchor="end">Centerton</text></g><g class="town" data-town="rogers" data-n="23" data-lat="36.332" tabindex="-1" role="button" aria-label="Rogers, 23 closed sales" style="--cx:390.2px;--cy:171px"><circle class="hit" cx="390.2" cy="171" r="26"/><circle class="ring" cx="390.2" cy="171" r="20.3"/><circle class="dot" cx="390.2" cy="171" r="20.3"/><text class="town-label" x="416.5" y="176" text-anchor="start">Rogers</text></g><g class="town" data-town="cave-springs" data-n="9" data-lat="36.264" tabindex="-1" role="button" aria-label="Cave Springs, 9 closed sales" style="--cx:305.2px;--cy:233.9px"><circle class="hit" cx="305.2" cy="233.9" r="26"/><circle class="ring" cx="305.2" cy="233.9" r="14.6"/><circle class="dot" cx="305.2" cy="233.9" r="14.6"/><text class="town-label" x="284.6" y="238.9" text-anchor="end">Cave Springs</text></g><g class="town" data-town="lowell" data-n="8" data-lat="36.255" tabindex="-1" role="button" aria-label="Lowell, 8 closed sales" style="--cx:380.5px;--cy:242.2px"><circle class="hit" cx="380.5" cy="242.2" r="26"/><circle class="ring" cx="380.5" cy="242.2" r="14.1"/><circle class="dot" cx="380.5" cy="242.2" r="14.1"/><text class="town-label" x="400.6" y="247.2" text-anchor="start">Lowell</text></g><g class="town" data-town="siloam-springs" data-n="1" data-lat="36.188" tabindex="-1" role="button" aria-label="Siloam Springs, 1 closed sale" style="--cx:75.3px;--cy:304.2px"><circle class="hit" cx="75.3" cy="304.2" r="26"/><circle class="ring" cx="75.3" cy="304.2" r="8.2"/><circle class="dot" cx="75.3" cy="304.2" r="8.2"/><text class="town-label is-minor" x="89.5" y="309.2" text-anchor="start">Siloam Springs</text></g><g class="town" data-town="springdale" data-n="27" data-lat="36.187" tabindex="-1" role="button" aria-label="Springdale, 27 closed sales" style="--cx:382px;--cy:305.1px"><circle class="hit" cx="382" cy="305.1" r="26"/><circle class="ring" cx="382" cy="305.1" r="21.6"/><circle class="dot" cx="382" cy="305.1" r="21.6"/><text class="town-label" x="409.6" y="310.1" text-anchor="start">Springdale</text></g><g class="town" data-town="tontitown" data-n="2" data-lat="36.178" tabindex="-1" role="button" aria-label="Tontitown, 2 closed sales" style="--cx:303.7px;--cy:313.5px"><circle class="hit" cx="303.7" cy="313.5" r="26"/><circle class="ring" cx="303.7" cy="313.5" r="9.5"/><circle class="dot" cx="303.7" cy="313.5" r="9.5"/><text class="town-label is-minor" x="288.2" y="318.5" text-anchor="end">Tontitown</text></g><g class="town" data-town="fayetteville" data-n="48" data-lat="36.063" tabindex="-1" role="button" aria-label="Fayetteville, 48 closed sales" style="--cx:361.1px;--cy:419.8px"><circle class="hit" cx="361.1" cy="419.8" r="26"/><circle class="ring" cx="361.1" cy="419.8" r="27.2"/><circle class="dot" cx="361.1" cy="419.8" r="27.2"/><text class="town-label" x="394.3" y="424.8" text-anchor="start">Fayetteville</text></g><g class="town" data-town="farmington" data-n="4" data-lat="36.042" tabindex="-1" role="button" aria-label="Farmington, 4 closed sales" style="--cx:294px;--cy:439.2px"><circle class="hit" cx="294" cy="439.2" r="26"/><circle class="ring" cx="294" cy="439.2" r="11.4"/><circle class="dot" cx="294" cy="439.2" r="11.4"/><text class="town-label" x="276.6" y="444.2" text-anchor="end">Farmington</text></g><g class="town" data-town="elkins" data-n="1" data-lat="36.001" tabindex="-1" role="button" aria-label="Elkins, 1 closed sale" style="--cx:472.3px;--cy:477.1px"><circle class="hit" cx="472.3" cy="477.1" r="26"/><circle class="ring" cx="472.3" cy="477.1" r="8.2"/><circle class="dot" cx="472.3" cy="477.1" r="8.2"/><text class="town-label is-minor" x="486.5" y="482.1" text-anchor="start">Elkins</text></g><g class="town" data-town="prairie-grove" data-n="1" data-lat="35.976" tabindex="-1" role="button" aria-label="Prairie Grove, 1 closed sale" style="--cx:241px;--cy:500.3px"><circle class="hit" cx="241" cy="500.3" r="26"/><circle class="ring" cx="241" cy="500.3" r="8.2"/><circle class="dot" cx="241" cy="500.3" r="8.2"/><text class="town-label is-minor" x="226.8" y="505.3" text-anchor="end">Prairie Grove</text></g><g class="town" data-town="west-fork" data-n="1" data-lat="35.924" tabindex="-1" role="button" aria-label="West Fork, 1 closed sale" style="--cx:338px;--cy:548.4px"><circle class="hit" cx="338" cy="548.4" r="26"/><circle class="ring" cx="338" cy="548.4" r="8.2"/><circle class="dot" cx="338" cy="548.4" r="8.2"/><text class="town-label is-minor" x="352.2" y="553.4" text-anchor="start">West Fork</text></g></svg>
+      <svg class="nwa-map" data-dz viewBox="0 0 632 725" preserveAspectRatio="xMinYMin meet" role="group" aria-labelledby="map-cap"><path class="county" data-fips="05143" d="M66.9 383.8L184.8 386.2L187.4 346.5L227.6 346.5L230.3 279.8L466 285.3L498.1 289.3L498.1 267L562.4 260.7L519.6 394.2L516.9 579.3L506.2 699.2L385.6 696L385.6 708.8L109.7 700.8L66.9 383.8Z"/><path class="county" data-fips="05007" d="M16 16L578.5 16.8L581.2 164.6L616 194.8L575.8 194L575.8 260.7L562.4 260.7L498.1 267L498.1 289.3L466 285.3L230.3 279.8L227.6 346.5L187.4 346.5L184.8 386.2L66.9 383.8L16 16Z"/><text class="county-name" x="40" y="66">Benton County</text><text class="county-name" x="124" y="660">Washington County</text><g class="town" data-town="bella-vista" data-n="10" data-lat="36.481" tabindex="-1" role="button" aria-label="Bella Vista, 10 closed sales" style="--cx:274.6px;--cy:33.2px"><circle class="hit" cx="274.6" cy="33.2" r="26"/><circle class="ring" cx="274.6" cy="33.2" r="15.1"/><circle class="dot" cx="274.6" cy="33.2" r="15.1"/><text class="town-label" x="295.7" y="38.2" text-anchor="start">Bella Vista</text></g><g class="town" data-town="pea-ridge" data-n="1" data-lat="36.454" tabindex="-1" role="button" aria-label="Pea Ridge, 1 closed sale" style="--cx:391px;--cy:58.2px"><circle class="hit" cx="391" cy="58.2" r="26"/><circle class="ring" cx="391" cy="58.2" r="8.2"/><circle class="dot" cx="391" cy="58.2" r="8.2"/><text class="town-label is-minor" x="405.2" y="63.2" text-anchor="start">Pea Ridge</text></g><g class="town" data-town="little-flock" data-n="1" data-lat="36.386" tabindex="-1" role="button" aria-label="Little Flock, 1 closed sale" style="--cx:377.5px;--cy:121.1px"><circle class="hit" cx="377.5" cy="121.1" r="26"/><circle class="ring" cx="377.5" cy="121.1" r="8.2"/><circle class="dot" cx="377.5" cy="121.1" r="8.2"/><text class="town-label is-minor" x="391.7" y="126.1" text-anchor="start">Little Flock</text></g><g class="town" data-town="bentonville" data-n="33" data-lat="36.373" tabindex="-1" role="button" aria-label="Bentonville, 33 closed sales" style="--cx:322.3px;--cy:133.1px"><circle class="hit" cx="322.3" cy="133.1" r="26"/><circle class="ring" cx="322.3" cy="133.1" r="23.4"/><circle class="dot" cx="322.3" cy="133.1" r="23.4"/><text class="town-label" x="322.3" y="101.7" text-anchor="middle">Bentonville</text></g><g class="town" data-town="centerton" data-n="6" data-lat="36.36" tabindex="-1" role="button" aria-label="Centerton, 6 closed sales" style="--cx:265.6px;--cy:145.1px"><circle class="hit" cx="265.6" cy="145.1" r="26"/><circle class="ring" cx="265.6" cy="145.1" r="12.8"/><circle class="dot" cx="265.6" cy="145.1" r="12.8"/><text class="town-label" x="246.8" y="150.1" text-anchor="end">Centerton</text></g><g class="town" data-town="rogers" data-n="23" data-lat="36.332" tabindex="-1" role="button" aria-label="Rogers, 23 closed sales" style="--cx:390.2px;--cy:171px"><circle class="hit" cx="390.2" cy="171" r="26"/><circle class="ring" cx="390.2" cy="171" r="20.3"/><circle class="dot" cx="390.2" cy="171" r="20.3"/><text class="town-label" x="416.5" y="176" text-anchor="start">Rogers</text></g><g class="town" data-town="cave-springs" data-n="9" data-lat="36.264" tabindex="-1" role="button" aria-label="Cave Springs, 9 closed sales" style="--cx:305.2px;--cy:233.9px"><circle class="hit" cx="305.2" cy="233.9" r="26"/><circle class="ring" cx="305.2" cy="233.9" r="14.6"/><circle class="dot" cx="305.2" cy="233.9" r="14.6"/><text class="town-label" x="284.6" y="238.9" text-anchor="end">Cave Springs</text></g><g class="town" data-town="lowell" data-n="8" data-lat="36.255" tabindex="-1" role="button" aria-label="Lowell, 8 closed sales" style="--cx:380.5px;--cy:242.2px"><circle class="hit" cx="380.5" cy="242.2" r="26"/><circle class="ring" cx="380.5" cy="242.2" r="14.1"/><circle class="dot" cx="380.5" cy="242.2" r="14.1"/><text class="town-label" x="400.6" y="247.2" text-anchor="start">Lowell</text></g><g class="town" data-town="siloam-springs" data-n="1" data-lat="36.188" tabindex="-1" role="button" aria-label="Siloam Springs, 1 closed sale" style="--cx:75.3px;--cy:304.2px"><circle class="hit" cx="75.3" cy="304.2" r="26"/><circle class="ring" cx="75.3" cy="304.2" r="8.2"/><circle class="dot" cx="75.3" cy="304.2" r="8.2"/><text class="town-label is-minor" x="89.5" y="309.2" text-anchor="start">Siloam Springs</text></g><g class="town" data-town="springdale" data-n="27" data-lat="36.187" tabindex="-1" role="button" aria-label="Springdale, 27 closed sales" style="--cx:382px;--cy:305.1px"><circle class="hit" cx="382" cy="305.1" r="26"/><circle class="ring" cx="382" cy="305.1" r="21.6"/><circle class="dot" cx="382" cy="305.1" r="21.6"/><text class="town-label" x="409.6" y="310.1" text-anchor="start">Springdale</text></g><g class="town" data-town="tontitown" data-n="2" data-lat="36.178" tabindex="-1" role="button" aria-label="Tontitown, 2 closed sales" style="--cx:303.7px;--cy:313.5px"><circle class="hit" cx="303.7" cy="313.5" r="26"/><circle class="ring" cx="303.7" cy="313.5" r="9.5"/><circle class="dot" cx="303.7" cy="313.5" r="9.5"/><text class="town-label is-minor" x="288.2" y="318.5" text-anchor="end">Tontitown</text></g><g class="town" data-town="fayetteville" data-n="48" data-lat="36.063" tabindex="-1" role="button" aria-label="Fayetteville, 48 closed sales" style="--cx:361.1px;--cy:419.8px"><circle class="hit" cx="361.1" cy="419.8" r="26"/><circle class="ring" cx="361.1" cy="419.8" r="27.2"/><circle class="dot" cx="361.1" cy="419.8" r="27.2"/><text class="town-label" x="394.3" y="424.8" text-anchor="start">Fayetteville</text></g><g class="town" data-town="farmington" data-n="4" data-lat="36.042" tabindex="-1" role="button" aria-label="Farmington, 4 closed sales" style="--cx:294px;--cy:439.2px"><circle class="hit" cx="294" cy="439.2" r="26"/><circle class="ring" cx="294" cy="439.2" r="11.4"/><circle class="dot" cx="294" cy="439.2" r="11.4"/><text class="town-label" x="276.6" y="444.2" text-anchor="end">Farmington</text></g><g class="town" data-town="elkins" data-n="1" data-lat="36.001" tabindex="-1" role="button" aria-label="Elkins, 1 closed sale" style="--cx:472.3px;--cy:477.1px"><circle class="hit" cx="472.3" cy="477.1" r="26"/><circle class="ring" cx="472.3" cy="477.1" r="8.2"/><circle class="dot" cx="472.3" cy="477.1" r="8.2"/><text class="town-label is-minor" x="486.5" y="482.1" text-anchor="start">Elkins</text></g><g class="town" data-town="prairie-grove" data-n="1" data-lat="35.976" tabindex="-1" role="button" aria-label="Prairie Grove, 1 closed sale" style="--cx:241px;--cy:500.3px"><circle class="hit" cx="241" cy="500.3" r="26"/><circle class="ring" cx="241" cy="500.3" r="8.2"/><circle class="dot" cx="241" cy="500.3" r="8.2"/><text class="town-label is-minor" x="226.8" y="505.3" text-anchor="end">Prairie Grove</text></g><g class="town" data-town="west-fork" data-n="1" data-lat="35.924" tabindex="-1" role="button" aria-label="West Fork, 1 closed sale" style="--cx:338px;--cy:548.4px"><circle class="hit" cx="338" cy="548.4" r="26"/><circle class="ring" cx="338" cy="548.4" r="8.2"/><circle class="dot" cx="338" cy="548.4" r="8.2"/><text class="town-label is-minor" x="352.2" y="553.4" text-anchor="start">West Fork</text></g></svg>
       <p class="small map-cap" id="map-cap">Benton and Washington counties. Each dot is a town where I&rsquo;ve closed sales, sized by count; the same numbers are listed below the map.</p>
     </div>
     <aside class="town-panel" aria-label="Town details">
@@ -1437,7 +1508,7 @@ html.lenis,html.lenis body{height:auto}
     </div>
     <div class="pod-main">
       <div class="player" id="player" data-id="4Xz-ZFgQ5tI" data-n="98" data-lenis-prevent>
-        <div class="vtile player-loop" data-threshold="0.4">
+        <div class="vtile player-loop" data-threshold="0.4" data-dz>
           <img src="media/brandon-studio.jpg" width="960" height="540" alt="Brandon at the NWA Investing microphone in front of the red studio curtain" loading="lazy" decoding="async">
           <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"><source data-src="media/brandon-studio.mp4" type="video/mp4"></video>
           <button class="vbtn" type="button" data-what="studio preview" aria-label="Play studio preview"><svg class="ic i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="ic i-pause" aria-hidden="true"><use href="#i-pause"/></svg></button>
@@ -1490,8 +1561,8 @@ html.lenis,html.lenis body{height:auto}
 <section class="contact" id="contact" aria-labelledby="contact-h">
   <div class="wrap g12 ct-grid">
     <div class="ct-side">
-      <div class="endcard-wrap">
-        <figure class="endcard" data-waterline>
+      <div class="endcard-wrap" data-dz-group>
+        <figure class="endcard" data-waterline data-dz>
           <img data-waterline-img src="brand/portrait.jpg" width="682" height="1024" alt="Brandon Still in a light blazer, smiling, in a studio portrait" loading="lazy" decoding="async">
           <figcaption class="endcard-copy">
             <svg class="endcard-mark" viewBox="0 0 800 352" aria-hidden="true" focusable="false"><path class="mk-roof" d="M12 338L335 16L657 338H789L460 13L135 338"/><path class="mk-pane" d="M352 255h35v35h-35z"/><path class="mk-pane" d="M407 255h35v35h-35z"/><path class="mk-pane" d="M352 310h35v35h-35z"/><path class="mk-pane" d="M407 310h35v35h-35z"/></svg>
@@ -1499,7 +1570,7 @@ html.lenis,html.lenis body{height:auto}
             <p class="endcard-line">Reach out at <a href="tel:+14792362900">479-236-2900</a></p>
           </figcaption>
         </figure>
-        <div class="pip vtile" data-pip data-threshold="0.5">
+        <div class="pip vtile" data-pip data-threshold="0.5" data-dz>
           <img src="media/brandon-talk.jpg" width="540" height="960" alt="Brandon talking to the camera in his office" loading="lazy" decoding="async">
           <video muted playsinline preload="none" data-captions data-once aria-hidden="true" tabindex="-1">
             <source data-src="media/brandon-talk.mp4" type="video/mp4">
@@ -1594,6 +1665,7 @@ html.lenis,html.lenis body{height:auto}
 </div>
 <p id="nt" hidden>Opens in a new tab</p>
 
+<script>/* dissolve: the whole page has parsed, so every fade target is watched without waiting on deferred scripts */window.__dzScan&&window.__dzScan()</script>
 <script>
 /* BUILD: functional behavior only. All animation lives in #motion below. */
 (function(){
@@ -1603,7 +1675,9 @@ html.lenis,html.lenis body{height:auto}
   var $$=function(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))};
   var RM=matchMedia('(prefers-reduced-motion: reduce)');
   var conn=navigator.connection;var saveData=!!(conn&&conn.saveData);
-  var canAuto=function(){return !RM.matches&&!saveData};
+  /* ?motion=reduce previews Reduce Motion in any browser, so its clips wait for a tap as they do there */
+  var calm=/[?&]motion=reduce(&|$)/.test(location.search);
+  var canAuto=function(){return !RM.matches&&!saveData&&!calm};
   var hasIO='IntersectionObserver' in window;
   var desk=matchMedia('(min-width: 900px)');
   var wide=matchMedia('(min-width: 1024px)');
