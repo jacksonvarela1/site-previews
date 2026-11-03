@@ -5,33 +5,35 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Centerton Food Trucks Park | Happiness on Wheels</title>
-<meta name="description" content="Centerton Food Trucks Park at 714 W Centerton Blvd, right beside Harps. Dine in, take out or get it delivered.">
+<meta name="description" content="Every truck and every menu at Centerton Food Trucks Park, right beside Harps in Centerton, AR. Tacos, papas asadas, fried rice, boba, paninis and more trucks on the way.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jacksonvarela1.github.io/site-previews/centerton-food-trucks/">
-<meta property="og:title" content="Centerton Food Trucks Park | Happiness on Wheels">
-<meta property="og:description" content="714 W Centerton Blvd, right beside Harps. Dine in, take out or get it delivered.">
+<meta property="og:title" content="Centerton Food Trucks Park | Every truck, every menu">
+<meta property="og:description" content="Who's serving and what's on the menu at Centerton Food Trucks Park, right beside Harps. Tacos, fried rice, boba and more trucks on the way.">
 <meta property="og:image" content="https://jacksonvarela1.github.io/site-previews/centerton-food-trucks/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Website preview for Centerton Food Trucks Park in Centerton, Arkansas">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="brand/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=Patrick+Hand&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Patrick+Hand&display=swap">
 <style>
 :root{
   --ink:#1c1b1d;--asphalt:#2b2a2e;--paper:#ffffff;--concrete:#eef1f4;--sky:#9cc6ea;
-  --blue:#186fbc;--orange:#f68525;--red:#d2373a;--yellow:#f9e236;--muted:#55565c;
+  --blue:#186fbc;--orange:#f68525;--red:#d2373a;--yellow:#f9e236;--muted:#55565c;--green:#1f8a4c;
   --display:'Barlow Semi Condensed','Arial Narrow',Arial,sans-serif;
   --body:'Barlow',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
   --hand:'Patrick Hand','Comic Sans MS','Segoe Print',cursive;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body)}
 img{max-width:100%;display:block}
 a{color:inherit}
-a:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
 .skip{position:absolute;left:-999px;top:0}
 .skip:focus{left:16px;top:56px;z-index:200;background:var(--ink);color:#fff;padding:8px 12px}
 #preview-bar{position:sticky;top:0;z-index:100;padding:8px 16px;text-align:center;background:var(--ink);color:#fff;font:500 13px/1.45 system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
@@ -42,7 +44,6 @@ header{border-bottom:1px solid #e3e5ea}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand img{height:62px;width:auto}
-.brand span{font:800 19px/1 var(--display);letter-spacing:.02em;text-transform:uppercase}
 .links{display:flex;gap:26px;font:600 15px var(--body)}
 .links a{text-decoration:none;padding:6px 0;border-bottom:3px solid transparent}
 .links a:hover{border-color:var(--orange)}
@@ -51,6 +52,11 @@ header{border-bottom:1px solid #e3e5ea}
 .btn.sun{background:var(--yellow);color:var(--ink);border-color:var(--ink)}
 .btn.ghost{background:transparent;color:var(--ink)}
 .btn svg{width:18px;height:18px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
+.dot.serving{background:var(--green)}
+.dot.coming{background:var(--orange)}
+.dot.check{background:#fff;box-shadow:inset 0 0 0 2px var(--muted)}
+.dot.open{background:var(--yellow);box-shadow:inset 0 0 0 1.5px var(--ink)}
 
 .hero{position:relative;overflow:hidden;padding:56px 0 72px}
 .hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
@@ -61,8 +67,9 @@ h1 .wheels{display:block;font-family:var(--hand);text-transform:none;font-weight
 .lede strong{color:var(--ink)}
 .modes{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 0;padding:0;list-style:none}
 .modes li{font:700 16px/1 var(--display);padding:10px 16px;border:2px solid var(--ink);border-radius:999px;display:flex;gap:8px;align-items:center}
-.modes li i{width:10px;height:10px;border-radius:50%;display:inline-block}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.dir{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:4px 0;font-weight:700;font-size:16px;text-underline-offset:4px;text-decoration-thickness:2px}
+.dir svg{width:18px;height:18px;color:var(--red)}
 .burst{position:relative;aspect-ratio:1;max-width:600px;justify-self:center;width:100%;margin:0}
 .burst svg.rays{position:absolute;inset:-12%;width:124%;height:124%;animation:spin 1.4s cubic-bezier(.2,.8,.2,1) both}
 .burst img{position:relative;height:auto;aspect-ratio:1;object-fit:cover;width:86%;margin:7%;border-radius:50%;border:6px solid var(--ink);background:#fff}
@@ -73,64 +80,211 @@ h1 .wheels{display:block;font-family:var(--hand);text-transform:none;font-weight
 .ribbon p{margin:0;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;font:700 22px/1.2 var(--display);text-transform:uppercase;letter-spacing:.03em}
 .ribbon span:nth-child(1){color:var(--yellow)}.ribbon span:nth-child(2){color:var(--orange)}.ribbon span:nth-child(3){color:var(--sky)}
 
-section{padding:88px 0}
+section{padding:88px 0;scroll-margin-top:var(--bar-h,56px)}
 h2{font:800 clamp(40px,5.4vw,68px)/.95 var(--display);text-transform:uppercase;margin:0 0 18px}
 h3{font:800 28px/1 var(--display);text-transform:uppercase;margin:0 0 10px}
 .sub{color:var(--muted);max-width:36em;margin:0}
 
-.how-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;border:3px solid var(--ink);border-radius:22px;overflow:hidden}
-.mode{padding:34px 30px 36px}
-.mode+.mode{border-left:3px solid var(--ink)}
-.mode .chip{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;margin-bottom:20px;border:3px solid var(--ink)}
-.mode .chip svg{width:28px;height:28px}
-.mode p{margin:0;color:var(--muted)}
-.m1 .chip{background:var(--yellow)}.m2 .chip{background:var(--orange)}.m3 .chip{background:var(--sky)}
+/* Who's here */
+.tier{margin-top:44px}
+.tier-h{display:flex;align-items:center;gap:10px;font-size:26px;margin:0}
+.tier-h .dot{width:14px;height:14px}
+.tier-h small{font:600 15px/1 var(--body);text-transform:none;color:var(--muted)}
+.tier-note{color:var(--muted);margin:8px 0 18px;font-size:16px}
+.trucks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:18px}
+.truck{border:3px solid var(--ink);border-radius:18px;padding:18px 20px 16px;display:flex;flex-direction:column;gap:6px;background:#fff;box-shadow:6px 6px 0 var(--yellow);transition:transform .18s ease,box-shadow .18s ease}
+.truck:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--yellow)}
+.tier-coming .truck{box-shadow:6px 6px 0 var(--orange)}
+.tier-coming .truck:hover{box-shadow:8px 8px 0 var(--orange)}
+.tier-check .tier-note{margin-bottom:0}
+.tier-check .tier-note a{display:inline-block;padding:2px 0;font-weight:700;color:var(--ink);text-underline-offset:4px;text-decoration-thickness:2px;text-decoration-color:var(--orange)}
+.t-name{font:800 23px/1.02 var(--display);text-transform:uppercase;margin:0}
+.t-cuisine{margin:0;color:var(--muted);font-size:15.5px;line-height:1.45}
+.t-hours{margin:auto 0 0;padding-top:8px;font-size:14.5px;font-weight:600;line-height:1.4}
+.t-act{margin:8px 0 0;display:flex;gap:6px 16px;flex-wrap:wrap;font-weight:700;font-size:15px}
+.t-act a{display:inline-block;padding:3px 0;text-underline-offset:4px;text-decoration-thickness:2px}
+#preview-bar a{display:inline-block;padding:4px 0}
+.mc-empty a{display:inline-block;padding:2px 0}
+.t-act .see{text-decoration-color:var(--orange)}
+.t-act .ext{color:var(--muted);font-weight:600}
 
+/* Menus */
+.menus{background:var(--concrete)}
+.menu-find{margin-top:26px}
+.menu-tools{margin-top:12px;padding:10px 0;background:var(--concrete);z-index:40}
+.js .menu-tools{position:sticky;top:var(--bar-h,0px)}
+.js .menu-tools.stuck{box-shadow:0 10px 14px -12px rgba(28,27,29,.45)}
+.search{position:relative;max-width:560px}
+.search input{width:100%;font:500 17px/1.2 var(--body);padding:13px 18px 13px 48px;border:2.5px solid var(--ink);border-radius:999px;background:#fff;color:var(--ink);-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:#74757b}
+.search svg{position:absolute;left:17px;top:50%;width:20px;height:20px;transform:translateY(-50%);pointer-events:none}
+.mcount{margin:10px 0 0;font-size:14px;font-weight:600;color:var(--muted);min-height:0}
+.mcount:empty{display:none}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:2px 16px 4px}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:2px solid var(--ink);border-radius:999px;background:#fff;font:700 15px/1 var(--display);letter-spacing:.02em;text-decoration:none;white-space:nowrap;transition:background .15s ease,color .15s ease}
+.chips a:hover{background:var(--yellow)}
+.chips a[aria-current="true"]{background:var(--ink);color:#fff}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:24px;margin-top:16px;align-items:start}
+.menu-card{background:#fff;border:3px solid var(--ink);border-radius:22px;overflow:hidden;scroll-margin-top:calc(var(--bar-h,0px) + var(--tools-h,0px) + 14px)}
+.mc-head{padding:22px 24px 18px;border-bottom:3px solid var(--ink)}
+.t1 .mc-head{background:var(--yellow)}.t2 .mc-head{background:var(--orange)}.t3 .mc-head{background:var(--sky)}
+.badge{display:inline-flex;align-items:center;gap:7px;font:700 12.5px/1 var(--body);text-transform:uppercase;letter-spacing:.09em;background:var(--ink);color:#fff;padding:6px 11px;border-radius:999px;margin:0 0 12px}
+.badge.serving::before{content:"";width:8px;height:8px;border-radius:50%;background:#5fe08f}
+.badge.coming{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.badge.check{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.mc-head h3{font-size:clamp(26px,3vw,32px);line-height:.98;margin:0 0 8px}
+.mc-cuisine{margin:0;font-weight:500;line-height:1.4}
+.mc-tag{font:400 22px/1.2 var(--hand);margin:8px 0 0}
+.mc-hours{margin:10px 0 0;font-size:15px;font-weight:700;line-height:1.4}
+.mc-asof{margin:6px 0 0;font-size:14px;font-weight:600;line-height:1.4}
+.mc-badges{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+.mc-badges .badge{margin:0}
+.pill-old{margin:0;font:700 12.5px/1 var(--body);text-transform:uppercase;letter-spacing:.09em;padding:6px 11px;border-radius:999px;background:#fff;color:#a8231f;box-shadow:inset 0 0 0 2px #a8231f}
+.earlier{grid-column:1/-1;border:3px dashed var(--ink);border-radius:22px;background:#fff}
+.earlier>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:4px 18px;align-items:center;padding:20px 24px;border-radius:19px}
+.earlier>summary::-webkit-details-marker{display:none}
+.earlier>summary::after{content:"Show";grid-row:1/3;grid-column:2;font:700 16px/1 var(--display);letter-spacing:.02em;padding:11px 18px;border:2px solid var(--ink);border-radius:999px;background:#fff}
+.earlier[open]>summary::after{content:"Hide"}
+.earlier>summary:hover::after{background:var(--yellow)}
+.earlier>summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.ea-h{font:800 24px/1.05 var(--display);text-transform:uppercase}
+.ea-sub{color:var(--muted);font-size:15.5px;line-height:1.45}
+.earlier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:24px;padding:4px 20px 20px;align-items:start}
+.mc-body{position:relative;padding:4px 24px 10px}
+.mc-grp{padding:16px 0 8px}
+.mc-grp+.mc-grp{border-top:1.5px dashed #cfd3da}
+.mc-grp h4{font:800 15px/1 var(--display);text-transform:uppercase;letter-spacing:.11em;color:var(--blue);margin:2px 0 12px}
+.grp-note{font-size:14px;line-height:1.45;color:var(--muted);margin:-4px 0 12px}
+.items{list-style:none;margin:0;padding:0;display:grid;gap:13px}
+.it-row{display:flex;align-items:baseline;gap:8px}
+.it-name{font-weight:600;font-size:16.5px;line-height:1.3}
+.it-row.priced::after{content:"";order:1;flex:1 1 16px;min-width:16px;border-bottom:2px dotted #b6bac3;transform:translateY(-5px)}
+.it-price{order:2}
+.it-price{font:700 18px/1 var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.it-desc{margin:3px 0 0;font-size:14.5px;line-height:1.45;color:var(--muted)}
+.opts{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.opts li{font-size:14px;line-height:1.2;padding:5px 10px;border-radius:999px;background:var(--concrete);box-shadow:inset 0 0 0 1.5px #d3d7de}
+.opts b{font:700 15px/1 var(--display);margin-left:2px}
+.mc-empty{padding:18px 0 14px}
+.mc-empty p{margin:0}
+.mc-foot{padding:14px 24px 18px;border-top:1.5px solid #e3e5ea;background:#fafbfc;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.mc-src{margin:0}
+.mc-src a,.mc-links a{display:inline-block;padding:4px 0;color:var(--ink);font-weight:600;text-underline-offset:3px}
+.mc-links{margin:6px 0 0;display:flex;gap:6px 16px;flex-wrap:wrap}
+.more{display:none}
+.js .menu-card.clamp:not(.open) .mc-body{max-height:31rem;overflow:hidden}
+.js .menu-card.clamp:not(.open) .mc-body::after{content:"";position:absolute;inset:auto 0 0;height:96px;background:linear-gradient(rgba(255,255,255,0),#fff 80%)}
+.js .menu-card.clamp .more{display:flex;justify-content:center;width:calc(100% - 48px);margin:4px 24px 18px;padding:12px 16px;border:2px solid var(--ink);border-radius:999px;background:#fff;color:var(--ink);font:700 16px/1 var(--display);letter-spacing:.02em;cursor:pointer;transition:background .15s ease}
+.js .menu-card.clamp .more:hover{background:var(--yellow)}
+.js .filtering .menu-card.clamp .mc-body{max-height:none;overflow:visible}
+.js .filtering .menu-card .mc-body::after,.js .filtering .menu-card .more{display:none}
+.menu-empty{margin:20px 0 0;padding:22px 24px;border:3px dashed var(--ink);border-radius:18px;background:#fff;font-weight:600}
+.updates{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;background:#fff;border:3px solid var(--ink);border-radius:22px;padding:26px 28px;box-shadow:8px 8px 0 var(--yellow)}
+.updates .chip{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;border:3px solid var(--ink);background:var(--sky)}
+.updates .chip svg{width:26px;height:26px}
+.updates h3{margin:4px 0 8px}
+.updates p{margin:0;max-width:44em}
+.updates p+p{margin-top:8px;color:var(--muted);font-size:15px}
+.updates p.send{margin-top:12px;color:var(--ink);font-size:15.5px}
+.updates .send a{display:inline-block;padding:4px 0;font-weight:700;text-underline-offset:3px}
+
+/* Food photos */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:250px;gap:14px;margin:34px 0 0}
+.gallery figure{margin:0;border-radius:18px;overflow:hidden;border:3px solid var(--ink);background:var(--concrete)}
+.gallery .wide{grid-column:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery .top img{object-position:50% 20%}
+.photo-credit{margin:14px 0 0;font-size:14px;color:var(--muted)}
+
+/* News */
 .sign{background:var(--concrete)}
 .sign-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
-.marquee{background:var(--asphalt);border-radius:18px;padding:40px 28px;text-align:center;box-shadow:inset 0 0 0 6px #3a393e}
-.marquee b{display:block;font:800 clamp(40px,6vw,74px)/1 var(--display);color:#fff;letter-spacing:.06em}
-.marquee em{display:block;font:700 clamp(22px,3vw,34px)/1.2 var(--display);font-style:normal;color:#ffc66a;letter-spacing:.08em;margin-top:10px;text-shadow:0 0 18px rgba(255,170,60,.65)}
-.bulbs{display:flex;justify-content:space-between;margin-top:22px}
-.bulbs i{width:10px;height:10px;border-radius:50%;background:#ffd27f;box-shadow:0 0 10px #ffb84d;animation:glow 2.4s ease-in-out infinite}
-.bulbs i:nth-child(even){animation-delay:1.2s}
-@keyframes glow{50%{opacity:.35}}
+.timeline{list-style:none;margin:30px 0 0 8px;padding:0;border-left:3px solid var(--ink)}
+.timeline li{display:grid;grid-template-columns:80px 1fr;gap:14px;padding:9px 0 9px 22px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-10px;top:15px;width:17px;height:17px;border-radius:50%;background:var(--yellow);box-shadow:inset 0 0 0 3px var(--ink)}
+.timeline li:last-child::before{background:var(--orange)}
+.timeline b{font:800 19px/1.25 var(--display);text-transform:uppercase}
+.follow{margin-top:34px;padding-top:26px;border-top:2px solid #d3d7de}
+.follow p{margin:0 0 14px;font:400 25px/1.2 var(--hand)}
+.follow small{display:block;margin-top:12px;font-size:14px;color:var(--muted)}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+.sign-pic{margin:0}
+.sign-pic img{width:100%;height:auto;border-radius:20px;border:4px solid var(--ink);box-shadow:8px 8px 0 var(--orange);background:#16233f}
+.sign-pic figcaption{margin:16px 0 0;font-size:14px;color:var(--muted)}
+.sign-cap{margin:10px 0 0;font:400 24px/1.2 var(--hand)}
 
-.follow-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
-.count{font:800 clamp(64px,10vw,120px)/.9 var(--display);color:var(--blue);margin:0}
-.count small{display:block;font:400 26px/1.2 var(--hand);color:var(--ink);margin-top:8px;max-width:12em}
-.socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-
+/* Visit */
 .visit{background:var(--ink);color:#fff}
 .visit .sub{color:#c9cbd2}
 .visit-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:stretch}
 .addr{font:700 30px/1.15 var(--display);margin:24px 0 6px}
-.near{font:400 24px var(--hand);color:var(--yellow);margin:0 0 28px}
+.near{font:400 24px var(--hand);color:var(--yellow);margin:0 0 22px}
+.park-hours{margin:0;font:700 22px/1.25 var(--display)}
+.park-hours+p{margin:4px 0 0;color:#c9cbd2;font-size:16px}
+.amen{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:8px;font-size:16px}
+.amen li{padding-left:26px;position:relative;line-height:1.45}
+.amen li::before{content:"";position:absolute;left:0;top:.42em;width:13px;height:13px;border-radius:50%;background:var(--yellow)}
+.visit .actions{margin-top:28px}
 .visit .btn{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
 .visit .btn.ghost{background:transparent;color:#fff;border-color:#fff}
-.contact{margin-top:34px;padding-top:24px;border-top:1px solid #45444a;display:grid;gap:8px;font-size:16px;overflow-wrap:anywhere}
+.contact{margin-top:30px;padding-top:22px;border-top:1px solid #45444a;display:grid;gap:8px;font-size:16px;overflow-wrap:anywhere}
 .contact a{color:#fff;text-underline-offset:3px}
+.vendor{margin-top:24px;padding:16px 18px;border:2px dashed #6b6a70;border-radius:16px;font-size:16px;color:#dfe0e4}
+.vendor b{color:#fff}
+.vendor a{color:var(--yellow);display:inline-block;padding:4px 0}
 .map{border-radius:20px;overflow:hidden;border:4px solid var(--yellow);min-height:360px;background:#2b2a2e}
+.map{position:relative}
 .map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+.map-open{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:14px;padding:24px;text-align:center;text-decoration:none;color:#fff;background:linear-gradient(118deg,transparent 44%,#3c3b41 44%,#3c3b41 52%,transparent 52%),linear-gradient(90deg,rgba(255,255,255,.05) 2px,transparent 2px) 0 0/46px 46px,linear-gradient(rgba(255,255,255,.05) 2px,transparent 2px) 0 0/46px 46px,#2b2a2e}
+.map-open svg{width:64px;height:64px;color:var(--yellow);filter:drop-shadow(0 6px 0 rgba(0,0,0,.35));transition:transform .2s ease}
+.map-open:hover svg{transform:translateY(-4px)}
+.map-open b{font:800 24px/1 var(--display);text-transform:uppercase;letter-spacing:.02em;background:var(--yellow);color:var(--ink);padding:13px 22px;border-radius:999px}
+.map-open span{color:#c9cbd2;font-size:16px}
 
 footer{padding:26px 0 34px;font-size:14px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .wrap{display:flex;justify-content:space-between;gap:8px 24px;flex-wrap:wrap}
 
+@media (min-width:861px){
+  .chips{flex-wrap:wrap;overflow:visible;margin:0;padding:0}
+}
 @media (max-width:860px){
   .links{display:none}
   .hero{padding:32px 0 56px}
-  .hero-grid,.sign-grid,.visit-grid,.follow-grid{grid-template-columns:1fr}
-  .burst{max-width:420px;order:-1}
-  .how-grid{grid-template-columns:1fr}
-  .mode+.mode{border-left:0;border-top:3px solid var(--ink)}
+  .hero-grid,.sign-grid,.visit-grid{grid-template-columns:1fr}
+  .burst{max-width:280px;margin-top:8px}
   section{padding:64px 0}
   .ribbon p{font-size:18px;gap:14px}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px;gap:10px}
+  .updates{grid-template-columns:1fr;padding:22px 20px;box-shadow:6px 6px 0 var(--yellow)}
+  .mc-head{padding:20px 18px 16px}
+  .mc-body{padding:2px 18px 8px}
+  .mc-foot{padding:14px 18px 16px}
+  .js .menu-card.clamp .more{width:calc(100% - 36px);margin:4px 18px 16px}
+  .menu-tools{padding:4px 0}
+  .chips{padding:2px 16px}
+  .chips a{padding:6px 12px;font-size:14.5px}
+  .search input{padding-top:12px;padding-bottom:12px}
+  .earlier>summary{grid-template-columns:1fr;padding:18px 18px;gap:8px}
+  .earlier>summary::after{grid-row:auto;grid-column:1;justify-self:start}
+  .earlier-grid{padding:0 12px 12px;gap:18px}
 }
 @media (max-width:420px){
-  .brand span{font-size:16px}
   .brand img{height:50px}
   .nav .btn{padding:11px 15px;font-size:15px}
-  #preview-bar{font-size:12px;padding:6px 12px}
+  #preview-bar{font-size:12px;line-height:1.3;padding:3px 12px}
+  #preview-bar a{padding:5px 0}
+  .timeline li{grid-template-columns:1fr;gap:2px}
+  .it-name{font-size:16px}
+}
+@media (max-width:600px){
+  .trucks{gap:12px}
+  .truck{padding:14px 16px 12px;gap:4px;box-shadow:4px 4px 0 var(--yellow)}
+  .tier-coming .truck{box-shadow:4px 4px 0 var(--orange)}
+  .t-name{font-size:21px}
+  .t-hours{padding-top:4px}
+  .t-act{margin-top:4px}
+  .tier{margin-top:32px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -144,8 +298,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Centerton Food Trucks Park, back to top"><img src="brand/logo-wide.jpg" alt="Centerton Food Trucks logo: a food truck in front of a rainbow sunburst, Happiness On Wheels" width="695" height="325"></a>
-    <nav class="links" aria-label="Main"><a href="#how">Eat here</a><a href="#sign">New sign</a><a href="#follow">Who's serving</a><a href="#visit">Find us</a></nav>
-    <a class="btn sun" href="https://www.google.com/maps/dir/?api=1&amp;destination=714+W+Centerton+Blvd,+Centerton,+AR+72719">Directions</a>
+    <nav class="links" aria-label="Main"><a href="#trucks">Who's here</a><a href="#menus">Menus</a><a href="#news">What's new</a><a href="#visit">Find us</a></nav>
+    <a class="btn sun" href="#menus">Every menu</a>
   </div>
 </header>
 <main id="main">
@@ -154,67 +308,100 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div>
         <p class="kicker">Centerton Food Trucks Park</p>
         <h1>Come hungry. <span class="wheels">Happiness on Wheels!</span></h1>
-        <p class="lede">A food truck park at <strong>714 W Centerton Blvd</strong>, right beside Harps. Grab a table and eat here, take it home, or have it delivered.</p>
-        <ul class="modes" aria-label="Ways to eat">
-          <li><i style="background:var(--yellow)"></i>Dine in</li>
-          <li><i style="background:var(--orange)"></i>Takeout</li>
-          <li><i style="background:var(--sky)"></i>Delivery</li>
-        </ul>
+        <p class="lede">Food trucks under one new roof at <strong>700 W Centerton Blvd</strong>, right beside Harps. Tacos and papas asadas, fried rice and boba, with more trucks on the way.</p>
+        <ul class="modes" aria-label="The park today"><!-- BUILD:HEROSTATS --><li><i class="dot serving" aria-hidden="true"></i>3 trucks serving now</li><li><i class="dot coming" aria-hidden="true"></i>3 more coming soon</li><li><i class="dot open" aria-hidden="true"></i>Park hours 11am to 8pm</li><!-- /BUILD:HEROSTATS --></ul>
         <div class="actions">
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=714+W+Centerton+Blvd,+Centerton,+AR+72719"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Get directions</a>
-          <a class="btn ghost" href="#follow">See who's serving</a>
+          <a class="btn" href="#menus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 3v8a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V3M8 13v8M17 21V3c-2.2 0-4 2.5-4 6v4h4"/></svg>See every menu</a>
+          <a class="btn ghost" href="#trucks">See who's serving</a>
         </div>
+        <a class="dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=700+W+Centerton+Blvd,+Centerton,+AR+72719"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg>Get directions</a>
       </div>
       <figure class="burst">
         <svg class="rays" viewBox="-100 -100 200 200" aria-hidden="true">
           <defs><path id="r" d="M-6 -62 L6 -62 L10 -96 L-10 -96Z"/></defs>
           <use href="#r" fill="#186fbc"/><use href="#r" fill="#f68525" transform="rotate(24)"/><use href="#r" fill="#f9e236" transform="rotate(48)"/><use href="#r" fill="#d2373a" transform="rotate(72)"/><use href="#r" fill="#186fbc" transform="rotate(96)"/><use href="#r" fill="#f68525" transform="rotate(120)"/><use href="#r" fill="#f9e236" transform="rotate(144)"/><use href="#r" fill="#d2373a" transform="rotate(168)"/><use href="#r" fill="#186fbc" transform="rotate(192)"/><use href="#r" fill="#f68525" transform="rotate(216)"/><use href="#r" fill="#f9e236" transform="rotate(240)"/><use href="#r" fill="#d2373a" transform="rotate(264)"/><use href="#r" fill="#186fbc" transform="rotate(288)"/><use href="#r" fill="#f68525" transform="rotate(312)"/><use href="#r" fill="#f9e236" transform="rotate(336)"/>
         </svg>
-        <img src="brand/photo1.jpg" alt="The Centerton Food Truck Park pavilion: a lit sign over picnic tables, with colorful food trailers parked along both sides" width="960" height="960" fetchpriority="high">
-        <figcaption class="credit">Photos: Centerton Food Trucks on Facebook</figcaption>
+        <img src="photos/tacos-hero.webp" alt="Street tacos with cilantro and lime next to rice and refried beans in a to-go box, from the park's photo album" width="960" height="960" fetchpriority="high">
+        <figcaption class="credit">Photo: Centerton Food Trucks Park on Facebook</figcaption>
       </figure>
     </div>
   </div>
 
-  <div class="ribbon" aria-hidden="true"><div class="wrap"><p><span>Dine in</span><span>Takeout</span><span>Delivery</span><span>Beside Harps</span></p></div></div>
+  <div class="ribbon" aria-hidden="true"><div class="wrap"><p><span>Supporting local food</span><span>Supporting local dreams</span><span>Happiness on wheels</span><span>Beside Harps</span></p></div></div>
 
-  <section id="how">
+  <section id="trucks">
     <div class="wrap">
-      <h2>Three ways to eat</h2>
-      <p class="sub">However your day is going, the park has a way to fit it in.</p>
-      <div class="how-grid">
-        <div class="mode m1"><div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 10h18M5 10l-1 9M19 10l1 9M7 14h10M12 10V5"/></svg></div><h3>Dine in</h3><p>Grab a picnic table at the park and make a night of it.</p></div>
-        <div class="mode m2"><div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 8h14l-1.5 12h-11zM9 8V6a3 3 0 0 1 6 0v2"/></svg></div><h3>Takeout</h3><p>Get it to go and have dinner home while it's hot.</p></div>
-        <div class="mode m3"><div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="6.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/><path d="M9 17.5h6M3 13h10V7h4l4 5v5.5h-1"/></svg></div><h3>Delivery</h3><p>Staying in tonight? Get it delivered.</p></div>
-      </div>
+      <h2>Who's here</h2>
+      <p class="sub">Every truck at the park: who is serving now and who is on the way. Hours come from each truck's own page.</p>
+      <!-- BUILD:LINEUP --><div class="tier tier-serving"><h3 class="tier-h"><i class="dot serving" aria-hidden="true"></i>Serving now <small>3 trucks</small></h3><p class="tier-note">Back at the park since Oct 15, after the city's temporary approval.</p><ul class="trucks"><li class="truck"><p class="t-name">La Fogata Tacos y Papas Asadas</p><p class="t-cuisine">Mesquite-grilled carne asada tacos, papas asadas and Colombian specials</p><p class="t-hours">Mon to Sat, 11am to 2pm and 5pm to 8pm. Closed Sunday.</p><p class="t-act"><a class="see" href="#m-la-fogata">Jump to its menu</a> <a class="ext" href="https://fogatanwa.com/">fogatanwa.com</a></p></li><li class="truck"><p class="t-name">DD&amp;F Mexican Grill</p><p class="t-cuisine">Mexican grill: tacos, burritos, quesadillas, tortas, fajitas and burgers</p><p class="t-hours">11am to 8pm. The park posted Oct 18 that DD&amp;F is open Sundays.</p><p class="t-act"><a class="see" href="#m-ddf-mexican-grill">Jump to its menu</a> <a class="ext" href="https://www.facebook.com/profile.php?id=61556519872842">DD&amp;F on Facebook</a></p></li><li class="truck"><p class="t-name">Lucky Tasty Asian Food</p><p class="t-cuisine">Asian plates: fried rice, lo mein, pad thai, orange chicken and boba</p><p class="t-hours">11am to 7pm. Closures are posted on its page.</p><p class="t-act"><a class="see" href="#m-lucky-tasty">Jump to its menu</a> <a class="ext" href="https://www.facebook.com/profile.php?id=100088201572285">Lucky Tasty on Facebook</a></p></li></ul></div><div class="tier tier-coming"><h3 class="tier-h"><i class="dot coming" aria-hidden="true"></i>Coming soon <small>3 trucks</small></h3><p class="tier-note">Announced by the park this fall. <span lang="es">&iexcl;Muy pronto!</span></p><ul class="trucks"><li class="truck"><p class="t-name">LOADED</p><p class="t-cuisine">American comfort food: loaded fries, grilled cheese, smash burgers and wings</p><p class="t-hours">Opening soon. Permits are in progress.</p><p class="t-act"><a class="see" href="#m-loaded">Jump to its menu</a> <a class="ext" href="https://www.facebook.com/photo.php?fbid=1440498161603327">The park&#x27;s LOADED post</a></p></li><li class="truck"><p class="t-name">IncaLicious</p><p class="t-cuisine">Home style Peruvian food, 100% halal</p><p class="t-hours">Opening soon</p><p class="t-act"><a class="see" href="#m-incalicious">Jump to its menu</a> <a class="ext" href="https://www.facebook.com/photo.php?fbid=1434053508914459">The park&#x27;s IncaLicious post</a></p></li><li class="truck"><p class="t-name">Silk Road Kitchen</p><p class="t-cuisine">Uzbek and Mediterranean favorites, all halal</p><p class="t-hours">Opening in a few weeks</p><p class="t-act"><a class="see" href="#m-silk-road-kitchen">Jump to its menu</a> <a class="ext" href="https://www.facebook.com/photo.php?fbid=1440500271603116">The park&#x27;s Silk Road post</a></p></li></ul></div><div class="tier tier-check"><h3 class="tier-h"><i class="dot check" aria-hidden="true"></i>Earlier lineup <small>3 trucks</small></h3><p class="tier-note">Also on the park's list before the rebuild: <a class="see" href="#m-panino-co">Panino &amp; Co</a>, <a class="see" href="#m-okie-dokie">Okie Dokie</a> and <a class="see" href="#m-la-loteria">La Loteria</a>. Check their pages before you go.</p></div><!-- /BUILD:LINEUP -->
     </div>
   </section>
 
-  <section class="sign" id="sign">
-    <div class="wrap sign-grid">
-      <div>
-        <h2>The new sign is up</h2>
-        <p class="sub">Coming down Centerton Blvd, watch for the new sign right beside Harps. That's your turn.</p>
-      </div>
-      <div class="marquee" aria-hidden="true">
-        <b>CENTERTON</b>
-        <em>FOOD TRUCK PARK</em>
-        <div class="bulbs"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="follow">
-    <div class="wrap follow-grid">
-      <div>
-        <h2>Who's serving today?</h2>
-        <p class="sub">The park posts its news on Instagram and Facebook. Follow along so you know what's cooking before you head over.</p>
-        <div class="socials">
-          <a class="btn" href="https://www.instagram.com/centertonfoodtruckspark/">Follow on Instagram</a>
-          <a class="btn ghost" href="https://www.facebook.com/centertonfoodtrucks/">Follow on Facebook</a>
+  <section class="menus" id="menus">
+    <div class="wrap">
+      <h2>Every menu in one place</h2>
+      <p class="sub">Each truck's menu, the way the truck posted it. Search for a dish, or tap a truck to jump to its menu.</p>
+      <div class="menu-find">
+        <div class="search" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input type="search" id="menu-q" placeholder="Search: tacos, boba, pizza" aria-label="Search every menu" autocomplete="off">
         </div>
       </div>
-      <p class="count">4,806<small>people follow the park on Facebook</small></p>
+      <div class="menu-tools">
+        <nav class="chips" aria-label="Jump to a truck's menu"><!-- BUILD:CHIPS --><a href="#menus" data-truck="all" aria-current="true">All trucks</a><a href="#m-la-fogata" data-truck="la-fogata"><i class="dot serving" aria-hidden="true"></i>La Fogata</a><a href="#m-ddf-mexican-grill" data-truck="ddf-mexican-grill"><i class="dot serving" aria-hidden="true"></i>DD&amp;F</a><a href="#m-lucky-tasty" data-truck="lucky-tasty"><i class="dot serving" aria-hidden="true"></i>Lucky Tasty</a><a href="#m-loaded" data-truck="loaded"><i class="dot coming" aria-hidden="true"></i>LOADED</a><a href="#m-incalicious" data-truck="incalicious"><i class="dot coming" aria-hidden="true"></i>IncaLicious</a><a href="#m-silk-road-kitchen" data-truck="silk-road-kitchen"><i class="dot coming" aria-hidden="true"></i>Silk Road</a><a href="#earlier" data-truck="check"><i class="dot check" aria-hidden="true"></i>Earlier lineup</a><!-- /BUILD:CHIPS --></nav>
+      </div>
+      <p class="mcount" id="menu-count" aria-live="polite"></p>
+      <p class="menu-empty" id="menu-empty" hidden>No dish matches that yet. Try tacos, chicken, fries or boba.</p>
+      <div class="menu-grid"><!-- BUILD:MENUS --><article class="menu-card t1" id="m-la-fogata" data-truck="la-fogata" data-status="serving" data-items="20" aria-labelledby="h-la-fogata"><header class="mc-head"><div class="mc-badges"><p class="badge serving">Serving now</p></div><h3 id="h-la-fogata">La Fogata Tacos y Papas Asadas</h3><p class="mc-cuisine">Mesquite-grilled carne asada tacos, papas asadas and Colombian specials</p><p class="mc-hours">Mon to Sat, 11am to 2pm and 5pm to 8pm. Closed Sunday.</p><p class="mc-asof">Menu from fogatanwa.com, checked Nov 2026. Prices may change.</p></header><div class="mc-body"><div class="mc-grp"><h4>Tacos de asada</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">4 Tacos de Asada, corn tortillas</span><span class="it-price">$15.75</span></div><p class="it-desc">Yellow corn tortillas, grilled onions, charro beans, lime, cilantro and salsa</p></li><li class="it"><div class="it-row priced"><span class="it-name">3 Tacos de Asada, flour tortillas</span><span class="it-price">$15.75</span></div><p class="it-desc">With grilled onion, charro beans, salsas, lime and cilantro</p></li><li class="it"><div class="it-row priced"><span class="it-name">5 Tacos de Asada, corn tortillas</span><span class="it-price">$19.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">One Taco de Asada, corn tortilla</span><span class="it-price">$4.00</span></div><p class="it-desc">Beef or chicken</p></li></ul></div><div class="mc-grp"><h4>Papas and plates</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Papa Asada con Carne</span><span class="it-price">$22.50</span></div><p class="it-desc">1 lb grilled baked potato with butter, sour cream, cheddar and carne asada, plus 3 corn or 2 flour tortillas</p></li><li class="it"><div class="it-row priced"><span class="it-name">Combo Tacos and Papas</span><span class="it-price">$32.00</span></div><p class="it-desc">4 corn or 3 flour tacos de asada and a regular papa asada with butter, sour cream and cheddar (no meat on the potato)</p></li><li class="it"><div class="it-row priced"><span class="it-name">Sincronizada de Asada</span><span class="it-price">$15.75</span></div><p class="it-desc">Burrito size flour tortilla with carne asada, refried beans, mozzarella, cilantro and grilled onions</p></li><li class="it"><div class="it-row priced"><span class="it-name">Faji Nachos</span><span class="it-price">$19.00</span></div><p class="it-desc">Nachos with cheese, carne asada, sour cream and pico de gallo</p></li><li class="it"><div class="it-row priced"><span class="it-name">Carne Asada Fries</span><span class="it-price">$19.00</span></div><p class="it-desc">Fries with carne asada or chicken, nacho cheese, tomatoes, onions, cilantro and sour cream</p></li></ul></div><div class="mc-grp"><h4>Mexican hot dogs</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Two Mexican Hot Dogs</span><span class="it-price">$13.00</span></div><p class="it-desc">Mayo, mustard, tomatoes, onions, jalapeños and a cup of charro beans</p></li><li class="it"><div class="it-row priced"><span class="it-name">Deluxe Mexican Hot Dogs Combo</span><span class="it-price">$16.00</span></div><p class="it-desc">Two bacon-wrapped hot dogs with grilled onions, chile toreado and fries</p></li></ul></div><div class="mc-grp"><h4>Colombian specials</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Empanadas Colombianas</span><span class="it-price">$3.75</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Salchipapas</span><span class="it-price">$19.50</span></div><p class="it-desc">Fries with beef sausage, chicken and melted mozzarella, with pineapple sauce and pink sauce</p></li></ul></div><div class="mc-grp"><h4>Extras, dessert and drinks</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">French Fries</span><span class="it-price">$2.99</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Chips and Salsa</span><span class="it-price">$7.00</span></div><p class="it-desc">A bag of chips with a 6 oz salsa verde or pico de gallo</p></li><li class="it"><div class="it-row priced"><span class="it-name">Extra Meat</span><span class="it-price">$5.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Green salsa, pico de gallo or pink sauce, 4 oz cup</span><span class="it-price">$0.50</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Mojadito de Piña (pineapple cake)</span><span class="it-price">$5.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Can Sodas</span><span class="it-price">$2.00</span></div><p class="it-desc">Coke, Sprite, Dr Pepper, Diet Coke</p></li><li class="it"><div class="it-row priced"><span class="it-name">Bottle of Water</span><span class="it-price">$3.00</span></div></li></ul></div></div><footer class="mc-foot"><p class="mc-src">Menu as posted by La Fogata Tacos y Papas Asadas, November 2026. Prices may change. <a href="https://fogatanwa.com/menu">Source: fogatanwa.com/menu</a></p><p class="mc-links"><a href="https://fogatanwa.com/">fogatanwa.com</a> <a href="https://www.facebook.com/lafogatanwa">Facebook</a></p></footer></article><article class="menu-card t2" id="m-ddf-mexican-grill" data-truck="ddf-mexican-grill" data-status="serving" data-items="15" aria-labelledby="h-ddf-mexican-grill"><header class="mc-head"><div class="mc-badges"><p class="badge serving">Serving now</p><p class="pill-old">Menu posted Feb 2024</p></div><h3 id="h-ddf-mexican-grill">DD&amp;F Mexican Grill</h3><p class="mc-cuisine">Mexican grill: tacos, burritos, quesadillas, tortas, fajitas and burgers</p><p class="mc-hours">11am to 8pm. The park posted Oct 18 that DD&amp;F is open Sundays.</p><p class="mc-asof">Menu as posted Feb 2024. Prices may change.</p></header><div class="mc-body"><div class="mc-grp"><h4>Tacos and burritos</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Tacos</span></div><p class="it-desc">With onion and cilantro</p><ul class="opts"><li>Chicken (pollo) <b>$2.50</b></li><li>Chorizo <b>$2.50</b></li><li>Pastor <b>$2.50</b></li><li>Beef (asada) <b>$2.75</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">Burritos</span></div><p class="it-desc">Rice, beans, lettuce, cheese, pico and sour crema, served with rice and beans</p><ul class="opts"><li>Chicken <b>$11.75</b></li><li>Chorizo <b>$11.75</b></li><li>Pastor <b>$11.75</b></li><li>Beef (asada) <b>$13.50</b></li></ul></li></ul></div><div class="mc-grp"><h4>Quesadillas</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Quesadillas</span></div><p class="it-desc">Served with rice and beans</p><ul class="opts"><li>Chicken <b>$11.25</b></li><li>Pastor <b>$11.25</b></li><li>Chorizo <b>$11.25</b></li><li>Beef (asada) <b>$12.50</b></li></ul></li><li class="it"><div class="it-row priced"><span class="it-name">Quesabirria</span><span class="it-price">$11.50</span></div></li></ul></div><div class="mc-grp"><h4>Tortas</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Tortas</span></div><p class="it-desc">Mexican bread, mayo, lettuce, tomatoes, avocado, jalapeños, beans and cheese</p><ul class="opts"><li>Chicken <b>$12.50</b></li><li>Chorizo <b>$12.50</b></li><li>Pastor <b>$12.50</b></li><li>Beef (asada) <b>$13.50</b></li></ul></li><li class="it"><div class="it-row priced"><span class="it-name">Torta Cubana</span><span class="it-price">$16.50</span></div><p class="it-desc">Ham, sausage, chicken, beef, pastor and chorizo</p></li><li class="it"><div class="it-row priced"><span class="it-name">Birria Torta</span><span class="it-price">$12.00</span></div><p class="it-desc">Mexican bread, mayo, lettuce, tomatoes, onion and cilantro</p></li></ul></div><div class="mc-grp"><h4>Fajitas</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Fajitas</span></div><p class="it-desc">Lettuce, pico, guacamole and sour cream, served with rice and beans</p><ul class="opts"><li>Chicken (pollo) <b>$13.50</b></li><li>Beef (res) <b>$14.25</b></li><li>Mix <b>$14.50</b></li></ul></li><li class="it"><div class="it-row priced"><span class="it-name">Add chorizo</span><span class="it-price">$1.99</span></div></li></ul></div><div class="mc-grp"><h4>Hamburguesas</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Cheese Burguer</span><span class="it-price">$12.00</span></div><p class="it-desc">Burgers come with fries and a can drink</p></li><li class="it"><div class="it-row priced"><span class="it-name">Egg Burguer</span><span class="it-price">$13.50</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Chorizo Burguer</span><span class="it-price">$13.50</span></div></li></ul></div><div class="mc-grp"><h4>Drinks</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Coca-Cola</span></div><ul class="opts"><li>Can <b>$1.25</b></li><li>Bottle <b>$2.80</b></li><li>Glass <b>$3.85</b></li></ul></li><li class="it"><div class="it-row priced"><span class="it-name">Jarritos</span><span class="it-price">$3.25</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Topo Chico</span><span class="it-price">$3.25</span></div></li></ul></div></div><footer class="mc-foot"><p class="mc-src">Menu as posted by DD&amp;F Mexican Grill, February 2024. Prices may change. <a href="https://www.facebook.com/photo.php?fbid=122097880784217329">Source: DD&amp;F&#x27;s menu photo on Facebook</a></p><p class="mc-links"><a href="https://www.facebook.com/profile.php?id=61556519872842">DD&amp;F on Facebook</a></p></footer></article><article class="menu-card t3" id="m-lucky-tasty" data-truck="lucky-tasty" data-status="serving" data-items="15" aria-labelledby="h-lucky-tasty"><header class="mc-head"><div class="mc-badges"><p class="badge serving">Serving now</p><p class="pill-old">Post date not shown</p></div><h3 id="h-lucky-tasty">Lucky Tasty Asian Food</h3><p class="mc-cuisine">Asian plates: fried rice, lo mein, pad thai, orange chicken and boba</p><p class="mc-hours">11am to 7pm. Closures are posted on its page.</p><p class="mc-asof">Menu board photo, post date not shown. Prices may change.</p></header><div class="mc-body"><div class="mc-grp"><h4>Main dishes</h4><p class="grp-note">Combo orders do not include a drink.</p><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Fried Rice</span></div><ul class="opts"><li>Chicken <b>$11</b></li><li>Beef <b>$12</b></li><li>Shrimp <b>$12</b></li><li>Combo <b>$13</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">Lo Mein</span></div><ul class="opts"><li>Chicken <b>$11</b></li><li>Beef <b>$12</b></li><li>Shrimp <b>$12</b></li><li>Combo <b>$13</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">Pad Thai</span></div><ul class="opts"><li>Chicken <b>$11</b></li><li>Beef <b>$12</b></li><li>Shrimp <b>$12</b></li><li>Combo <b>$13</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">Cashew Chicken</span></div><p class="it-desc">Mild</p><ul class="opts"><li>Steam rice <b>$12</b></li><li>Fried rice <b>$13</b></li><li>Lo mein <b>$16</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">Beef and Broccoli</span></div><ul class="opts"><li>Steam rice <b>$12</b></li><li>Fried rice <b>$13</b></li><li>Lo mein <b>$16</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">Spicy Beef</span></div><ul class="opts"><li>Steam rice <b>$12</b></li><li>Fried rice <b>$13</b></li><li>Lo mein <b>$16</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">Orange Chicken</span></div><ul class="opts"><li>Steam rice <b>$11</b></li><li>Fried rice <b>$12</b></li><li>Lo mein <b>$15</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">Sesame Chicken</span></div><ul class="opts"><li>Steam rice <b>$11</b></li><li>Fried rice <b>$12</b></li><li>Lo mein <b>$15</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">General Tso Chicken</span></div><ul class="opts"><li>Steam rice <b>$11</b></li><li>Fried rice <b>$12</b></li><li>Lo mein <b>$15</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">Sweet and Sour Chicken</span></div><ul class="opts"><li>Steam rice <b>$11</b></li><li>Fried rice <b>$12</b></li><li>Lo mein <b>$15</b></li></ul></li><li class="it"><div class="it-row"><span class="it-name">Chicken Leg Quarter</span></div><ul class="opts"><li>Steam rice <b>$9</b></li><li>Fried rice <b>$10</b></li><li>Lo mein <b>$13</b></li></ul></li></ul></div><div class="mc-grp"><h4>Soup and drinks</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Egg Drop Soup</span><span class="it-price">$7</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Boba Drinks</span><span class="it-price">$5</span></div><p class="it-desc">Coconut, honeydew, mango, milk tea, mocha, strawberry, taro and watermelon</p></li><li class="it"><div class="it-row priced"><span class="it-name">All soda</span><span class="it-price">$2</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Water bottle</span><span class="it-price">$1.50</span></div></li></ul></div></div><footer class="mc-foot"><p class="mc-src">Menu board photo posted by Lucky Tasty Asian Food on Facebook (post date not shown). Seen November 2026. Prices may change. <a href="https://www.facebook.com/profile.php?id=100088201572285&amp;sk=photos">Source: Lucky Tasty&#x27;s menu board photo on Facebook</a></p><p class="mc-links"><a href="https://www.facebook.com/profile.php?id=100088201572285">Lucky Tasty on Facebook</a></p></footer></article><article class="menu-card t1" id="m-loaded" data-truck="loaded" data-status="coming" data-items="19" aria-labelledby="h-loaded"><header class="mc-head"><div class="mc-badges"><p class="badge coming">Coming soon</p></div><h3 id="h-loaded">LOADED</h3><p class="mc-cuisine">American comfort food: loaded fries, grilled cheese, smash burgers and wings</p><p class="mc-hours">Opening soon. Permits are in progress.</p><p class="mc-asof">Menu as posted by the park, Oct 2026. No prices yet.</p></header><div class="mc-body"><div class="mc-grp"><h4>Get it loaded</h4><p class="grp-note">Toppings: white queso, shredded cheese, pulled pork, beef, chicken, green onion, tomato, chili, sour cream, bacon, onions, sauteed bell peppers.</p><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Loaded Fries</span></div><p class="it-desc">Crispy fries piled high with your choice of toppings</p></li><li class="it"><div class="it-row"><span class="it-name">Loaded Mac and Cheese</span></div><p class="it-desc">Creamy macaroni and cheese with your choice of toppings</p></li><li class="it"><div class="it-row"><span class="it-name">Loaded Baked Potato</span></div><p class="it-desc">Fluffy baked potato with your choice of toppings</p></li><li class="it"><div class="it-row"><span class="it-name">Loaded Corndog</span></div><p class="it-desc">A classic corndog with your favorite toppings</p></li><li class="it"><div class="it-row"><span class="it-name">Loaded Sammich</span></div><p class="it-desc">Any crazy creation with your favorite toppings</p></li><li class="it"><div class="it-row"><span class="it-name">Loaded Grill Cheese</span></div><p class="it-desc">A specialty creation or build your own</p></li></ul></div><div class="mc-grp"><h4>Grill cheese creations</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Cheese Explosion</span></div><p class="it-desc">4 types of cheese on cheese infused sourdough</p></li><li class="it"><div class="it-row"><span class="it-name">Cheese Pizza Grill Cheese</span></div><p class="it-desc">4 cheeses, pizza sauce and Parmesan</p></li><li class="it"><div class="it-row"><span class="it-name">Pepperoni Pizza Grill Cheese</span></div><p class="it-desc">Pizza sauce, 4 cheeses and pepperoni</p></li><li class="it"><div class="it-row"><span class="it-name">Buffalo Chicken Grill Cheese</span></div><p class="it-desc">4 cheeses and a buffalo chicken mix</p></li></ul></div><div class="mc-grp"><h4>Classics</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Double Smash Burger</span></div><p class="it-desc">Two patties, 2 slices of cheese, loaded sauce and onions</p></li><li class="it"><div class="it-row"><span class="it-name">Chicken Strip Basket</span></div><p class="it-desc">3 or 5 pieces with fries and a side of gravy</p></li><li class="it"><div class="it-row"><span class="it-name">Bone-In Wings</span></div><p class="it-desc">5, 10, 15 or 20 pieces. Buffalo, BBQ, garlic parm, sweet chili, loaded sweet heat or lemon pepper</p></li><li class="it"><div class="it-row"><span class="it-name">Pulled Pork Sammich</span></div><p class="it-desc">Tender pulled pork on a bun</p></li><li class="it"><div class="it-row"><span class="it-name">Frito Pie</span></div><p class="it-desc">Fritos topped with chili and shredded cheese</p></li><li class="it"><div class="it-row"><span class="it-name">Chili Dog</span></div><p class="it-desc">All-beef hot dog with chili and shredded cheese</p></li></ul></div><div class="mc-grp"><h4>Sides, kids and dessert</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Sides</span></div><p class="it-desc">Plain baked potato, cup of chili, fries, mac and cheese, mozzarella sticks, mixed veggies</p></li><li class="it"><div class="it-row"><span class="it-name">Kids menu</span></div><p class="it-desc">Cheeseburger, 3 piece chicken tender, grill cheese or corn dog, with fries and a drink (most with a cookie)</p></li><li class="it"><div class="it-row"><span class="it-name">Dessert</span></div><p class="it-desc">Deep fried loaded Oreos and a dessert of the day</p></li></ul></div></div><footer class="mc-foot"><p class="mc-src">Menu as posted by Centerton Food Trucks Park for LOADED, October 2026. Not open yet, so no prices are posted. <a href="https://www.facebook.com/photo.php?fbid=1440498161603327">Source: the park&#x27;s menu post for LOADED</a></p><p class="mc-links"><a href="https://www.facebook.com/photo.php?fbid=1440498161603327">The park&#x27;s LOADED post</a></p></footer></article><article class="menu-card t2" id="m-incalicious" data-truck="incalicious" data-status="coming" data-items="12" aria-labelledby="h-incalicious"><header class="mc-head"><div class="mc-badges"><p class="badge coming">Coming soon</p></div><h3 id="h-incalicious">IncaLicious</h3><p class="mc-cuisine">Home style Peruvian food, 100% halal</p><p class="mc-hours">Opening soon</p><p class="mc-asof">Menu as posted by the park, Oct 2026. No prices yet.</p></header><div class="mc-body"><div class="mc-grp"><h4>Platos</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Lomo Saltado</span></div><p class="it-desc">Beef stir-fry with onions, tomatoes and fries, served with rice</p></li><li class="it"><div class="it-row"><span class="it-name">Pollo Saltado</span></div><p class="it-desc">Chicken stir-fry with onions, tomatoes and fries, served with rice</p></li><li class="it"><div class="it-row"><span class="it-name">Arroz Chaufa de Pollo</span></div><p class="it-desc">Peruvian-style chicken fried rice with egg, green onions and soy sauce</p></li><li class="it"><div class="it-row"><span class="it-name">Sándwich de Lomo Saltado</span></div><p class="it-desc">Lomo saltado on ciabatta with tomato and house mayo</p></li><li class="it"><div class="it-row"><span class="it-name">Guiso del Día</span></div><p class="it-desc">Daily homemade stew with rice: meat, chicken or vegetarian. Add frijoles or naan</p></li></ul></div><div class="mc-grp"><h4>Papas</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Salchipapa Peruana</span></div><p class="it-desc">Fries with beef sausage, house sauce, ketchup and mustard</p></li><li class="it"><div class="it-row"><span class="it-name">Lomo Papa</span></div><p class="it-desc">Fries topped with lomo saltado, house sauce and onions</p></li><li class="it"><div class="it-row"><span class="it-name">Papa a la Huancaína</span></div><p class="it-desc">Boiled potatoes in a creamy aji amarillo sauce, topped with egg and olive</p></li></ul></div><div class="mc-grp"><h4>Drinks and sauces</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Maracuyá</span></div><p class="it-desc">Passion fruit juice</p></li><li class="it"><div class="it-row"><span class="it-name">Soda</span></div><p class="it-desc">Canned sodas</p></li><li class="it"><div class="it-row"><span class="it-name">Crema de Rocoto</span></div><p class="it-desc">Salsa picante peruana</p></li><li class="it"><div class="it-row"><span class="it-name">Crema de Pollería</span></div><p class="it-desc">Salsa suave de la casa</p></li></ul></div></div><footer class="mc-foot"><p class="mc-src">Menu as posted by Centerton Food Trucks Park for IncaLicious, October 2026. Not open yet, so no prices are posted. <a href="https://www.facebook.com/photo.php?fbid=1434053508914459">Source: the park&#x27;s menu post for IncaLicious</a></p><p class="mc-links"><a href="https://www.facebook.com/photo.php?fbid=1434053508914459">The park&#x27;s IncaLicious post</a></p></footer></article><article class="menu-card t3" id="m-silk-road-kitchen" data-truck="silk-road-kitchen" data-status="coming" data-items="11" aria-labelledby="h-silk-road-kitchen"><header class="mc-head"><div class="mc-badges"><p class="badge coming">Coming soon</p></div><h3 id="h-silk-road-kitchen">Silk Road Kitchen</h3><p class="mc-cuisine">Uzbek and Mediterranean favorites, all halal</p><p class="mc-tag">Made fresh with family recipes, and all halal.</p><p class="mc-hours">Opening in a few weeks</p><p class="mc-asof">Menu as posted by the park, Oct 2026. No prices yet.</p></header><div class="mc-body"><div class="mc-grp"><h4>Mains</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Pilaf</span></div><p class="it-desc">Traditional Uzbek rice with tender beef, onions, carrots, chickpeas and spices</p></li><li class="it"><div class="it-row"><span class="it-name">Lagman</span></div><p class="it-desc">Hand-pulled noodles with beef and fresh vegetables in a savory sauce</p></li><li class="it"><div class="it-row"><span class="it-name">Manti</span></div><p class="it-desc">Hand-folded steamed dumplings with seasoned beef and onions</p></li><li class="it"><div class="it-row"><span class="it-name">Shawarma</span></div><p class="it-desc">Beef or chicken, wrapped with fresh veggies and their signature sauce</p></li><li class="it"><div class="it-row"><span class="it-name">Lamb Chops</span></div><p class="it-desc">Seasoned and grilled</p></li><li class="it"><div class="it-row"><span class="it-name">Kebab Burger</span></div><p class="it-desc">Ground beef patty with cheese, lettuce, tomato and onion</p></li><li class="it"><div class="it-row"><span class="it-name">Whole Fried Chicken</span></div><p class="it-desc">Marinated in house spices and fried golden</p></li></ul></div><div class="mc-grp"><h4>Pastries, sides and drinks</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Somsa</span></div><p class="it-desc">Crispy baked pastry filled with seasoned meat and onions</p></li><li class="it"><div class="it-row"><span class="it-name">Hot Meat Pie</span></div><p class="it-desc">Golden fried pastry filled with seasoned beef and onions</p></li><li class="it"><div class="it-row"><span class="it-name">Sides</span></div><p class="it-desc">Fries, steamed rice</p></li><li class="it"><div class="it-row"><span class="it-name">Drinks</span></div><p class="it-desc">Soda, water</p></li></ul></div></div><footer class="mc-foot"><p class="mc-src">Menu as posted by Centerton Food Trucks Park for Silk Road Kitchen, October 2026. Not open yet, so no prices are posted. <a href="https://www.facebook.com/photo.php?fbid=1440500271603116">Source: the park&#x27;s menu post for Silk Road Kitchen</a></p><p class="mc-links"><a href="https://www.facebook.com/photo.php?fbid=1440500271603116">The park&#x27;s Silk Road post</a></p></footer></article><details class="earlier" id="earlier"><summary><span class="ea-h">Earlier lineup: 3 more menus</span><span class="ea-sub">Trucks on the park's list before the rebuild: Panino &amp; Co, Okie Dokie and La Loteria. Check their pages before you go.</span></summary><div class="earlier-grid"><article class="menu-card t1" id="m-panino-co" data-truck="panino-co" data-status="check" data-items="26" aria-labelledby="h-panino-co"><header class="mc-head"><div class="mc-badges"><p class="badge check">Earlier lineup</p></div><h3 id="h-panino-co">Panino &amp; Co</h3><p class="mc-cuisine">Paninos, fresh pasta, burgers, pizza and wings</p><p class="mc-hours">Check its page for days and hours</p><p class="mc-asof">Menu from its online shop, checked Nov 2026. Prices may change.</p></header><div class="mc-body"><div class="mc-grp"><h4>Paninos</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Da Vinci</span><span class="it-price">$12.00</span></div><p class="it-desc">Chicken, cheese mix, Greek dijon, Mediterranean apple, spring mix</p></li><li class="it"><div class="it-row priced"><span class="it-name">Godfather</span><span class="it-price">$12.69</span></div><p class="it-desc">Salami, pepperoni, black forest ham, roast beef, spring mix, cherry tomato, Greek dijon, caramelized onion</p></li><li class="it"><div class="it-row priced"><span class="it-name">Soprano Maya</span><span class="it-price">$12.99</span></div><p class="it-desc">Mayan chicken, provolone, spring mix, pineapple, Greek dijon</p></li></ul></div><div class="mc-grp"><h4>Fresh pasta</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Fetuccini Marinara</span><span class="it-price">$14.00</span></div><p class="it-desc">Fresh fetuccini, marinara, chicken and parmesano</p></li><li class="it"><div class="it-row priced"><span class="it-name">Fetuccini Cheese Sauce</span><span class="it-price">$14.00</span></div><p class="it-desc">Fresh fetuccini, chicken and a provolone, parmesano and manchego cheese sauce</p></li><li class="it"><div class="it-row priced"><span class="it-name">Mozarella Raviolli</span><span class="it-price">$15.00</span></div></li></ul></div><div class="mc-grp"><h4>Burgers</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Cheeseburger</span><span class="it-price">$11.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Bacon Cheeseburger</span><span class="it-price">$12.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Hawaiana Burger</span><span class="it-price">$13.99</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">The Meat Lover</span><span class="it-price">$14.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Titan Burger</span><span class="it-price">$15.00</span></div><p class="it-desc">Double patty, salami, ham, roast beef, bacon, caramelized onion</p></li></ul></div><div class="mc-grp"><h4>Pizza</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Margarita Pizza</span><span class="it-price">$10.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Classic Pepperoni Pizza</span><span class="it-price">$11.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Pizza, 2 toppings</span><span class="it-price">$11.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Pizza, 3 toppings</span><span class="it-price">$12.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Hawaiana Pizza</span><span class="it-price">$12.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Classic Pepperoni and Fries</span><span class="it-price">$15.00</span></div></li></ul></div><div class="mc-grp"><h4>Wings, boxes and extras</h4><ul class="items"><li class="it"><div class="it-row"><span class="it-name">Wings</span></div><ul class="opts"><li>10 pieces <b>$13.99</b></li><li>15 pieces <b>$19.99</b></li></ul></li><li class="it"><div class="it-row priced"><span class="it-name">Panini Box</span><span class="it-price">$25.00</span></div><p class="it-desc">Pasta and panini</p></li><li class="it"><div class="it-row priced"><span class="it-name">El Mundial Box</span><span class="it-price">$50.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Extra French Fries</span><span class="it-price">$2.50</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Extra Bread</span><span class="it-price">$1.00</span></div></li></ul></div><div class="mc-grp"><h4>Drinks</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Mexican Coke</span><span class="it-price">$4.19</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Dr Pepper, Diet Coke or Squirt</span><span class="it-price">$3.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Monster</span><span class="it-price">$3.99</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Water Bottle</span><span class="it-price">$3.50</span></div></li></ul></div></div><footer class="mc-foot"><p class="mc-src">Menu as posted by Panino &amp; Co, November 2026. Prices may change. <a href="https://paninoco.square.site/">Source: paninoco.square.site</a></p><p class="mc-links"><a href="https://paninoco.square.site/">paninoco.square.site</a> <a href="https://www.facebook.com/profile.php?id=61576387734542">Facebook</a></p></footer></article><article class="menu-card t2" id="m-okie-dokie" data-truck="okie-dokie" data-status="check" data-items="10" aria-labelledby="h-okie-dokie"><header class="mc-head"><div class="mc-badges"><p class="badge check">Earlier lineup</p></div><h3 id="h-okie-dokie">Okie Dokie Cakewich</h3><p class="mc-cuisine">Japanese sandos, chantilly cakes, cinnamon rolls and sandwiches</p><p class="mc-hours">Check its page for days and hours</p><p class="mc-asof">Menu from its online shop, checked Nov 2026. Every item showed out of stock that day.</p></header><div class="mc-body"><div class="mc-grp"><h4>Sweets</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Japanese Sando</span><span class="it-price">$6.59</span></div><p class="it-desc">Fresh berries, Biscoff, pistachio, pineapple, cookies and cream or pandan</p></li><li class="it"><div class="it-row priced"><span class="it-name">Chantilly</span><span class="it-price">$6.59</span></div><p class="it-desc">Fresh berries, Biscoff, pineapple, ube, pandan or pistachio</p></li><li class="it"><div class="it-row priced"><span class="it-name">Cinnamon Rolls</span><span class="it-price">$7.59</span></div><p class="it-desc">Original, Biscoff, lemon, strawberry, orange, blueberry or pistachio</p></li></ul></div><div class="mc-grp"><h4>Savory</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Gangnam Sammie</span><span class="it-price">$14.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Food Court Bourbon Chicken</span><span class="it-price">$14.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Centerton Monster</span><span class="it-price">$15.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Centerton Monster Sandwich</span><span class="it-price">$11.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Okie Dokie Pasta Salad</span><span class="it-price">$4.00</span></div></li><li class="it"><div class="it-row priced"><span class="it-name">Potato Wedges</span><span class="it-price">$4.00</span></div></li></ul></div><div class="mc-grp"><h4>Drinks</h4><ul class="items"><li class="it"><div class="it-row priced"><span class="it-name">Milk, Coke, Dr Pepper, Sprite or bottled water</span><span class="it-price">$2.00</span></div></li></ul></div></div><footer class="mc-foot"><p class="mc-src">Menu as posted on Okie Dokie Cakewich&#x27;s online shop, November 2026. Every item showed out of stock that day. Prices may change. <a href="https://www.okiedokiecakewich.com/s/shop">Source: okiedokiecakewich.com</a></p><p class="mc-links"><a href="https://www.okiedokiecakewich.com/s/shop">okiedokiecakewich.com</a> <a href="https://www.facebook.com/profile.php?id=100069534763236">Facebook</a></p></footer></article><article class="menu-card t3" id="m-la-loteria" data-truck="la-loteria" data-status="check" data-items="0" aria-labelledby="h-la-loteria"><header class="mc-head"><div class="mc-badges"><p class="badge check">Earlier lineup</p></div><h3 id="h-la-loteria">La Loteria Snacks of NWA</h3><p class="mc-cuisine">Mexican snacks: elotes, Tosti-Elote, Dori-Elote and quesabirrias</p><p class="mc-tag">Delicious antojitos (mexican snacks) for everyone!!</p><p class="mc-hours">Its Instagram lists Tue to Thu 4:30 to 8pm, Fri and Sat 4:30 to 8:30pm</p></header><div class="mc-body"><div class="mc-empty"><p><b>Menu coming soon.</b> We have not found a posted menu yet. See what it is serving on <a href="https://www.facebook.com/laloteriasnacksofnwa">its page</a>.</p></div></div><footer class="mc-foot"><p class="mc-src">Menu checked November 2026.</p><p class="mc-links"><a href="https://www.facebook.com/laloteriasnacksofnwa">La Loteria on Facebook</a></p></footer></article></div></details><!-- /BUILD:MENUS -->
+      <aside class="updates" aria-labelledby="updates-h">
+        <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4"/></svg></div>
+        <div>
+          <h3 id="updates-h">How updates work</h3>
+          <p>Every menu on this page lives in one simple list. When a truck changes a price or a new truck rolls in, the truck can text or email a menu photo to Jackson (or the park forwards it), and it is on the site the same day. There is no software for you or the trucks to learn. If you would rather edit it yourselves, it can run from a free Google Sheet you control.</p>
+          <p>Each menu shows where it came from and when it was posted or checked.</p>
+          <p class="send"><b>Truck owners:</b> <a href="mailto:centertonfoodtrucks@gmail.com?subject=Our%20menu%20for%20the%20park%20website">send the park your menu</a> to get it on this page.</p>
+        </div>
+      </aside></div>
+    </div>
+  </section>
+
+  <section id="food" aria-labelledby="food-h">
+    <div class="wrap">
+      <h2 id="food-h">Hungry?</h2>
+      <p class="sub">A few plates from the park's own photo album.</p>
+      <div class="gallery">
+        <figure class="wide top"><img src="photos/boba-drinks.webp" alt="Six boba drinks in a row on a food truck counter, in red, green, white, yellow, purple and brown" width="1200" height="900" loading="lazy" decoding="async"></figure>
+        <figure><img src="photos/carne-asada-papa.webp" alt="A papa asada piled with grilled steak and cheese, with tortillas, lime and salsa verde" width="720" height="958" loading="lazy" decoding="async"></figure>
+        <figure><img src="photos/fried-rice-plate.webp" alt="Fried rice with cashew chicken, peppers and dried chiles on a white plate" width="720" height="615" loading="lazy" decoding="async"></figure>
+        <figure><img src="photos/noodle-plate.webp" alt="Pad thai style noodles with chicken, green onion and crushed peanuts on a white plate" width="720" height="960" loading="lazy" decoding="async"></figure>
+        <figure><img src="photos/orange-chicken-lo-mein.webp" alt="Orange chicken over lo mein with vegetables in a to-go box on a red picnic table" width="720" height="1079" loading="lazy" decoding="async"></figure>
+        <figure><img src="photos/panini-sandwich.webp" alt="A pressed panino cut in half, filled with pulled meat and purple slaw" width="720" height="960" loading="lazy" decoding="async"></figure>
+        <figure><img src="photos/steak-bites-potato.webp" alt="A baked potato topped with steak bites and cheese, with pico de gallo and green salsa" width="720" height="732" loading="lazy" decoding="async"></figure>
+      </div>
+      <p class="photo-credit">Photos: Centerton Food Trucks Park on Facebook</p>
+    </div>
+  </section>
+
+  <section class="sign" id="news">
+    <div class="wrap sign-grid">
+      <div>
+        <h2>Growing. Improving. Coming back better.</h2>
+        <p class="sub">This fall the park got a new roof, a new sign and a longer lineup.</p>
+        <ol class="timeline"><!-- BUILD:TIMELINE --><li><b>Aug 10</b><span>Closed for the rebuild: a new roof and a metal structure over the tables.</span></li><li><b>Oct 15</b><span>The original trucks reopened after the city&#x27;s temporary approval.</span></li><li><b>Oct 16</b><span>Filtered water and ice vending opened at the park.</span></li><li><b>Oct 27</b><span>The new sign went up.</span></li><li><b>Next</b><span>LOADED, IncaLicious and Silk Road Kitchen are on the way, plus 5 new truck spaces.</span></li><!-- /BUILD:TIMELINE --></ol>
+        <div class="follow">
+          <p>Follow us for new vendor announcements!</p>
+          <div class="socials">
+            <a class="btn" href="https://www.facebook.com/centertonfoodtrucks/">Follow on Facebook</a>
+            <a class="btn ghost" href="https://www.instagram.com/centertonfoodtruckspark/">Follow on Instagram</a>
+          </div>
+          <small>4.8K people follow the park on Facebook.</small>
+        </div>
+      </div>
+      <figure class="sign-pic">
+        <img src="photos/park-pavilion-sign.webp" alt="The park's own picture of the pavilion at night: CENTERTON across the roof and FOOD TRUCKS PARK lit in orange, with food trailers on both sides" width="960" height="640" loading="lazy" decoding="async">
+        <p class="sign-cap">How the park pictured it.</p>
+        <figcaption>The park's design picture of the pavilion, from its Oct 14 post on Facebook. The real sign went up Oct 27, so come see it in person.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -222,22 +409,154 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="wrap visit-grid">
       <div>
         <h2>Find the park</h2>
-        <p class="sub">Right off Centerton Blvd, next door to Harps.</p>
-        <p class="addr">714 W Centerton Blvd<br>Centerton, AR 72719</p>
+        <p class="sub">Under the new pavilion on Centerton Blvd.</p>
+        <p class="addr">700 W Centerton Blvd<br>Centerton, AR 72719</p>
         <p class="near">right beside Harps</p>
+        <p class="park-hours">Park hours: 11am to 8pm</p>
+        <p>Trucks can open longer, and each truck keeps its own days. See Who's here for each one.</p>
+        <ul class="amen"><!-- BUILD:AMENITIES --><li>Covered pavilion with a new roof and metal structure, rebuilt this summer</li><li>New park sign, installed Oct 27</li><li>Picnic tables under the pavilion, with new tables on the way</li><li>Filtered water and ice vending</li><li>Parking on site</li><li>5 new truck spaces and food trailers for rent</li><!-- /BUILD:AMENITIES --></ul>
         <div class="actions">
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=714+W+Centerton+Blvd,+Centerton,+AR+72719">Get directions</a>
-          <a class="btn ghost" href="mailto:Centertonfoodtrucks@gmail.com">Email the park</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=700+W+Centerton+Blvd,+Centerton,+AR+72719">Get directions</a>
+          <a class="btn ghost" href="mailto:centertonfoodtrucks@gmail.com">Email the park</a>
         </div>
         <div class="contact">
-          <a href="mailto:Centertonfoodtrucks@gmail.com">Centertonfoodtrucks@gmail.com</a>
+          <a href="mailto:centertonfoodtrucks@gmail.com">centertonfoodtrucks@gmail.com</a>
+          <a href="https://www.facebook.com/centertonfoodtrucks/">Centerton Food Trucks Park on Facebook</a>
           <a href="https://www.instagram.com/centertonfoodtruckspark/">@centertonfoodtruckspark on Instagram</a>
         </div>
+        <p class="vendor"><b>Want a spot at the park?</b> The park has food trailers for rent and new truck spaces. <a href="mailto:centertonfoodtrucks@gmail.com">Email the park</a> to ask.</p>
       </div>
-      <div class="map"><iframe title="Map to Centerton Food Trucks Park, 714 W Centerton Blvd" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=714+W+Centerton+Blvd,+Centerton,+AR+72719&amp;z=15&amp;output=embed"></iframe></div>
+      <div class="map"><a class="map-open" href="https://www.google.com/maps/search/?api=1&amp;query=700+W+Centerton+Blvd,+Centerton,+AR+72719" data-embed="https://maps.google.com/maps?q=700+W+Centerton+Blvd,+Centerton,+AR+72719&amp;z=15&amp;output=embed"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.6A2.6 2.6 0 1 1 12 6.4a2.6 2.6 0 0 1 0 5.2z"/></svg><b>Show the map</b><span>700 W Centerton Blvd, right beside Harps</span></a></div>
     </div>
   </section>
 </main>
-<footer><div class="wrap"><span>Centerton Food Trucks Park, 714 W Centerton Blvd, Centerton, AR 72719</span><span>Photos: Centerton Food Trucks on Facebook</span></div></footer>
+<footer><div class="wrap"><span>Centerton Food Trucks Park, 700 W Centerton Blvd, Centerton, AR 72719</span><span><!-- BUILD:CHECKED -->Menus last checked Nov 2, 2026.<!-- /BUILD:CHECKED --> Menus live in one list and are updated by message.</span><span>Photos: Centerton Food Trucks Park on Facebook. Menus: each truck's own site or posts, and the park's announcements.</span></div></footer>
+<script>
+(function(){
+  var d=document,root=d.documentElement;root.classList.add('js');
+  var bar=d.getElementById('preview-bar'),tools=d.querySelector('.menu-tools'),earlier=d.getElementById('earlier');
+  function measure(){
+    root.style.setProperty('--bar-h',(bar?bar.offsetHeight:0)+'px');
+    if(tools)root.style.setProperty('--tools-h',tools.offsetHeight+'px');
+  }
+  addEventListener('resize',measure);
+  var mapLink=d.querySelector('.map-open');
+  if(mapLink)mapLink.addEventListener('click',function(ev){
+    ev.preventDefault();var f=d.createElement('iframe');
+    f.title='Map to Centerton Food Trucks Park, 700 W Centerton Blvd';f.referrerPolicy='no-referrer-when-downgrade';f.src=mapLink.getAttribute('data-embed');
+    mapLink.replaceWith(f);
+  });
+  // Links into the folded "Earlier lineup" menus open it first, so the jump lands on the card.
+  function openFor(href){
+    if(!earlier||!href||href.charAt(0)!=='#'||href.length<2)return false;
+    var el=d.getElementById(href.slice(1));
+    if(el&&earlier.contains(el)&&!earlier.open){earlier.open=true;return el}
+    return false;
+  }
+  d.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href^="#"]');if(a)openFor(a.getAttribute('href'))},true);
+  var landed=openFor(location.hash);if(landed)requestAnimationFrame(function(){landed.scrollIntoView()});
+  var grid=d.querySelector('.menu-grid');if(!grid||!tools){requestAnimationFrame(measure);return}
+  var search=d.querySelector('.menu-find .search'),q=d.getElementById('menu-q'),count=d.getElementById('menu-count'),empty=d.getElementById('menu-empty');
+  var chips=[].slice.call(tools.querySelectorAll('.chips a')),cards=[].slice.call(grid.querySelectorAll('.menu-card'));
+  var norm=function(s){return(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]+/g,'').replace(/\s+/g,' ')};
+  var SYN={
+    drink:['soda','water','boba','coke','coca','jarritos','topo chico','juice','maracuya','milk','sprite'],
+    soda:['coke','coca','sprite','jarritos'],
+    dessert:['cake','cinnamon roll','oreo','chantilly','sando','sweets'],
+    sweet:['dessert','cake','cinnamon roll','oreo','chantilly','sando'],
+    burger:['burguer'],chicken:['pollo'],pork:['pastor','carnitas'],
+    noodle:['lo mein','pad thai','lagman','fetuccini'],pasta:['fetuccini','raviolli','mac and cheese']
+  };
+  function variants(t){
+    var b=t.length>3&&/s$/.test(t)&&!/(ss|ies)$/.test(t)?t.slice(0,-1):t,v=[t];
+    if(b!==t)v.push(b);
+    (SYN[b]||[]).forEach(function(x){v.push(x)});
+    return v;
+  }
+  function hit(s,v){for(var i=0;i<v.length;i++){if(s.indexOf(v[i])>-1)return true}return false}
+  var active='all';
+  search.hidden=false;
+  cards.forEach(function(card){
+    var head=card.querySelector('.mc-head');
+    card._t=norm([].map.call(head.querySelectorAll('h3,.mc-cuisine,.mc-tag'),function(x){return x.textContent}).join(' ')+' '+card.getAttribute('data-truck').replace(/-/g,' '));
+    card._items=[].slice.call(card.querySelectorAll('.it'));
+    card._items.forEach(function(it){it._t=norm(it.textContent)});
+    card._groups=[].map.call(card.querySelectorAll('.mc-grp'),function(g){
+      var h=g.querySelector('h4');
+      return {el:g,h:norm(h?h.textContent:''),idx:[].map.call(g.querySelectorAll('.it'),function(it){return card._items.indexOf(it)})};
+    });
+    var n=+card.getAttribute('data-items');
+    if(n>8){
+      card.classList.add('clamp');
+      var b=d.createElement('button');b.type='button';b.className='more';b.setAttribute('aria-expanded','false');
+      b.textContent='Show all '+n+' items';
+      b.addEventListener('click',function(){
+        var open=card.classList.toggle('open');b.setAttribute('aria-expanded',String(open));
+        b.textContent=open?'Show less':'Show all '+n+' items';
+        if(!open)card.scrollIntoView({block:'start'});
+      });
+      card.querySelector('.mc-body').after(b);
+    }
+  });
+  requestAnimationFrame(measure);
+  // A word counts on a dish first, then on its menu group heading (only if no dish in that group has it),
+  // then on the truck's name, cuisine and tagline (only if no dish on that menu has it).
+  function apply(){
+    var raw=norm(q.value).trim(),terms=raw?raw.split(' ').map(variants):[],hits=0,shown=0;
+    var filtering=terms.length>0||active!=='all';
+    grid.classList.toggle('filtering',filtering);
+    cards.forEach(function(card){
+      var slug=card.getAttribute('data-truck'),st=card.getAttribute('data-status');
+      var mine=active==='all'||slug===active||(active==='check'&&st==='check');
+      var items=card._items,ok=items.map(function(){return true});
+      terms.forEach(function(v){
+        var sat=items.map(function(it){return hit(it._t,v)});
+        card._groups.forEach(function(g){
+          if(!g.idx.some(function(i){return sat[i]})&&hit(g.h,v))g.idx.forEach(function(i){sat[i]=true});
+        });
+        if(!sat.some(Boolean)&&hit(card._t,v))sat=sat.map(function(){return true});
+        ok=ok.map(function(o,i){return o&&sat[i]});
+      });
+      var vis=0;
+      items.forEach(function(it,i){it.hidden=!ok[i];if(ok[i])vis++});
+      card._groups.forEach(function(g){g.el.hidden=!g.idx.some(function(i){return ok[i]})});
+      var show=mine&&(!terms.length||vis>0||(!items.length&&terms.every(function(v){return hit(card._t,v)})));
+      card.hidden=!show;if(show){shown++;hits+=vis}
+    });
+    if(earlier){
+      var inside=cards.some(function(c){return !c.hidden&&earlier.contains(c)});
+      earlier.hidden=filtering&&!inside;
+      if(filtering&&inside)earlier.open=true;
+    }
+    var chip=chips.filter(function(c){return c.getAttribute('data-truck')===active})[0];
+    var where=active==='check'?'the earlier lineup':(chip?chip.textContent:'');
+    count.textContent=terms.length&&hits?hits+(hits===1?' dish matches':' dishes match')+' "'+q.value.trim()+'"'+(active!=='all'?' at '+where:''):(!terms.length&&active!=='all'?'Showing '+where+' only. Tap All trucks to see every menu.':'');
+    empty.hidden=!(terms.length&&!shown);
+  }
+  function setChip(slug){
+    active=slug;
+    chips.forEach(function(c){c.setAttribute('aria-current',String(c.getAttribute('data-truck')===slug))});
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click',function(ev){
+      ev.preventDefault();setChip(c.getAttribute('data-truck'));apply();
+      try{history.replaceState(null,'',active==='all'?'#menus':active==='check'?'#earlier':'#m-'+active)}catch(e){}
+      var anchor=count.textContent?count:grid;
+      var top=anchor.getBoundingClientRect().top+scrollY-(bar?bar.offsetHeight:0)-tools.offsetHeight-12;
+      if(scrollY>top+40||active!=='all')scrollTo({top:Math.max(0,top),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    });
+  });
+  q.addEventListener('input',apply);
+  [].forEach.call(d.querySelectorAll('a.see'),function(a){
+    a.addEventListener('click',function(){if(active!=='all'||q.value){q.value='';setChip('all');apply()}});
+  });
+  if('IntersectionObserver' in window){
+    var s=d.createElement('div');s.setAttribute('aria-hidden','true');tools.before(s);
+    requestAnimationFrame(function(){
+      new IntersectionObserver(function(e){tools.classList.toggle('stuck',!e[0].isIntersecting)},{rootMargin:'-'+((bar?bar.offsetHeight:0)+1)+'px 0px 0px 0px'}).observe(s);
+    });
+  }
+})();
+</script>
 </body>
 </html>
