@@ -124,7 +124,7 @@ h1 .h1-top{display:block;font:400 clamp(40px,5.4vw,70px)/.98 var(--sign);color:v
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:44px 0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:44px 0}
 .stat{padding:6px 26px;border-left:1px solid rgba(251,241,220,.14)}
 .stat:first-child{border-left:0;padding-left:0}
 .stat b{display:block;font:400 clamp(34px,4vw,48px)/1 var(--sign);color:var(--yellow)}
@@ -282,7 +282,7 @@ footer a{color:#fff}
 </style>
 </head>
 <body>
-<div id="preview-bar">Preview built by Jackson Varela, a student in Fayetteville, AR. Not affiliated with or endorsed by Rolling Taco. Want it finished? $299 founding price, nothing due until it is live. Call or text <a href="tel:+15018176397">501-817-6397</a>.</div>
+<div id="preview-bar">Preview built by Jackson Varela, a student in Fayetteville, AR. Not affiliated with or endorsed by Rolling Taco. Want it finished? <span class="bar-price" data-bar-price="founding">$299 founding price, nothing due until it is live.</span> Call or text <a href="tel:+15018176397">501-817-6397</a>.</div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="flag" viewBox="0 0 60 70"><path fill="currentColor" fill-rule="evenodd" d="M0 0H60V58L55 66 50 58 45 66 40 58 35 66 30 58 25 66 20 58 15 66 10 58 5 66 0 58Z M30 17 40 30 30 43 20 30Z M30 24 34 30 30 36 26 30Z M9 13a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0-6.4 0Z M44.6 13a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0-6.4 0Z M9 47a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0-6.4 0Z M44.6 47a3.2 3.2 0 1 0 6.4 0a3.2 3.2 0 1 0-6.4 0Z M6 28h6v4H6Z M48 28h6v4h-6Z M27 5h6v5h-6Z M27 50h6v5h-6Z"/></symbol>
@@ -332,7 +332,6 @@ footer a{color:#fff}
 <main>
   <div class="wrap">
     <div class="stats">
-      <div class="stat rv"><b>4.9</b><p>stars on DoorDash, 20+ ratings</p></div>
       <div class="stat rv"><b>90%</b><p>recommend them on Facebook</p></div>
       <div class="stat rv"><b>1.7K</b><p>followers on Facebook</p></div>
       <div class="stat rv"><b>2.1K</b><p>followers on Instagram</p></div>
