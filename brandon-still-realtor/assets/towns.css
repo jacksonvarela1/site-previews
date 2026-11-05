@@ -1,0 +1,89 @@
+/* generated file, do not edit by hand */
+@media (min-width:1024px){.c-1-8{grid-column:1/9}}
+.sec-s{padding-block:var(--sec-s)}
+.nwa-map.is-locator .town:not(.is-current) .town-label{display:none}
+.nwa-map.is-locator .town:not(.is-current):not(.is-muted) .dot{fill:var(--ink-3)}
+.ep-card .ep-t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tbl-wrap{--tb:var(--paper);overflow-x:auto;background:linear-gradient(90deg,var(--tb) 30%,#faf8f200) 0 0/40px 100% no-repeat local,linear-gradient(270deg,var(--tb) 30%,#faf8f200) 100% 0/40px 100% no-repeat local,linear-gradient(90deg,#19191929,#19191900) 0 0/14px 100% no-repeat scroll,linear-gradient(270deg,#19191929,#19191900) 100% 0/14px 100% no-repeat scroll}
+.bg-stone .tbl-wrap{--tb:var(--stone)}
+.tbl.is-2col{min-width:0}
+.tbl{width:100%;min-width:520px;border-collapse:collapse;font-size:var(--t-body)}
+.tbl th{font-size:var(--t-small);font-weight:500;color:var(--ink-2);text-align:left;padding:0 var(--s3) var(--s3) 0;border-bottom:1.5px solid var(--ink)}
+.tbl td{padding:var(--s3) var(--s3) var(--s3) 0;border-bottom:1px solid var(--line)}
+.tbl .r{text-align:right}
+.town-hero .meta{margin-bottom:var(--s3)}
+.town-hero .lead{margin-top:var(--s5)}
+.town-toc{margin-top:var(--s6)}
+.town-photo{margin-top:var(--s6)}
+.town-photo .slot{--ar:3/2}
+.town-photo .ph{position:relative;border-radius:var(--r-media);overflow:hidden;aspect-ratio:3/2;background:var(--sand)}
+.town-photo .ph img{width:100%;height:100%;object-fit:cover}
+@media (min-width:1024px){.town-hero-g{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--s8);align-items:end}.town-photo{margin-top:0}}
+.town-grid{padding-block:var(--sec-m) var(--sec-l)}
+@media (min-width:1024px){.town-grid>.town-rail,.town-grid>.town-main{grid-row:1}.town-rail{align-self:start}}
+@media (min-width:1024px) and (min-height:700px){.town-rail{position:sticky;top:calc(var(--hdr) + 24px)}}
+.rail-card{padding:var(--s5);border-radius:var(--r-media);background:var(--stone)}
+.rail-card>.small{margin-top:var(--s2)}
+.rail-acts{margin-top:var(--s5)}
+.rail-acts .btn{flex:1 1 100%}
+@media (max-width:899px){.rail-acts{display:none}}
+.nwa-map.is-locator{overflow:hidden;margin-top:var(--s4);border-radius:var(--r-media)}
+.nwa-map.is-locator .town-label{font-size:22px;stroke-width:5px}
+.nwa-map.is-locator .town.is-near .town-label{display:inline;font-size:17px;font-weight:560}
+.nwa-map.is-locator .county-name{display:none}
+.nwa-map.is-locator .town.is-current .dot{transform:scale(1.4)}
+.town-sec+.town-sec{margin-top:var(--sec-m)}
+.town-sec>.h2{max-width:24ch}
+.town-sec>.h2+*{margin-top:var(--s5)}
+.town-sec>.h3+*{margin-top:var(--s3)}
+.town-sec .prose{margin-top:var(--s5)}
+.town-sec .cards,.town-sec .rowlist,.town-sec .faq,.town-sec .tbl-wrap,.town-sec .idx-slot{margin-top:var(--s6)}
+.town-sec .fine{margin-top:var(--s4)}
+.town-sec .quote{max-width:40ch}
+.town-sec .defs{margin-top:var(--s6)}
+.town-sec .defs dd a{padding-block:5px}
+.picks-mod{display:grid;gap:var(--s6);margin-top:var(--s6)}
+@media (min-width:768px){.picks-mod.has-reel{grid-template-columns:minmax(0,240px) minmax(0,1fr);align-items:start;column-gap:var(--s7)}}
+.pick-rows{border-top:1.5px solid var(--ink)}
+.town-sec .pick-rows{margin-top:var(--s5)}
+.pick-rows>li{padding-block:var(--s4);border-bottom:1px solid var(--line)}
+.pick-rows>li>p{margin-top:var(--s1);color:var(--ink-2)}
+.quote-more{display:grid;gap:var(--s5);margin-top:var(--s6)}
+.quote-more p{max-width:62ch}
+.town-pod{display:grid;gap:var(--s5);margin-top:var(--s6)}
+@media (min-width:768px){.town-pod{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:start;gap:var(--s6)}}
+.town-pod .pod-cap{margin-top:0}
+.town-pod .pod-cap>p+p{margin-top:var(--s2)}
+.ep-card.is-text{padding-top:var(--s3);border-top:1.5px solid var(--ink)}
+.ep-card .small{color:var(--ink-2);margin-top:var(--s1)}
+.faq .a.is-wide{max-width:none}
+.src-list{display:grid;gap:var(--s2);margin-top:var(--s4)}
+.hub-head{margin-bottom:var(--s7)}
+.hub-map .nwa-map{max-width:600px}
+@media (min-width:1024px) and (min-height:700px){.hub-map{position:sticky;top:calc(var(--hdr) + 24px);align-self:start}}
+.hub-list>.h3+.rowlist{margin-top:var(--s3)}
+.hub-list>.rowlist+.h3{margin-top:var(--s7)}
+.snap-pair{display:grid;gap:var(--s7);margin-top:var(--s6)}
+@media (min-width:768px){.snap-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--gap)}}
+.snap-pair .tbl{min-width:0}
+.ep-card.is-text .ep-n{font-size:var(--t-small);font-weight:600;color:var(--ink-2)}
+@media (max-width:767px){.picks-mod .reel-media{max-width:260px}}
+.mini-map{width:100%;height:100%;background:var(--map-land)}
+.mini-map .county{fill:var(--map-land);stroke:var(--map-edge);stroke-width:1;vector-effect:non-scaling-stroke}
+.mini-map circle{fill:var(--ink-3)}
+.mini-map .cur{fill:var(--red);stroke:var(--paper);stroke-width:3;vector-effect:non-scaling-stroke}
+.mini-map text{font-family:var(--font);font-size:26px;font-weight:620;fill:var(--ink);paint-order:stroke;stroke:var(--map-land);stroke-width:5px;stroke-linejoin:round}
+.card .ph-cap{font-size:var(--t-fine);color:var(--ink-3)}
+@media (max-width:767px){.town-cards.cards:not(.rail){--cols:2;gap:var(--s5) var(--s4)}.town-cards .card-media,.town-cards .small,.town-cards .ph-cap{display:none}.town-cards .card{padding-top:var(--s3);border-top:1.5px solid var(--ink)}.town-cards .card-title{font-size:1.0625rem;padding-block:2px}}
+.homes-nav .chips{flex-wrap:wrap}
+.sold-town{padding-top:var(--s7);border-top:1px solid var(--line)}
+.sold-town+.sold-town{margin-top:var(--s7)}
+.sold-town .h3+*{margin-top:var(--s3)}
+.sold-town .cards{margin-top:var(--s5)}
+.sold-town .tlink{margin-top:var(--s2)}
+.watch{display:grid;gap:var(--s7) var(--gap)}
+@media (min-width:900px){.watch{grid-template-columns:minmax(0,420px) minmax(0,1fr);column-gap:var(--s8);align-items:start}}
+.watch .reel-media{max-width:420px}
+.watch-copy>*+*{margin-top:var(--s4)}
+.watch-copy .transcript-body{padding:0;font-size:var(--t-body)}
+.reels.is-grid{grid-template-columns:repeat(3,minmax(0,1fr))}

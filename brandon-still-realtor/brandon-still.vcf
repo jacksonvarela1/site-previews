@@ -8,7 +8,7 @@ TEL;TYPE=CELL,VOICE:+1-479-236-2900
 item1.TEL;TYPE=WORK,VOICE:+1-479-633-7411
 item1.X-ABLabel:Collier & Associates office
 EMAIL;TYPE=INTERNET:brandonstillnwa@gmail.com
-item2.ADR;TYPE=WORK:;Suite 122;5100 W. Park Ave;Rogers;AR;72758;USA
+item2.ADR;TYPE=WORK:;Ste A122;5100 W Park Ave;Rogers;AR;72758;USA
 item2.X-ABLabel:Collier & Associates
 URL:https://www.brandonstillrealtor.com
 X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/sellingwithstill/
