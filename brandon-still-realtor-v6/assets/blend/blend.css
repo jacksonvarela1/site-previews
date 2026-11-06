@@ -1,0 +1,219 @@
+/* ---------- v1.5 blend: header, footer, motion, media ----------
+   Child theme style.css section for Brandon Still's WordPress site (theme brandonstill 1.5.0).
+   Every rule hangs off a class you add under Block > Advanced > Additional CSS class(es), or off his
+   existing header, footer and button markup. Remove a class and that block is exactly his again.
+   Motion: transform and opacity only, once, and only under prefers-reduced-motion: no-preference.
+   Hiding rules are scoped to .bs-js, which the script adds, so nothing is hidden if it never runs. */
+
+:root{--bs-ease:cubic-bezier(.2,.7,.2,1);--bs-head:84px}
+@media (max-width:781px){:root{--bs-head:68px}}
+html{scroll-padding-top:calc(var(--bs-head) + 12px)}
+
+/* ---- header: firm beside his name, office line, sticky ---- */
+.wp-site-blocks>header.wp-block-template-part{position:sticky;top:0;z-index:50;background:var(--wp--preset--color--base)}
+.bs-sticky{position:relative}
+.bs-sticky::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:12px;pointer-events:none;
+  background:linear-gradient(rgba(22,33,28,.08),rgba(22,33,28,0));opacity:0}
+.bs-scrolled .bs-sticky::after{opacity:1}
+.bs-brand{transform-origin:left center}
+.bs-brand-row{display:flex;align-items:baseline;gap:12px;margin:0}
+.bs-header .bs-brand-firm{font-family:var(--wp--preset--font-family--fraunces);font-size:1.6rem;font-weight:600;line-height:1.2;
+  letter-spacing:0;text-transform:none;color:var(--wp--preset--color--contrast);margin:0;padding-left:12px;border-left:1px solid #CFC7B9;white-space:nowrap}
+.bs-header .wp-block-site-title{line-height:1.2;white-space:nowrap}
+.bs-brand-sub a{color:inherit;text-decoration:none}
+.bs-brand-sub a:hover{text-decoration:underline}
+.wp-block-navigation li.bs-nav-office{display:none}
+.bs-call .bs-call-short{display:none}
+@media (max-width:781px){
+  .bs-brand-row{flex-direction:column;align-items:flex-start;gap:0}
+  .bs-header .wp-block-site-title,.bs-header .bs-brand-firm{font-size:1.2rem;line-height:1.15;padding-left:0;border-left:0}
+}
+/* one calm row at every width: with the firm beside his name, his full nav only fits from about 1280 px, so below
+   that the Navigation block's own overlay menu takes over (core shows it only under 600 px by default) */
+@media (max-width:1279px){
+  .bs-header{flex-wrap:nowrap;gap:16px}
+  .bs-header>.bs-brand{flex:1 1 auto;min-width:0}
+  .bs-header>.wp-block-navigation{order:3;flex:none}
+  .bs-header>.wp-block-buttons{order:2;flex:none}
+}
+@media (min-width:600px) and (max-width:1279px){
+  .bs-header .wp-block-navigation__responsive-container-open:not(.always-shown){display:flex}
+  .bs-header .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){display:none}
+}
+@media (max-width:781px){
+  .bs-header{gap:10px;padding-block:10px}
+  .bs-header .bs-brand-sub{display:none}
+  .bs-call .bs-call-long{display:none}
+  .bs-call .bs-call-short{display:inline}
+  .bs-header .bs-call .wp-block-button__link{padding:10px 18px}
+  .wp-block-navigation li.bs-nav-office{display:flex}
+}
+/* 1280 to 1359 px: his full nav, a touch more compact so it stays on the brand's row */
+@media (min-width:1280px) and (max-width:1359px){
+  .bs-header .wp-block-site-title,.bs-header .bs-brand-firm{font-size:1.35rem}
+  .bs-header .bs-brand-firm{padding-left:10px}
+  .bs-brand-row{gap:10px}
+  .bs-header .wp-block-navigation{gap:.9rem;font-size:.95rem}
+  .bs-header .wp-block-navigation .wp-block-navigation__container{gap:.9rem}
+}
+
+/* ---- footer ---- */
+.bs-footer li a,.bs-footer address a{display:inline-block;padding-block:4px}
+.bs-foot-firm{display:block}
+.bs-foot-about{max-width:34rem;font-size:.95rem;line-height:1.6;color:var(--wp--preset--color--contrast-2)}
+.bs-social-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-top:32px;padding-top:24px;border-top:1px solid #DDD6CA}
+.bs-social-row .bs-social-lead{margin:0;font-size:.95rem;font-weight:600}
+.bs-social{display:flex;flex-wrap:wrap;gap:4px 20px;list-style:none;margin:0;padding:0}
+.bs-footer .bs-social a{display:inline-flex;align-items:center;gap:8px;min-height:24px;padding-block:4px;text-decoration:none;color:var(--wp--preset--color--contrast)}
+.bs-social a:hover .wp-block-social-link-label{text-decoration:underline}
+.bs-social svg{width:20px;height:20px;fill:currentColor;flex:none}
+.bs-eho{white-space:nowrap}
+.bs-eho svg{height:20px;width:auto;vertical-align:-5px;margin-right:4px}
+.bs-footer .bs-idx-disclaimer{font-size:.78rem;max-width:62rem}
+
+/* ---- firm line in every brick call-to-action panel ---- */
+.bs-cta .bs-cta-firm{font-size:.95rem;margin-top:20px}
+.bs-cta .bs-cta-firm a{color:#fff}
+/* his inline links inside the brick panels inherited the brick link color and vanished; white, underlined */
+.bs-cta p a:not(.wp-block-button__link){color:#fff;text-decoration:underline}
+
+/* ---- TCPA consent checkbox in his WPForms ---- */
+.bs-consent{font-size:.85rem;line-height:1.5}
+.bs-consent ul{list-style:none;margin:0;padding:0}
+.bs-consent li{display:flex;gap:10px;align-items:flex-start}
+.bs-consent input[type=checkbox]{width:18px;height:18px;margin:3px 0 0;flex:none;accent-color:var(--wp--preset--color--contrast)}
+.bs-cta .bs-consent label,.bs-cta .bs-consent a{color:#fff !important}
+.bs-preview-hv .bs-consent{flex:1 1 100%}
+
+/* ---- Lofty IDX slot in the preview (his .bs-placeholder look, shorter) ---- */
+.bs-idx-slot{min-height:180px}
+.bs-idx-slot.is-search{min-height:clamp(320px,34vw,480px)}
+.bs-idx-slot .bs-lede{margin:0;font-size:1.05rem}
+
+/* ---- small additions inside his sections ---- */
+.bs-more-link{margin-top:20px}
+.bs-band .bs-stat-source{color:#C9C4BA;font-size:.8rem;line-height:1.5;margin:20px 0 0}
+.bs-note{font-size:.88rem;line-height:1.55;color:var(--wp--preset--color--contrast-2)}
+.bs-reviews-more{margin:20px 0 0}
+.bs-band .bs-reviews-more a{color:var(--wp--preset--color--base)}
+.bs-stat-num{font-variant-numeric:tabular-nums}
+
+/* ---- home hero: his media frame plays a silent loop (core Cover block, class bs-hero-video) ---- */
+.bs-hero-video.wp-block-cover{position:relative;display:block;min-height:0;aspect-ratio:1024/554;padding:0;margin:0;border-radius:0;overflow:hidden;background:var(--wp--preset--color--base-2)}
+.bs-hero-video .wp-block-cover__video-background{position:absolute;top:0;left:0;width:100%;height:100%;margin:0;padding:0;max-width:none;max-height:none;border:0;box-shadow:none;object-fit:cover;object-position:50% 50%}
+.bs-hero-video .wp-block-cover__background{display:none}
+.bs-hero-video .wp-block-cover__inner-container{position:absolute;inset:0;pointer-events:none}
+@media (max-width:781px){.bs-hero-video.wp-block-cover{aspect-ratio:16/9}}
+.bs-video-toggle{position:absolute;right:12px;bottom:12px;z-index:2;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;
+  border:0;border-radius:999px;background:rgba(22,33,28,.55);color:#fff;cursor:pointer;
+  font:600 .8rem/1 var(--wp--preset--font-family--instrument-sans);letter-spacing:.01em;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.bs-video-toggle::before{content:"";width:10px;height:12px;background:linear-gradient(90deg,#fff 0 35%,transparent 35% 65%,#fff 65%)}
+.bs-video-toggle[data-state=paused]::before{background:#fff;clip-path:polygon(0 0,100% 50%,0 100%)}
+.bs-video-toggle:hover{background:rgba(22,33,28,.75)}
+.bs-video-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+/* ---- YouTube facade inside his embed frame (WP YouTube Lyte does this on WordPress) ---- */
+.wp-block-embed.bs-video .wp-block-embed__wrapper{background:var(--wp--preset--color--contrast)}
+.bs-yt{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:hidden;background:var(--wp--preset--color--contrast);cursor:pointer}
+.bs-yt img{display:block;width:100%;height:100%;object-fit:cover}
+.bs-yt-play{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:14px;background:rgba(22,33,28,.8)}
+.bs-yt-play::after{content:"";position:absolute;left:27px;top:15px;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #fff}
+.bs-yt:hover .bs-yt-play{background:var(--wp--preset--color--accent-1)}
+.bs-yt:focus-visible{outline:3px solid #fff;outline-offset:-6px}
+.wp-block-embed.bs-video iframe{border:0}
+
+/* ---- his reels (core Video block, class bs-reel) ---- */
+.bs-reel{margin:0}
+.bs-reel video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;background:var(--wp--preset--color--contrast)}
+.bs-reel-row .bs-reel-title{font-size:1rem;line-height:1.35;margin:14px 0 0}
+.bs-reel-row .bs-reel-text{font-size:.95rem;line-height:1.55;margin:8px 0 0}
+.bs-reel-row .bs-reel-meta{font-size:.82rem;line-height:1.5;color:var(--wp--preset--color--contrast-2);margin:8px 0 0}
+.bs-reel-row .bs-card p{margin:0 0 10px}
+@media (min-width:782px){.wp-block-columns.bs-reel-row{max-width:920px;margin-left:0 !important}}
+@media (max-width:781px){
+  .wp-block-columns.bs-reel-row{display:grid !important;grid-template-columns:1fr 1fr;gap:16px}
+  .bs-reel-row>.wp-block-column:last-child{grid-column:1/-1}
+}
+
+/* ---- photo and video slots until the shoot (block patterns brandonstill/town-plate and video card) ----
+   Town plate: his Sand panel, square corners like the photos it stands in for, an Ozark ridgeline in Moss Gray.
+   Video card: his .bs-video frame on Forest Ink with the same ridge in Limestone. Swap for an Image or Embed block. */
+.bs-plate,.bs-vcard{position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;
+  padding:clamp(20px,3vw,32px)}
+.bs-plate{aspect-ratio:3/2;margin:0;background:var(--wp--preset--color--base-2)}
+.bs-vcard{aspect-ratio:16/9;margin-block-end:0;background:var(--wp--preset--color--contrast);color:#fff}
+.bs-plate::before,.bs-vcard::before{content:"";position:absolute;inset:0;pointer-events:none;background-repeat:no-repeat;
+  background-position:center bottom;background-size:100% auto;transform-origin:50% 100%}
+.bs-plate::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 140'%3E%3Cpath fill='%233D4842' fill-opacity='.07' d='M0 62C48 44 92 50 138 36 186 22 228 40 280 30 334 20 378 6 432 20 486 34 540 26 600 16V140H0Z'/%3E%3Cpath fill='%233D4842' fill-opacity='.09' d='M0 96C64 80 112 88 176 72 236 58 282 78 340 70 400 62 452 50 510 64 548 72 576 70 600 66V140H0Z'/%3E%3Cpath fill='none' stroke='%233D4842' stroke-opacity='.18' stroke-width='1.2' d='M0 96C64 80 112 88 176 72 236 58 282 78 340 70 400 62 452 50 510 64 548 72 576 70 600 66'/%3E%3C/svg%3E")}
+.bs-vcard::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 140'%3E%3Cpath fill='%23F6F3EE' fill-opacity='.04' d='M0 62C48 44 92 50 138 36 186 22 228 40 280 30 334 20 378 6 432 20 486 34 540 26 600 16V140H0Z'/%3E%3Cpath fill='%23F6F3EE' fill-opacity='.05' d='M0 96C64 80 112 88 176 72 236 58 282 78 340 70 400 62 452 50 510 64 548 72 576 70 600 66V140H0Z'/%3E%3Cpath fill='none' stroke='%23F6F3EE' stroke-opacity='.12' stroke-width='1.2' d='M0 96C64 80 112 88 176 72 236 58 282 78 340 70 400 62 452 50 510 64 548 72 576 70 600 66'/%3E%3C/svg%3E")}
+.bs-plate>p,.bs-vcard>p{position:relative;margin:0}
+.bs-plate .bs-eyebrow{margin:0 0 6px}
+.bs-plate .bs-plate-name{font-family:var(--wp--preset--font-family--fraunces);font-weight:600;font-size:clamp(1.9rem,3.4vw,2.8rem);
+  line-height:1.05;letter-spacing:-.01em;color:var(--wp--preset--color--contrast)}
+.bs-vcard .bs-vcard-eyebrow{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#C9C4BA;margin-bottom:8px}
+.bs-vcard .bs-vcard-title{font-family:var(--wp--preset--font-family--fraunces);font-weight:600;font-size:clamp(1.35rem,2.6vw,2rem);
+  line-height:1.15;color:#fff}
+.bs-town-photo{margin:0}
+.bs-town-photo img{display:block;width:100%;height:auto}
+
+/* ---- sources in small print, related links, episode lines ---- */
+.bs-faq .bs-faq-src{font-size:.8rem;line-height:1.5;color:var(--wp--preset--color--contrast-2);margin:10px 0 0}
+.bs-faq .bs-faq-more{font-size:.88rem;line-height:1.5;margin:8px 0 0}
+.bs-band .bs-quick-facts{margin-top:8px}
+.bs-ep-links{font-size:.95rem;line-height:1.6}
+.bs-faq-more a,.bs-more-link a,.bs-cta-firm a,.bs-reel-meta a{display:inline-block;padding-block:3px}
+.bs-search-title{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.1;letter-spacing:-.01em;margin:0 0 20px}
+.bs-sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ---- one reel beside his words (investing guide, his own rental walkthrough slot) ---- */
+.wp-block-columns.bs-reel-feature{align-items:flex-start;gap:28px;margin-block:28px}
+.bs-reel-feature>.bs-reel-col{flex:0 0 240px !important;max-width:240px}
+.bs-reel-feature .bs-eyebrow{margin:0}
+.bs-reel-feature .bs-reel-title{font-size:1.15rem;line-height:1.35;margin:6px 0 0}
+.bs-reel-feature .bs-reel-text{margin:10px 0 0}
+.bs-reel-feature .bs-reel-meta{font-size:.82rem;line-height:1.5;color:var(--wp--preset--color--contrast-2);margin:12px 0 0}
+.bs-transcript{margin-top:12px;font-size:.95rem}
+.bs-transcript summary{cursor:pointer;font-weight:600}
+@media (max-width:781px){.bs-reel-feature>.bs-reel-col{flex-basis:100% !important;max-width:260px}}
+
+/* ---- reviews: arrows only, no auto-advance (the band keeps his Trustindex card look) ---- */
+.ti-widget.ti-static .ti-read-more span{color:#3D4842}
+
+/* ---- motion ---- */
+.bs-settle{overflow:hidden}
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .bs-sticky::after{transition:opacity .24s var(--bs-ease)}
+  @media (min-width:782px){
+    .bs-brand{transition:transform .24s var(--bs-ease)}
+    .bs-scrolled .bs-brand{transform:scale(.94)}
+  }
+  /* M1 fade and rise */
+  .bs-js .bs-reveal{opacity:0;transform:translateY(14px);transition:opacity .6s var(--bs-ease),transform .6s var(--bs-ease)}
+  .bs-js .bs-reveal.is-in{opacity:1;transform:none}
+  .bs-js .bs-reveal .bs-stagger>.wp-block-column{opacity:0;transform:translateY(10px);transition:opacity .6s var(--bs-ease),transform .6s var(--bs-ease)}
+  .bs-js .bs-reveal.is-in .bs-stagger>.wp-block-column{opacity:1;transform:none}
+  .bs-js .bs-reveal.is-in .bs-stagger>.wp-block-column:nth-child(2){transition-delay:.06s}
+  .bs-js .bs-reveal.is-in .bs-stagger>.wp-block-column:nth-child(3){transition-delay:.12s}
+  .bs-js .bs-reveal.is-in .bs-stagger>.wp-block-column:nth-child(n+4){transition-delay:.18s}
+  /* M2 image settle */
+  .bs-js .bs-settle img,.bs-js .bs-settle video{transform:scale(1.04);transition:transform 1.2s var(--bs-ease)}
+  .bs-js .bs-settle.is-in img,.bs-js .bs-settle.is-in video{transform:none}
+  .bs-js .bs-settle.bs-plate::before{transform:scale(1.04);transition:transform 1.2s var(--bs-ease)}
+  .bs-js .bs-settle.bs-plate.is-in::before{transform:none}
+  /* M4 hover lift, fine pointers only */
+  @media (hover:hover) and (pointer:fine){
+    .bs-lift .bs-card,.wp-block-button__link{transition:transform .18s var(--bs-ease)}
+    .bs-lift .bs-card{position:relative}
+    .bs-lift .bs-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+      box-shadow:0 10px 28px rgba(22,33,28,.10);opacity:0;transition:opacity .18s var(--bs-ease)}
+    .bs-lift .bs-card:hover{transform:translateY(-3px)}
+    .bs-lift .bs-card:hover::after{opacity:1}
+    .wp-block-button__link:hover{transform:translateY(-1px)}
+    .wp-block-button__link:active{transform:scale(.98);transition-duration:.09s}
+    .bs-yt .bs-yt-play{transition:transform .18s var(--bs-ease)}
+    .bs-yt:hover .bs-yt-play{transform:scale(1.06)}
+  }
+}
+@media print{.bs-js .bs-reveal,.bs-js .bs-reveal .bs-stagger>.wp-block-column{opacity:1 !important;transform:none !important}
+  .wp-site-blocks>header.wp-block-template-part{position:static}}

@@ -1,0 +1,343 @@
+:root {
+    --lofty-font-bold: 'font-bold';
+    --lofty-font-regular-serif: 'font-serif-regular';
+    --lofty-font-regular: 'font-regular';
+    --lofty-font-medium: 'font-medium';
+    --lofty-font-play-bold: 'font-play-bold';
+    --lofty-font-play-medium: 'font-play-medium';
+    --lofty-font-mon-regular: 'font-mon-regular';
+    --lofty-font-mon-medium: 'font-mon-medium';
+    --lofty-font-mon-bold: 'font-mon-bold';
+    --lofty-font-light: 'font-light';
+}
+
+@font-face {
+    font-family: 'font-light';
+    font-display: block;
+    src: url('fonts/SF-UI-Text/300.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font-regular';
+    font-display: block;
+    src: url('fonts/SF-UI-Text/400.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font-medium';
+    font-display: block;
+    src: url('fonts/SF-UI-Text/500.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font-bold';
+    font-display: block;
+    src: url('fonts/SF-UI-Text/600.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font-play-bold';
+    font-display: block;
+    src: url('fonts/Playfair-Display/700.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font-play-medium';
+    font-display: block;
+    src: url('fonts/Playfair-Display/500.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font-serif-regular';
+    font-display: block;
+    src: url('fonts/DM-Serif-Display/400.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font-mon-regular';
+    font-display: block;
+    src: url('fonts/Montserrat/400.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font-mon-medium';
+    font-display: block;
+    src: url('fonts/Montserrat/500.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font-mon-bold';
+    font-display: block;
+    src: url('fonts/Montserrat/700.ttf') format('truetype');
+}
+*[class^='lofty-'] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--lofty-font-regular);
+}
+
+.lofty-reset-style p,
+.lofty-reset-style ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lofty-reset-style * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.lofty-reset-style a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.lofty-listing-page {
+    padding: 40px 50px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.lofty-listing-page.lofty-is-shortcode {
+    padding: 40px 0;
+}
+
+@media (min-width: 1800px) {
+    .lofty-listing-page {
+        width: 1800px;
+    }
+}
+@media (max-width: 600px) {
+    .lofty-listing-page {
+        padding: 30px 0 0;
+    }
+    #lofty-listing-search,
+    #lofty_filter_container,
+    .lofty-disclaimer-list {
+        padding: 0 15px;
+    }
+    #lofty_pagination_container {
+        width: 100%;
+        left: 0;
+    }
+}
+.lofty-mobile-btn {
+    background: #111111;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #fff;
+    border: 0;
+    text-align: center;
+}
+
+.lofty-overflow-hidden {
+    overflow: hidden;
+    height: 100vh;
+}
+.lofty-overflow-hidden:before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    position: fixed;
+    z-index: 1010;
+    -webkit-transform: translateZ(1010px);
+    transform: translateZ(1010px);
+}
+
+.lofty-tooltip {
+    background: #202437;
+    color: #c6c8d1;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    border-radius: 4px;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+}
+.lofty-tooltip .tooltip-arrow {
+    color: #202437;
+}
+
+.lofty-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 70%;
+    text-align: center;
+    max-width: 500px;
+    z-index: 4000000;
+}
+
+.lofty-line-through {
+    text-decoration: line-through;
+}
+
+.lofty-page-padding {
+    padding: 0 40px;
+}
+
+@media (max-width: 600px) {
+    .lofty-page-padding {
+        padding: 0 15px;
+    }
+}
+@-webkit-keyframes slideInDown {
+    0% {
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes slideInDown {
+    0% {
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+@-webkit-keyframes slideOutUp {
+    0% {
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+@keyframes slideOutUp {
+    0% {
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+.lofty-status-tag {
+    background: #348cff;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+}
+.lofty-status-tag.hot {
+    background: #f05252;
+}
+.lofty-status-tag.open-house {
+    background: #45adff;
+}
+.lofty-status-tag.new {
+    background: #00c768;
+}
+.lofty-status-tag.price-reduced {
+    background: #ff973b;
+}
+.lofty-status-tag.pending {
+    background: #ffa600;
+}
+.lofty-status-tag.active {
+    background: #bb40ef;
+}
+.lofty-status-tag.sold {
+    background: #505050;
+}
+.lofty-status-tag.exclusive {
+    background: #2cd781;
+}
+
+.lofty-no-listing {
+    text-align: center;
+}
+.lofty-no-listing .lofty_iconfont {
+    font-size: 64px;
+    color: #dadada;
+}
+.lofty-no-listing .no-listing-text {
+    color: #a8a8a8;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .lofty-no-listing .lofty_iconfont {
+        font-size: 36px;
+    }
+    .lofty-no-listing .no-listing-text {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
+.lofty-disclaimer-list {
+    margin-top: 60px;
+}
+@media (max-width: 767px) {
+    .lofty-disclaimer-list {
+        margin-top: 30px;
+    }
+}
+.lofty-disclaimer-list .lofty-mls-logo {
+    margin: 0;
+}
+.lofty-disclaimer-list .lofty-mls-logo img {
+    height: 30px !important;
+}
+.lofty-disclaimer-list .lofty-mobile-mls-logo {
+    display: none;
+}
+@media (max-width: 767px) {
+    .lofty-disclaimer-list .lofty-mobile-mls-logo {
+        display: block;
+    }
+}
+.lofty-disclaimer-list .lofty-pc-mls-logo {
+    display: block;
+}
+@media (max-width: 767px) {
+    .lofty-disclaimer-list .lofty-pc-mls-logo {
+        display: none;
+    }
+}
+.lofty-disclaimer-list .lofty-mls-disclaimer {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #aaa;
+    word-break: break-word;
+}
+
+.lofty-site-pending #page {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+.lofty-site-pending #page:after {
+    position: absolute;
+    content: '';
+    background-image: url('data:,');
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: repeat;
+    pointer-events: none;
+    z-index: 1;
+}

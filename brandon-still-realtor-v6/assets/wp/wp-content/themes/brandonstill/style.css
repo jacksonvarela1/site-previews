@@ -1,0 +1,88 @@
+/*
+Theme Name: Brandon Still Realtor
+Description: Child theme of Twenty Twenty-Five for brandonstillrealtor.com: Northwest Arkansas real estate.
+Author: Brandon Still
+Template: twentytwentyfive
+Version: 1.4.0
+Requires at least: 6.7
+Text Domain: brandonstill
+License: GNU General Public License v2 or later
+*/
+
+/* ---------- Section helpers (add these class names under Block > Advanced > Additional CSS class) ---------- */
+
+.bs-eyebrow{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--wp--preset--color--accent-1)}
+
+.bs-hero{padding-block:clamp(48px,7vw,96px)}
+.bs-hero h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;letter-spacing:-.02em}
+.bs-lede{font-size:1.2rem;line-height:1.6;color:var(--wp--preset--color--contrast-2);max-width:40rem}
+
+.bs-band{background:var(--wp--preset--color--contrast);color:var(--wp--preset--color--base);padding:clamp(32px,4vw,48px) clamp(20px,4vw,48px);border-radius:20px}
+.bs-band h2,.bs-band h3,.bs-band p,.bs-band strong{color:inherit}
+.bs-band .bs-stat-num{font-family:var(--wp--preset--font-family--fraunces);font-size:2.2rem;font-weight:600;line-height:1.1;margin:0}
+.bs-band .bs-stat-label{color:#C9C4BA;font-size:.95rem;margin:.25rem 0 0}
+
+.bs-soft{background:var(--wp--preset--color--base-2);padding:clamp(40px,6vw,88px) clamp(20px,4vw,48px);border-radius:24px}
+
+.bs-card{background:#fff;border:1px solid #DDD6CA;border-radius:18px;padding:28px}
+.bs-card h3{margin-top:0}
+
+.bs-cta{background:var(--wp--preset--color--accent-1);color:#fff;padding:clamp(32px,5vw,56px);border-radius:28px}
+.bs-cta h2,.bs-cta p{color:#fff}
+.bs-cta .wp-block-button__link{background:var(--wp--preset--color--contrast);color:#fff}
+
+.bs-placeholder{background:#D9D2C5;border-radius:20px;min-height:260px;display:flex;align-items:flex-end;padding:18px;color:#3D4842;font-size:.9rem}
+
+.bs-faq .wp-block-details{border-top:1px solid #CFC7B9;padding-block:20px}
+.bs-faq .wp-block-details:last-child{border-bottom:1px solid #CFC7B9}
+.bs-faq summary{font-size:1.15rem;font-weight:600;cursor:pointer}
+
+.bs-video{border-radius:18px;overflow:hidden}
+
+/* Header / footer */
+.bs-header{border-bottom:1px solid #DDD6CA;padding:16px clamp(20px,4vw,48px);align-items:center}
+.bs-header .wp-block-site-title{font-family:var(--wp--preset--font-family--fraunces);font-size:1.6rem;font-weight:600;margin:0}
+.bs-header .wp-block-site-title a{color:var(--wp--preset--color--contrast);text-decoration:none}
+.bs-header .bs-call .wp-block-button__link{background:var(--wp--preset--color--accent-1)}
+.bs-footer{padding:56px clamp(20px,4vw,48px) 40px;margin-top:0}
+.bs-footer a{color:var(--wp--preset--color--contrast)}
+.bs-footer ul{list-style:none;padding-left:0}
+.bs-brand-sub{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wp--preset--color--contrast-2);margin:0}
+.bs-footer{background:var(--wp--preset--color--base-2)}
+.bs-footer address{font-style:normal;line-height:1.7}
+
+@media (max-width:781px){
+  .bs-band .bs-stat-num{font-size:1.7rem}
+}
+
+/* ---------- v1.1: spacing, overflow, hero search placeholder ---------- */
+html,body{overflow-x:clip}
+.wp-block-post-content > .wp-block-group + .wp-block-group{margin-top:clamp(40px,5vw,72px)}
+.bs-hero .wp-block-column:first-child .bs-placeholder{min-height:64px;align-items:center}
+.bs-review{margin:0;padding:28px;background:#fff;border:1px solid #DDD6CA;border-radius:18px}
+.bs-review p{margin:0 0 10px}
+.bs-review cite{font-style:normal;font-weight:600;font-size:.95rem}
+
+/* ---------- v1.2: guide download forms (WPForms) inside brick CTA ---------- */
+.bs-cta .wpforms-container{margin:24px 0 0;max-width:720px}
+.bs-cta .wpforms-container .wpforms-field-label,
+.bs-cta .wpforms-container .wpforms-field-sublabel,
+.bs-cta .wpforms-container .wpforms-field-description,
+.bs-cta .wpforms-confirmation-container-full,
+.bs-cta .wpforms-confirmation-container-full p{color:#fff !important}
+.bs-cta .wpforms-container input[type=text],
+.bs-cta .wpforms-container input[type=email],
+.bs-cta .wpforms-container select{background:#fff !important;color:#16211C !important;border:0 !important;border-radius:10px !important;min-height:46px}
+.bs-cta .wpforms-container .wpforms-field{padding:8px 0}
+.bs-cta .wpforms-container button[type=submit]{background:#16211C !important;color:#fff !important;border:0 !important;border-radius:999px !important;padding:14px 28px !important;font-weight:600;height:auto !important}
+.bs-cta .wpforms-container label.wpforms-error{color:#FFE2D6 !important}
+.bs-cta .wpforms-confirmation-container-full{background:transparent !important;border:1px solid rgba(255,255,255,.5) !important;border-radius:14px;padding:20px !important}
+.bs-cta .wpforms-confirmation-container-full a:not([style]){color:#fff}
+
+/* ---------- v1.3: market snapshot shortcode ---------- */
+.bs-market .wp-block-columns{display:flex;flex-wrap:wrap;gap:24px;margin-top:20px}
+.bs-market .wp-block-column{flex:1 1 180px}
+.bs-market h2{margin-top:0}
+
+/* ---------- v1.4: IDX disclaimer ---------- */
+.bs-idx-disclaimer{color:var(--wp--preset--color--contrast-2);line-height:1.5;margin-top:8px}

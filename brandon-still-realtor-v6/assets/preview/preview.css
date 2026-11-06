@@ -1,0 +1,29 @@
+/* Preview layer for the static copy of Brandon's WordPress site.
+   Not part of his theme. It only covers what the copy has to stand in for:
+   preview notes on forms, the Lofty IDX slots, the static Trustindex reviews and the footer credit. */
+
+.bs-preview-note{margin:12px 0 0;font-size:.85rem;line-height:1.5;opacity:.82}
+.bs-preview-note.is-flash{opacity:1}
+.bs-preview-credit{margin:28px 0 0;font-size:.78rem;letter-spacing:.01em;color:var(--wp--preset--color--contrast-2);opacity:.85}
+
+/* Lofty IDX slots, drawn with his own .bs-placeholder style */
+.bs-idx-slot{min-height:260px;align-items:flex-end;margin-top:var(--wp--style--block-gap,1.2rem)}
+.bs-idx-slot.is-search{min-height:clamp(450px,44vw,635px)}
+.bs-idx-search-wrap{padding:24px clamp(20px,4vw,46px) 56px}
+
+/* Lofty home valuation, step 1 shown as a calm, non-sending card */
+.bs-preview-hv{max-width:640px}
+.bs-preview-hv form{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.bs-preview-hv input{flex:1 1 260px;min-height:48px;padding:0 16px;border:1px solid #CFC7B9;border-radius:10px;font:inherit;background:#fff;color:var(--wp--preset--color--contrast)}
+.bs-preview-hv button{border:0;cursor:pointer}
+
+/* Trustindex reviews, static: the remote loader is not used in the preview */
+.ti-widget.ti-static{opacity:1!important;height:auto!important;overflow:visible!important}
+.ti-widget.ti-static .ti-review-item{transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.ti-widget.ti-static .ti-review-item.ti-open .ti-review-content .ti-review-text-container{-webkit-line-clamp:unset;display:block;height:auto}
+.ti-widget.ti-static .ti-read-more:empty{display:none}
+.ti-widget.ti-static .bs-ti-initial{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;font:600 17px/1 "Trustindex Poppins",system-ui,sans-serif;color:#fff;background:#2F5D4A}
+.ti-widget.ti-static .bs-ti-initial[data-tone="1"]{background:#A84A28}
+.ti-widget.ti-static .bs-ti-initial[data-tone="2"]{background:#3D4842}
+.bs-band .ti-widget.ti-static .bs-ti-initial{box-shadow:0 0 0 1px rgba(255,255,255,.25)}
+@media (prefers-reduced-motion:reduce){.ti-widget.ti-static .ti-review-item{transition:none}}
