@@ -1,0 +1,381 @@
+/* ---------- v1.5 blend: header, footer, motion, media ----------
+   Child theme style.css section for Brandon Still's WordPress site (theme brandonstill 1.5.0).
+   Every rule hangs off a class you add under Block > Advanced > Additional CSS class(es), or off his
+   existing header, footer and button markup. Remove a class and that block is exactly his again.
+   Motion: transform and opacity only, once. Movement only under prefers-reduced-motion: no-preference; under reduce
+   the same entrances run as gentle opacity-only fades (see "motion" below).
+   Hiding rules are scoped to .bs-js, which the script adds, so nothing is hidden if it never runs. */
+
+:root{--bs-ease:cubic-bezier(.2,.7,.2,1);--bs-head:84px}
+@media (max-width:781px){:root{--bs-head:68px}}
+html{scroll-padding-top:calc(var(--bs-head) + 12px)}
+
+/* ---- header: firm beside his name, office line, sticky ---- */
+.wp-site-blocks>header.wp-block-template-part{position:sticky;top:0;z-index:50;background:var(--wp--preset--color--base)}
+.bs-sticky{position:relative}
+.bs-sticky::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:12px;pointer-events:none;
+  background:linear-gradient(rgba(22,33,28,.08),rgba(22,33,28,0));opacity:0}
+.bs-scrolled .bs-sticky::after{opacity:1}
+.bs-brand{transform-origin:left center}
+.bs-brand-row{display:flex;align-items:baseline;gap:12px;margin:0}
+.bs-header .bs-brand-firm{font-family:var(--wp--preset--font-family--fraunces);font-size:1.6rem;font-weight:600;line-height:1.2;
+  letter-spacing:0;text-transform:none;color:var(--wp--preset--color--contrast);margin:0;padding-left:12px;border-left:1px solid #CFC7B9;white-space:nowrap}
+.bs-header .wp-block-site-title{line-height:1.2;white-space:nowrap}
+.bs-brand-sub a{color:inherit;text-decoration:none}
+.bs-brand-sub a:hover{text-decoration:underline}
+/* the Collier office number reads as contact information, not a caption (AREC ABPG p.6) */
+.bs-brand-sub .bs-office-num{font-size:.82rem;font-weight:600;letter-spacing:.02em;color:var(--wp--preset--color--contrast)}
+.bs-brand-office{display:none;margin:0}
+.bs-brand-office a{display:inline-flex;align-items:center;min-height:24px;font-family:var(--wp--preset--font-family--instrument-sans);
+  font-size:13px;font-weight:600;line-height:1.2;color:var(--wp--preset--color--contrast);text-decoration:none}
+.bs-brand-office a:hover{text-decoration:underline}
+.wp-block-navigation li.bs-nav-office{display:none}
+.bs-call .bs-call-short{display:none}
+@media (max-width:781px){
+  .bs-brand-row{flex-direction:column;align-items:flex-start;gap:0}
+  .bs-header .wp-block-site-title,.bs-header .bs-brand-firm{font-size:1.2rem;line-height:1.15;padding-left:0;border-left:0}
+  .bs-header>.bs-brand{row-gap:2px}
+  .bs-brand-office{display:block}
+}
+/* one calm row at every width. His full nav stays from 1100 px: from 1100 to 1279 px the brand tightens (name beside
+   the firm at 1.2rem, sub line on two lines, header about 97 px; fully stacking the name over the firm would make it
+   143 px). Below 1100 px the Navigation block's own overlay menu takes over (core shows it only under 600 px). */
+@media (max-width:1099px){
+  .bs-header{flex-wrap:nowrap;gap:16px}
+  .bs-header>.bs-brand{flex:1 1 auto;min-width:0}
+  .bs-header>.wp-block-navigation{order:3;flex:none}
+  .bs-header>.wp-block-buttons{order:2;flex:none}
+}
+@media (min-width:600px) and (max-width:1099px){
+  .bs-header .wp-block-navigation__responsive-container-open:not(.always-shown){display:flex}
+  .bs-header .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){display:none}
+}
+@media (min-width:1100px) and (max-width:1279px){
+  .bs-header{flex-wrap:nowrap;gap:16px}
+  .bs-header>.bs-brand{flex:0 1 auto;min-width:0;row-gap:6px}
+  .bs-header>.wp-block-navigation,.bs-header>.wp-block-buttons{flex:none}
+  .bs-header .wp-block-site-title,.bs-header .bs-brand-firm{font-size:1.2rem;line-height:1.15}
+  .bs-header .bs-brand-firm{padding-left:10px}
+  .bs-brand-row{gap:10px}
+  .bs-brand-sub{line-height:1.45}
+  .bs-brand-sub .bs-sub-sep{display:none}
+  .bs-brand-sub .bs-sub-b{display:block}
+  .bs-header .wp-block-navigation{gap:.9rem;font-size:.95rem}
+  .bs-header .wp-block-navigation .wp-block-navigation__container{gap:.9rem}
+}
+@media (max-width:781px){
+  .bs-header{gap:10px;padding-block:10px}
+  .bs-header .bs-brand-sub{display:none}
+  .bs-call .bs-call-long{display:none}
+  .bs-call .bs-call-short{display:inline}
+  .bs-header .bs-call .wp-block-button__link{padding:10px 18px}
+  .wp-block-navigation li.bs-nav-office{display:flex}
+}
+/* 1280 to 1359 px: his full nav, a touch more compact so it stays on the brand's row */
+@media (min-width:1280px) and (max-width:1359px){
+  .bs-header .wp-block-site-title,.bs-header .bs-brand-firm{font-size:1.35rem}
+  .bs-header .bs-brand-firm{padding-left:10px}
+  .bs-brand-row{gap:10px}
+  .bs-header .wp-block-navigation{gap:.9rem;font-size:.95rem}
+  .bs-header .wp-block-navigation .wp-block-navigation__container{gap:.9rem}
+}
+
+/* ---- footer ---- */
+.bs-footer li a,.bs-footer address a{display:inline-block;padding-block:4px}
+.bs-foot-firm{display:block}
+.bs-foot-about{max-width:34rem;font-size:.95rem;line-height:1.6;color:var(--wp--preset--color--contrast-2)}
+/* ---- his social profiles: core Social Icons block (Show text labels on, Pill shape, icon color Forest Ink), drawn
+   as his outline pill button: Instrument Sans 600, 1 px Limestone ring, 44 px tall; hover fills Forest Ink like his
+   solid button. On the brick call-to-action panel the ring and text are white, like the office button there.
+   Order as on his Linktree (Facebook, Instagram, LinkedIn), then his YouTube and the NWA Investing Podcast. ---- */
+.bs-social-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:32px;padding-top:24px;border-top:1px solid #DDD6CA}
+.bs-social-row .bs-social-lead{margin:0;font-size:.95rem;font-weight:600}
+.wp-block-social-links.bs-social{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0;font-size:inherit}
+.wp-block-social-links.bs-social .wp-social-link{margin:0;padding:0;border-radius:999px;background:transparent;color:var(--wp--preset--color--contrast);font-size:inherit}
+.wp-block-social-links.bs-social .wp-block-social-link-anchor{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px 0 14px;
+  border-radius:999px;box-shadow:inset 0 0 0 1px #CFC7B9;color:inherit;text-decoration:none;
+  font-family:var(--wp--preset--font-family--instrument-sans);font-size:.9rem;font-weight:600;line-height:1;
+  transition:background-color .2s var(--bs-ease),color .2s var(--bs-ease),box-shadow .2s var(--bs-ease)}
+.wp-block-social-links.bs-social .wp-block-social-link-anchor:hover{background:var(--wp--preset--color--contrast);color:#fff;
+  box-shadow:inset 0 0 0 1px var(--wp--preset--color--contrast)}
+.wp-block-social-links.bs-social .wp-block-social-link-anchor:focus-visible{outline:2px solid var(--wp--preset--color--accent-1);outline-offset:2px}
+.wp-block-social-links.bs-social svg{width:20px;height:20px;fill:currentColor;flex:none}
+.wp-block-social-links.bs-social .wp-block-social-link-label{font-size:inherit;line-height:1}
+.bs-cta .bs-social-row{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.35)}
+.bs-cta .bs-social-row .bs-social-lead{color:#fff}
+.bs-cta .wp-block-social-links.bs-social .wp-social-link{color:#fff}
+.bs-cta .wp-block-social-links.bs-social .wp-block-social-link-anchor{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.9)}
+.bs-cta .wp-block-social-links.bs-social .wp-block-social-link-anchor:hover{background:#fff;color:var(--wp--preset--color--accent-1);box-shadow:inset 0 0 0 1.5px #fff}
+.bs-cta .wp-block-social-links.bs-social .wp-block-social-link-anchor:focus-visible{outline-color:#fff}
+/* beside his reels and episode on the home page: no rule above, it sits inside his section */
+.bs-social-row.is-inline{margin-top:24px;padding-top:0;border-top:0}
+.bs-eho{white-space:nowrap}
+.bs-eho svg{height:20px;width:auto;vertical-align:-5px;margin-right:4px}
+/* the IDX notice keeps a readable measure but starts on the same left edge as every other footer line
+   (his footer group centers a 1280 px column) */
+.bs-footer .bs-idx-disclaimer{font-size:.78rem;max-width:62rem}
+.bs-footer>.bs-idx-disclaimer{margin-left:max(0px,calc((100% - 1280px) / 2)) !important;margin-right:auto !important}
+/* phones: his two link lists side by side instead of stacked (about 350 px shorter at 390) */
+@media (max-width:781px){
+  .bs-footer>.wp-block-columns{flex-wrap:wrap !important}
+  .bs-footer>.wp-block-columns>.wp-block-column:nth-child(3),
+  .bs-footer>.wp-block-columns>.wp-block-column:nth-child(4){flex:1 1 0 !important;min-width:0}
+}
+
+/* ---- his small card links reach a 24 px target (inline padding: the look and line height do not change) ---- */
+.bs-card p a:not(.wp-block-button__link),.bs-card .wp-block-heading a,.wp-block-post-excerpt__more-link,.wp-block-post-terms a{padding-block:3px}
+
+/* ---- firm line in every brick call-to-action panel, office number as an outline button beside his cell ---- */
+.bs-cta .bs-cta-firm{font-size:.95rem;margin-top:20px}
+.bs-cta .bs-cta-firm a{color:#fff}
+.bs-cta .wp-block-button.is-style-outline>.wp-block-button__link{background:transparent;color:#fff;border:0;padding:.85em 1.6em;
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.9)}
+.bs-cta .wp-block-button.is-style-outline>.wp-block-button__link:hover{background:rgba(255,255,255,.1)}
+/* his inline links inside the brick panels inherited the brick link color and vanished; white, underlined */
+.bs-cta p a:not(.wp-block-button__link){color:#fff;text-decoration:underline}
+
+/* ---- TCPA consent checkbox in his WPForms ---- */
+.bs-consent{font-size:.85rem;line-height:1.5}
+.bs-consent ul{list-style:none;margin:0;padding:0}
+.bs-consent li{display:flex;gap:10px;align-items:flex-start}
+/* a 20 px box with 2 px around it: a 24 px target. WPForms Modern draws its box from this variable. */
+.bs-consent{--wpforms-field-size-checkbox-size:20px}
+.bs-consent input[type=checkbox],div.wpforms-container-full .bs-consent input[type=checkbox]{width:20px;height:20px;margin:2px;flex:none;
+  accent-color:var(--wp--preset--color--contrast)}
+.bs-cta .bs-consent label,.bs-cta .bs-consent a{color:#fff !important}
+.bs-preview-hv .bs-consent{flex:1 1 100%}
+
+/* ---- Lofty IDX slot in the preview (his .bs-placeholder look, shorter) ---- */
+.bs-idx-slot{min-height:180px}
+.bs-idx-slot.is-search{min-height:clamp(320px,34vw,480px)}
+.bs-idx-slot .bs-lede{margin:0;font-size:1.05rem}
+
+/* ---- small additions inside his sections ---- */
+.bs-more-link{margin-top:20px}
+.bs-band .bs-stat-source{color:#C9C4BA;font-size:.8rem;line-height:1.5;margin:20px 0 0}
+.bs-note{font-size:.88rem;line-height:1.55;color:var(--wp--preset--color--contrast-2)}
+.bs-reviews-more{margin:20px 0 0}
+.bs-band .bs-reviews-more a{color:var(--wp--preset--color--base)}
+.bs-stat-num{font-variant-numeric:tabular-nums}
+
+/* ---- home hero: his media frame plays a silent loop (core Cover block, class bs-hero-video) ---- */
+.bs-hero-video.wp-block-cover{position:relative;display:block;min-height:0;aspect-ratio:1024/554;padding:0;margin:0;border-radius:0;overflow:hidden;background:var(--wp--preset--color--base-2)}
+.bs-hero-video .wp-block-cover__video-background{position:absolute;top:0;left:0;width:100%;height:100%;margin:0;padding:0;max-width:none;max-height:none;border:0;box-shadow:none;object-fit:cover;object-position:50% 50%}
+.bs-hero-video .wp-block-cover__background{display:none}
+.bs-hero-video .wp-block-cover__inner-container{position:absolute;inset:0;pointer-events:none}
+@media (max-width:781px){.bs-hero-video.wp-block-cover{aspect-ratio:16/9}}
+.bs-video-toggle{position:absolute;right:12px;bottom:12px;z-index:2;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;
+  border:0;border-radius:999px;background:rgba(22,33,28,.55);color:#fff;cursor:pointer;
+  font:600 .8rem/1 var(--wp--preset--font-family--instrument-sans);letter-spacing:.01em;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.bs-video-toggle::before{content:"";width:10px;height:12px;background:linear-gradient(90deg,#fff 0 35%,transparent 35% 65%,#fff 65%)}
+.bs-video-toggle[data-state=paused]::before{background:#fff;clip-path:polygon(0 0,100% 50%,0 100%)}
+.bs-video-toggle:hover{background:rgba(22,33,28,.75)}
+.bs-video-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+/* ---- YouTube facade inside his embed frame (WP YouTube Lyte does this on WordPress) ---- */
+.wp-block-embed.bs-video .wp-block-embed__wrapper{background:var(--wp--preset--color--contrast)}
+.bs-yt{position:absolute;inset:0;display:block;width:100%;height:100%;overflow:hidden;background:var(--wp--preset--color--contrast);cursor:pointer}
+.bs-yt img{display:block;width:100%;height:100%;object-fit:cover}
+.bs-yt-play{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:14px;background:rgba(22,33,28,.8)}
+.bs-yt-play::after{content:"";position:absolute;left:27px;top:15px;border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #fff}
+.bs-yt:hover .bs-yt-play{background:var(--wp--preset--color--accent-1)}
+.bs-yt:focus-visible{outline:3px solid #fff;outline-offset:-6px}
+.wp-block-embed.bs-video iframe{border:0}
+
+/* ---- his reels (core Video block, class bs-reel) ---- */
+.bs-reel{margin:0}
+.bs-reel video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:18px;background:var(--wp--preset--color--contrast)}
+.bs-reel-row .bs-reel-title{font-size:1rem;line-height:1.35;margin:14px 0 0}
+.bs-reel-row .bs-reel-text{font-size:.95rem;line-height:1.55;margin:8px 0 0}
+.bs-reel-row .bs-reel-meta{font-size:.82rem;line-height:1.5;color:var(--wp--preset--color--contrast-2);margin:8px 0 0}
+/* the home pair: two reels side by side at a deliberate width, then one quiet line */
+@media (min-width:782px){.wp-block-columns.bs-reel-row{max-width:720px;margin-left:0 !important;gap:32px}}
+@media (max-width:781px){.wp-block-columns.bs-reel-row{display:grid !important;grid-template-columns:1fr 1fr;gap:16px}}
+.bs-reel-more{margin-top:20px;font-size:.95rem}
+.bs-reel-more a{display:inline-block;padding-block:3px}
+
+/* ---- photo and video slots until the shoot (block patterns brandonstill/town-plate and video card) ----
+   Town plate: his Sand panel, square corners like the photos it stands in for, an Ozark ridgeline in Moss Gray.
+   Video card: the same light Sand plate inside his .bs-video frame (so no page stacks two dark blocks in one screen),
+   eyebrow "Video tour in production". Swap for an Embed block when the video exists; hide the section until then. */
+.bs-plate,.bs-vcard{position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;
+  padding:clamp(20px,3vw,32px)}
+.bs-plate{aspect-ratio:3/2;margin:0;background:var(--wp--preset--color--base-2)}
+.bs-vcard{aspect-ratio:16/9;margin-block-end:0;background:var(--wp--preset--color--base-2);color:var(--wp--preset--color--contrast)}
+.bs-plate::before,.bs-vcard::before{content:"";position:absolute;inset:0;pointer-events:none;background-repeat:no-repeat;
+  background-position:center bottom;background-size:100% auto;transform-origin:50% 100%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 140'%3E%3Cpath fill='%233D4842' fill-opacity='.07' d='M0 62C48 44 92 50 138 36 186 22 228 40 280 30 334 20 378 6 432 20 486 34 540 26 600 16V140H0Z'/%3E%3Cpath fill='%233D4842' fill-opacity='.09' d='M0 96C64 80 112 88 176 72 236 58 282 78 340 70 400 62 452 50 510 64 548 72 576 70 600 66V140H0Z'/%3E%3Cpath fill='none' stroke='%233D4842' stroke-opacity='.18' stroke-width='1.2' d='M0 96C64 80 112 88 176 72 236 58 282 78 340 70 400 62 452 50 510 64 548 72 576 70 600 66'/%3E%3C/svg%3E")}
+.bs-plate>p,.bs-vcard>p{position:relative;margin:0}
+.bs-plate .bs-eyebrow{margin:0 0 6px}
+.bs-plate .bs-plate-name{font-family:var(--wp--preset--font-family--fraunces);font-weight:600;font-size:clamp(1.9rem,3.4vw,2.8rem);
+  line-height:1.05;letter-spacing:-.01em;color:var(--wp--preset--color--contrast)}
+.bs-vcard .bs-vcard-eyebrow{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  color:var(--wp--preset--color--contrast-2);margin-bottom:8px}
+.bs-vcard .bs-vcard-title{font-family:var(--wp--preset--font-family--fraunces);font-weight:600;font-size:clamp(1.35rem,2.6vw,2rem);
+  line-height:1.15;color:var(--wp--preset--color--contrast)}
+.bs-town-photo{margin:0}
+.bs-town-photo img{display:block;width:100%;height:auto}
+
+/* ---- sources in small print, related links, episode lines ---- */
+.bs-faq .bs-faq-src{font-size:.8rem;line-height:1.5;color:var(--wp--preset--color--contrast-2);margin:10px 0 0}
+.bs-faq .bs-faq-more{font-size:.88rem;line-height:1.5;margin:8px 0 0}
+/* quick facts: one line of his small text directly under the dark snapshot band */
+.bs-market+.bs-quick-facts{margin-block-start:12px !important;color:var(--wp--preset--color--contrast-2);line-height:1.5}
+.bs-ep-links{font-size:.95rem;line-height:1.6}
+.bs-faq-more a,.bs-more-link a,.bs-cta-firm a,.bs-reel-meta a{display:inline-block;padding-block:3px}
+.bs-search-title{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.1;letter-spacing:-.01em;margin:0 0 20px}
+.bs-sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ---- one reel beside his words (investing guide, his own rental walkthrough slot) ---- */
+.wp-block-columns.bs-reel-feature{align-items:flex-start;gap:28px;margin-block:28px}
+.bs-reel-feature>.bs-reel-col{flex:0 0 240px !important;max-width:240px}
+.bs-reel-feature .bs-eyebrow{margin:0}
+.bs-reel-feature .bs-reel-title{font-size:1.15rem;line-height:1.35;margin:6px 0 0}
+.bs-reel-feature .bs-reel-text{margin:10px 0 0}
+.bs-reel-feature .bs-reel-meta{font-size:.82rem;line-height:1.5;color:var(--wp--preset--color--contrast-2);margin:12px 0 0}
+.bs-transcript{margin-top:12px;font-size:.95rem}
+.bs-transcript summary{cursor:pointer;font-weight:600}
+@media (max-width:781px){.bs-reel-feature>.bs-reel-col{flex-basis:100% !important;max-width:260px}}
+
+/* ---- reviews: arrows only, no auto-advance (the band keeps his Trustindex card look) ---- */
+.ti-widget.ti-static .ti-read-more span{color:#3D4842;display:inline-block;padding-block:3px}
+
+/* ---- whole-card links: a card that stands for one page is clickable anywhere. One real link per card (its title, or
+   its arrow link), stretched over the card with ::after, so screen readers and the keyboard meet one link, not three.
+   Other links inside the card (category tags) sit above the stretch and keep working. WordPress: add the class
+   bs-card-link to the card Group and bs-card-primary to its title link (Link settings > Additional CSS class). ---- */
+.bs-card-link{position:relative}
+/* links inside his sentences reach a 24 px target without changing the line (inline padding does not move text) */
+.wp-block-post-content :is(p,li) a:not(.wp-block-button__link):not(.bs-card-primary){padding-block:3px}
+.bs-card-link .bs-card-primary::after,
+.bs-card-link:not(:has(.bs-card-primary)) :is(h2,h3,h4) a::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
+.bs-card-link :not(h2,h3,h4)>a:not(.bs-card-primary),.bs-card-link button,.bs-card-link input{position:relative;z-index:2}
+.bs-card-link .bs-card-primary:focus-visible{outline:none}
+.bs-card-link:has(.bs-card-primary:focus-visible){outline:2px solid var(--wp--preset--color--accent-1);outline-offset:3px}
+.bs-card-link:hover .bs-card-primary{text-decoration:underline;text-underline-offset:.18em}
+.bs-arrow{display:inline-block}
+/* links added inside his dark stat band read as part of the number line */
+.bs-band .bs-stat-label a{color:inherit;text-decoration:underline;text-decoration-color:rgba(246,243,238,.5);text-underline-offset:.2em}
+.bs-band .bs-stat-label a:hover{text-decoration-color:currentColor}
+
+/* ---- motion ----
+   Two modes, both finished and calm.
+   No preference: sections fade in and rise 32 px, their heading trails a beat, card grids stagger in, photos settle from
+   1.08, the hero copy rises in on load, the header tightens on scroll, cards lift on hover.
+   Reduced motion (the Windows "Animation effects" switch, which many PCs ship with off, or the user's own setting): the
+   same entrances as opacity-only fades, with no movement, scaling or parallax; hover changes color and shadow only.
+   Transform and opacity only. Hiding rules are scoped to .bs-js, which the script adds, so nothing hides without it. */
+.bs-settle{overflow:hidden}
+/* same-page anchors (#listings and friends) land clear of the sticky header even while the 32 px rise is pending */
+.bs-reveal[id]{scroll-margin-top:32px}
+@keyframes bs-fade{from{opacity:0}}
+@keyframes bs-rise{from{opacity:0;transform:translateY(24px)}}
+/* both modes: fades */
+.bs-js .bs-reveal{opacity:0;transition:opacity .7s var(--bs-ease)}
+.bs-js .bs-reveal.is-in{opacity:1}
+.bs-js .bs-reveal .bs-stagger>.wp-block-column{opacity:0;transition:opacity .6s var(--bs-ease)}
+.bs-js .bs-reveal.is-in .bs-stagger>.wp-block-column{opacity:1}
+.bs-js .bs-reveal.is-in .bs-stagger>.wp-block-column:nth-child(2){transition-delay:.08s}
+.bs-js .bs-reveal.is-in .bs-stagger>.wp-block-column:nth-child(3){transition-delay:.16s}
+.bs-js .bs-reveal.is-in .bs-stagger>.wp-block-column:nth-child(4){transition-delay:.24s}
+.bs-js .bs-reveal.is-in .bs-stagger>.wp-block-column:nth-child(n+5){transition-delay:.32s}
+.bs-js .bs-settle:not(.bs-hero-video) img{opacity:0;transition:opacity .8s var(--bs-ease)}
+.bs-js .bs-settle.is-in img{opacity:1}
+.bs-js main .bs-hero .wp-block-column:first-child>:is(.bs-eyebrow,h1,.bs-lede,.wp-block-buttons),
+.bs-js main .bs-hero>:is(.bs-eyebrow,h1,.bs-lede,.wp-block-buttons){animation-name:bs-fade;animation-duration:.45s;
+  animation-timing-function:var(--bs-ease);animation-fill-mode:backwards}
+/* backwards, not both: the first frame holds through the delay, and once finished the animation lets go entirely (his
+   own static style is the end state), so nothing lingers in the page's animation list */
+/* longhands only, so the delays below are never reset by a shorthand of higher specificity */
+.bs-js main .bs-hero h1{animation-delay:.04s}
+.bs-js main .bs-hero .bs-lede{animation-delay:.08s}
+.bs-js main .bs-hero .wp-block-buttons{animation-delay:.12s}
+.bs-sticky::after{transition:opacity .24s var(--bs-ease)}
+@media (hover:hover) and (pointer:fine){
+  .bs-lift .bs-card{position:relative}
+  .bs-lift .bs-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;
+    box-shadow:0 12px 32px rgba(22,33,28,.12);opacity:0;transition:opacity .22s var(--bs-ease)}
+  .bs-lift .bs-card:hover::after{opacity:1}
+}
+/* no preference: movement on top of the fades */
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  @media (min-width:782px){
+    .bs-brand{transition:transform .24s var(--bs-ease)}
+    .bs-scrolled .bs-brand{transform:scale(.94)}
+  }
+  /* M1 fade and rise, the heading trailing a beat */
+  .bs-js .bs-reveal{transform:translateY(32px);transition:opacity .8s var(--bs-ease),transform 1s var(--bs-ease)}
+  .bs-js .bs-reveal.is-in{transform:none}
+  .bs-js .bs-reveal>:is(h2.wp-block-heading,.bs-eyebrow){transform:translateY(18px);transition:transform 1.1s var(--bs-ease) .06s}
+  .bs-js .bs-reveal.is-in>:is(h2.wp-block-heading,.bs-eyebrow){transform:none}
+  .bs-js .bs-reveal .bs-stagger>.wp-block-column{transform:translateY(24px);transition:opacity .7s var(--bs-ease),transform .9s var(--bs-ease)}
+  .bs-js .bs-reveal.is-in .bs-stagger>.wp-block-column{transform:none}
+  /* M2 image settle */
+  .bs-js .bs-settle img,.bs-js .bs-settle video{transform:scale(1.08);transition:opacity .8s var(--bs-ease),transform 1.6s var(--bs-ease)}
+  .bs-js .bs-settle.is-in img,.bs-js .bs-settle.is-in video{transform:none}
+  .bs-js .bs-settle.bs-plate::before{transform:scale(1.08);transition:transform 1.6s var(--bs-ease)}
+  .bs-js .bs-settle.bs-plate.is-in::before{transform:none}
+  /* hero copy rises in on load */
+  .bs-js main .bs-hero .wp-block-column:first-child>:is(.bs-eyebrow,h1,.bs-lede,.wp-block-buttons),
+  .bs-js main .bs-hero>:is(.bs-eyebrow,h1,.bs-lede,.wp-block-buttons){animation-name:bs-rise;animation-duration:.9s}
+  .bs-js main .bs-hero h1{animation-delay:.08s}
+  .bs-js main .bs-hero .bs-lede{animation-delay:.18s}
+  .bs-js main .bs-hero .wp-block-buttons{animation-delay:.28s}
+  /* M4 hover lift, fine pointers only */
+  @media (hover:hover) and (pointer:fine){
+    .bs-lift .bs-card,.wp-block-button__link{transition:transform .2s var(--bs-ease),background-color .2s var(--bs-ease),color .2s var(--bs-ease)}
+    .bs-lift .bs-card:hover{transform:translateY(-4px)}
+    .wp-block-button__link:hover{transform:translateY(-1px)}
+    .wp-block-button__link:active{transform:scale(.98);transition-duration:.09s}
+    .bs-yt .bs-yt-play{transition:transform .2s var(--bs-ease)}
+    .bs-yt:hover .bs-yt-play{transform:scale(1.08)}
+    .bs-card-link figure img{transition:transform .6s var(--bs-ease)}
+    .bs-card-link:hover figure img{transform:scale(1.04)}
+    .bs-arrow{transition:transform .2s var(--bs-ease)}
+    .bs-card-link:hover .bs-arrow,a:hover>.bs-arrow{transform:translateX(4px)}
+    .wp-block-social-links.bs-social .wp-block-social-link-anchor svg{transition:transform .2s var(--bs-ease)}
+    .wp-block-social-links.bs-social .wp-block-social-link-anchor:hover svg{transform:scale(1.12)}
+  }
+}
+@media print{.bs-js .bs-reveal,.bs-js .bs-reveal .bs-stagger>.wp-block-column,.bs-js .bs-settle img{opacity:1 !important;transform:none !important}
+  .wp-site-blocks>header.wp-block-template-part{position:static}}
+
+/* ---- mortgage payment calculator (Custom HTML block in a Group with class bs-calc-wrap, page /mortgage-calculator/).
+   His card for the inputs, his dark stat band for the result, his WPForms field look, his pill button colors. ---- */
+.bs-calc{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:start}
+.bs-calc-in{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;margin:0}
+.bs-calc-tag{grid-column:1/-1;margin:0;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--wp--preset--color--accent-1)}
+.bs-calc-fld{display:flex;flex-direction:column;gap:6px;min-width:0}
+.bs-calc-fld.is-wide{grid-column:1/-1}
+.bs-calc-fld label{font-size:.95rem;font-weight:600;color:var(--wp--preset--color--contrast)}
+.bs-calc-box{position:relative;display:flex;align-items:center;background:#fff;border:1px solid #CFC7B9;border-radius:10px;min-height:46px;
+  transition:border-color .2s var(--bs-ease),box-shadow .2s var(--bs-ease)}
+.bs-calc-box:focus-within{border-color:var(--wp--preset--color--contrast);box-shadow:0 0 0 3px rgba(22,33,28,.12)}
+.bs-calc-box .bs-calc-unit{padding:0 0 0 14px;color:var(--wp--preset--color--contrast-2);font-weight:600}
+.bs-calc-box .bs-calc-unit.is-after{padding:0 14px 0 0}
+.bs-calc-box input,.bs-calc-box select{flex:1 1 auto;min-width:0;width:100%;min-height:44px;border:0;background:transparent;padding:0 14px 0 6px;
+  font:500 1rem/1.2 var(--wp--preset--font-family--instrument-sans);color:var(--wp--preset--color--contrast);font-variant-numeric:tabular-nums;outline:0}
+.bs-calc-box select{padding-left:14px;cursor:pointer}
+.bs-calc-fld input[type=range]{width:100%;height:24px;margin:2px 0 0;accent-color:var(--wp--preset--color--contrast);cursor:pointer}
+.bs-calc-out.bs-band{position:sticky;top:calc(var(--bs-head) + 16px);padding:clamp(24px,3vw,36px)}
+.bs-calc-out .bs-calc-label{margin:0;color:#C9C4BA;font-size:.95rem}
+.bs-calc-out .bs-calc-total{margin:6px 0 0;font-family:var(--wp--preset--font-family--fraunces);font-weight:600;font-size:clamp(2.4rem,4.4vw,3.4rem);line-height:1.05;
+  font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.bs-calc-total [data-o]{display:inline-block}
+.bs-calc-total .bs-calc-per{font-size:.42em;font-weight:500;margin-left:4px;color:#C9C4BA}
+.bs-calc-bar{display:flex;gap:3px;height:10px;margin:22px 0 16px;border-radius:999px;overflow:hidden;background:rgba(246,243,238,.12)}
+.bs-calc-bar i{display:block;min-width:0}
+.bs-calc-bar [data-seg=pi]{background:#F6F3EE}.bs-calc-bar [data-seg=tax]{background:#C9A37E}
+.bs-calc-bar [data-seg=ins]{background:#8FA898}.bs-calc-bar [data-seg=hoa]{background:#6F7A73}
+.bs-calc-legend{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.95rem}
+.bs-calc-legend li{display:flex;align-items:center;gap:10px;color:#E4DFD6}
+.bs-calc-legend li::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--c);flex:none}
+.bs-calc-legend b{margin-left:auto;font-weight:600;color:#F6F3EE;font-variant-numeric:tabular-nums}
+.bs-calc-verdict{margin:18px 0 0;padding-top:16px;border-top:1px solid rgba(246,243,238,.18);font-size:.95rem;line-height:1.55;color:#F6F3EE}
+.bs-calc-fine{max-width:52rem;margin-top:18px;color:var(--wp--preset--color--contrast-2);line-height:1.55}
+@media (max-width:781px){
+  .bs-calc{grid-template-columns:1fr}
+  .bs-calc-in{grid-template-columns:1fr}
+  .bs-calc-out.bs-band{position:static}
+}
