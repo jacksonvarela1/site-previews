@@ -1,0 +1,29 @@
+/* generated file, do not edit by hand */
+.map-key{max-width:60ch}
+@media (min-width:1024px){.hub-atlas .hub-map{position:sticky;top:calc(var(--hdr) + 24px);align-self:start}}
+.nwa-map .town.is-muted{cursor:default}
+.nwa-map .town.is-muted .dot{fill:var(--edge)}
+.atlas.on-paper .nwa-map .county{fill:var(--map-land)}
+.atlas.on-paper .nwa-map .town-label{stroke:var(--map-land)}
+.atlas.on-paper .nwa-map .town.is-zero .dot{fill:var(--map-land)}
+.atlas.on-paper .nwa-map .town.is-hot .dot,.atlas.on-paper .nwa-map .town:focus-visible .dot{stroke:var(--paper)}
+.page-lede{margin-top:var(--s5)}
+.tbl.choose td a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em;padding-block:4px}
+.ledger-grid.is-2{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:var(--s3)}
+.idx{container-type:inline-size}
+.idx-in{display:grid;gap:var(--s6)}
+.idx-main{max-width:62ch}
+.idx-main>*+*{margin-top:var(--s4)}
+.idx-main .h3{margin-top:var(--s2)}
+.idx-main .btns,.idx-main .pend-status{margin-top:var(--s5)}
+.idx-firm{font-size:var(--t-ui);font-weight:600;color:var(--ink)}
+.idx-m{display:none}
+.idx-m .tlink{font-weight:600}
+@container (max-width:539px){.idx-main .btns{display:none}.idx-main .idx-m{display:block}}
+.cty{margin:var(--s8) 0 var(--s3)}
+.hub-list>.cty:first-child{margin-top:0}
+.hub-idx,.two-c{margin-top:var(--s8)}
+.two-c+.prose{margin-top:var(--s3)}
+.cty-pair{display:grid;gap:var(--s6) var(--gap);margin-top:var(--s6)}
+@media (min-width:768px){.cty-pair{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cty-pair .h3s{font-size:var(--t-small);font-weight:500;color:var(--ink-2)}
