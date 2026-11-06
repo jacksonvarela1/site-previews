@@ -5,233 +5,695 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>In Retrospect Vintage Mall | Fayetteville, AR</title>
-<meta name="description" content="Vintage Market and Boutique at 10 E Township St, Fayetteville. Retro clothing and jewelry, mid-century decor, gifts and home furnishings, books and records. Open daily.">
+<meta name="description" content="Vintage Market and Boutique at 10 E Township St, Fayetteville. Retro clothing and jewelry, mid-century decor, gifts and home furnishings, books and records from over 30 vendors.">
+<meta name="theme-color" content="#04292F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2304292f'/%3E%3Cpath d='M6 9h20M6 14h20M6 19h20M6 24h20' stroke='%23e1f3dd' stroke-width='2'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jacksonvarela1.github.io/site-previews/in-retrospect-vintage-mall/">
 <meta property="og:title" content="In Retrospect Vintage Mall | Fayetteville, AR">
-<meta property="og:description" content="Vintage Market and Boutique at 10 E Township St, Fayetteville. Open daily.">
+<meta property="og:description" content="Vintage Market and Boutique at 10 E Township St, Fayetteville. You'll never know what you'll find.">
 <meta property="og:image" content="https://jacksonvarela1.github.io/site-previews/in-retrospect-vintage-mall/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Website preview for In Retrospect Vintage Mall in Fayetteville, Arkansas">
 <meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.className+=' js';setTimeout(function(){if(!window.gsap)document.documentElement.classList.remove('js')},2500)</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&family=Josefin+Sans:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Josefin+Sans:wght@300;600;700&family=Lilita+One&family=Monoton&display=swap">
 <style>
 :root{
-  --deep:#04292f;--deep2:#0a3940;--teal:#295f68;--bright:#5fb0ba;--sage:#6f887d;--cream:#eef0c9;--paper:#f6f5ea;--ink:#082126;--muted:#45605f;
-  --sans:'Josefin Sans','Century Gothic','Avenir Next',system-ui,sans-serif;
-  --stripe:'Monoton','Josefin Sans','Century Gothic',sans-serif;
+  --night:#04292f;--night2:#0b3940;--mint:#e1f3dd;--teal:#508a96;--teal-d:#407984;--bright:#3293a3;
+  --cream:#f2edc3;--espresso:#1f0b00;--butter:#f5d791;--red:#ba2f36;--ink:#08201f;
+  --teal-ink:#2f6670;--red-ink:#a1252c;--teal-lt:#6fa3ae;
+  --text:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --caps:'Josefin Sans','Century Gothic',sans-serif;
+  --chunk:'Lilita One','Arial Rounded MT Bold',sans-serif;
+  --stripe:'Monoton','Josefin Sans',sans-serif;
+  --wrap:min(1180px,100% - 36px);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.65 var(--sans)}
-img{max-width:100%;display:block}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--ink);font:400 17px/1.6 var(--text)}
+img{max-width:100%;display:block;height:auto}
 a{color:inherit}
-a:focus-visible{outline:3px solid var(--bright);outline-offset:3px;border-radius:3px}
+:focus-visible{outline:3px solid var(--butter);outline-offset:3px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-999px;top:0}
-.skip:focus{left:16px;top:56px;z-index:200;background:var(--cream);color:var(--deep);padding:8px 12px}
+.skip:focus{left:16px;top:56px;z-index:200;background:var(--butter);color:var(--night);padding:10px 14px}
 #preview-bar{position:sticky;top:0;z-index:100;padding:8px 16px;text-align:center;background:#000;color:#fff;font:500 13px/1.45 system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
 #preview-bar a{color:var(--cream);font-weight:700}
-.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+.wrap{width:var(--wrap);margin-inline:auto}
+section[id]{scroll-margin-top:56px}
 
-/* stripes motif from the logo's inline lettering */
-.lines{height:14px;background:repeating-linear-gradient(to bottom,var(--bright) 0 2px,transparent 2px 4px)}
+/* shared bits */
+.kick{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;font:700 14px/1 var(--caps);letter-spacing:.2em;text-transform:uppercase}
+.kick::before{content:"";width:30px;height:9px;background:repeating-linear-gradient(to bottom,currentColor 0 2px,transparent 2px 3.5px)}
+h2{margin:0;font:400 clamp(40px,10.5vw,84px)/.95 var(--chunk);letter-spacing:.005em}
+.src{display:inline-block;margin-top:14px;font:500 14px/1.4 var(--text);padding:5px 11px 4px;border-radius:999px;border:1.5px solid currentColor;opacity:.9}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 24px 12px;border-radius:999px;font:400 19px/1 var(--chunk);letter-spacing:.02em;text-decoration:none;background:var(--butter);color:var(--night);border:2.5px solid var(--butter);box-shadow:0 5px 0 rgba(0,0,0,.28);transition:transform .2s cubic-bezier(.3,1.6,.5,1),box-shadow .2s}
+.btn:hover{transform:translateY(-3px) rotate(-1.5deg);box-shadow:0 8px 0 rgba(0,0,0,.28)}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 0 rgba(0,0,0,.28)}
+.btn.line{background:transparent;color:var(--mint);border-color:var(--mint);box-shadow:none}
+.btn.dark{background:var(--night);color:var(--cream);border-color:var(--night)}
+.btn .ar{display:inline-block;transition:transform .25s}
+.btn:hover .ar{transform:translateX(4px)}
 
-.top{background:var(--deep);color:var(--cream)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{height:58px;width:auto}
-.brand span{font:600 15px/1.1 var(--sans);letter-spacing:.08em}
-.links{display:flex;gap:28px;font:600 15px var(--sans)}
-.links a{text-decoration:none;color:var(--cream);padding:4px 0;background:linear-gradient(var(--bright),var(--bright)) 0 100%/0 2px no-repeat;transition:background-size .25s}
-.links a:hover{background-size:100% 2px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px 12px;border-radius:999px;font:700 16px/1 var(--sans);letter-spacing:.04em;text-decoration:none;background:var(--cream);color:var(--deep);border:2px solid var(--cream);transition:transform .18s ease}
-.btn:hover{transform:translateY(-2px)}
-.btn.ghost{background:transparent;color:var(--cream)}
-.btn.dark{background:var(--deep);color:var(--cream);border-color:var(--deep)}
-.btn.dark.ghost{background:transparent;color:var(--deep)}
+/* header */
+.top{background:var(--night);color:var(--mint);position:relative;overflow:clip}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0 10px}
+.brand img{height:46px;width:auto}
+.hdr .btn{min-height:44px;padding:11px 16px 9px;font-size:16px}
+.nav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px 0 12px}
+.nav a{flex:none;text-decoration:none;font:700 13.5px/1 var(--caps);letter-spacing:.1em;text-transform:uppercase;padding:11px 12px 9px;border:1.5px solid rgba(225,243,221,.35);border-radius:999px;transition:background .2s,color .2s,border-color .2s}
+.nav a:hover{background:var(--mint);color:var(--night);border-color:var(--mint)}
 
-.hero{padding:40px 0 0;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-bottom:64px}
-h1{margin:0;font:300 clamp(44px,6.4vw,84px)/1.02 var(--sans);letter-spacing:-.01em}
-h1 .st{display:block;font-family:var(--stripe);font-weight:400;font-size:.92em;letter-spacing:.02em;color:var(--bright);line-height:1.1;margin-top:.12em}
-.lede{max-width:31em;margin:24px 0 0;color:#cfd7c4;font-size:19px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.facts{display:flex;gap:28px;flex-wrap:wrap;margin:30px 0 0;padding:0;list-style:none;color:var(--cream);font-weight:600}
-.facts li{display:flex;align-items:center;gap:10px}
-.facts li:before{content:"";width:22px;height:8px;background:repeating-linear-gradient(to bottom,var(--bright) 0 2px,transparent 2px 3px)}
-.logo-card{position:relative;justify-self:center;width:100%;max-width:440px}
-.logo-card img{width:100%;border-radius:10px;box-shadow:0 0 0 1px #1b4a52,0 30px 60px -20px #000;animation:tune 1.2s cubic-bezier(.2,.7,.2,1) both}
-.logo-card figcaption{font-size:13px;color:#9fb3a9;margin-top:10px;text-align:right}
-@keyframes tune{from{opacity:0;filter:blur(8px) saturate(0);transform:translateY(16px)}to{opacity:1;filter:none;transform:none}}
+/* awning, from their 2026 holiday flyer */
+.awning{position:relative;height:46px;background:repeating-linear-gradient(90deg,var(--bright) 0 40px,var(--cream) 40px 80px);transform-origin:50% 0;box-shadow:inset 0 10px 14px -8px rgba(0,0,0,.45)}
+.awning::after{content:"";position:absolute;left:0;right:0;top:100%;height:20px;background:radial-gradient(circle at 20px 0,var(--bright) 19.5px,transparent 20.5px) 0 0/80px 20px repeat-x,radial-gradient(circle at 60px 0,var(--cream) 19.5px,transparent 20.5px) 0 0/80px 20px repeat-x;filter:drop-shadow(0 6px 5px rgba(0,0,0,.35))}
+.awning::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.18),transparent 60%)}
 
-section{padding:88px 0}
-h2{font:300 clamp(36px,4.8vw,58px)/1.05 var(--sans);margin:0 0 16px;letter-spacing:-.01em}
-h2 b{font-weight:700}
-.sub{max-width:34em;color:var(--muted);margin:0}
+/* hero */
+.hero{position:relative;padding:44px 0 64px}
+.hero::before{content:"";position:absolute;inset:auto -20% -30% 30%;height:80%;background:radial-gradient(closest-side,rgba(50,147,163,.28),transparent);pointer-events:none}
+.hero-grid{position:relative;display:grid;align-items:start}
+.hero-grid > *{order:2}
+.hero-grid > .eyebrow,.hero-grid > .wm{order:0}
+.hero-grid > .art{order:1;margin-top:30px}
+.hero-grid > .ribbon{justify-self:start}
+.eyebrow{margin:0 0 18px;font:600 15px/1.3 var(--caps);letter-spacing:.24em;text-transform:uppercase;color:var(--teal-lt)}
+.wm{margin:0;container-type:inline-size;font-weight:400}
+.wm-vis{display:block}
+.wm-in{display:flex;align-items:center;gap:.35em;font:400 11.6cqi/1 var(--stripe);color:var(--teal)}
+.wm-in::after{content:"";flex:1;height:2px;background:var(--mint);opacity:.55;transform-origin:0 50%}
+.wm-main{display:block;font:400 12.9cqi/1.08 var(--stripe);white-space:nowrap;margin:.08em 0 .06em}
+.wm-main .r{color:var(--mint)}
+.wm-main .s{color:var(--teal)}
+.wm .ch{display:inline-block;will-change:transform}
+.wm-sub{display:flex;align-items:center;gap:.7em;font:300 5.4cqi/1 var(--caps);letter-spacing:.2em;color:var(--teal);white-space:nowrap}
+.wm-sub::before{content:"";flex:1;height:2px;background:var(--mint);opacity:.55;transform-origin:100% 50%}
+.lede{margin:26px 0 0;max-width:30em;font:500 clamp(19px,4.8vw,23px)/1.45 var(--text);color:var(--mint)}
+.lede em{font-style:normal;color:var(--butter)}
+.today{display:flex;align-items:center;flex-wrap:wrap;gap:4px 12px;margin:24px 0 0;padding:12px 16px 11px;border-radius:14px;background:var(--night2);border:1.5px solid rgba(80,138,150,.6);color:var(--mint);max-width:30em}
+.today .dot{width:10px;height:10px;border-radius:50%;background:var(--butter);box-shadow:0 0 0 0 rgba(245,215,145,.7);animation:pulse 2.2s infinite}
+.today b{font:400 20px/1.2 var(--chunk);color:var(--butter);letter-spacing:.01em}
+.today small{flex-basis:100%;font:500 14px/1.35 var(--text);color:#b9d3cc}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(245,215,145,0)}100%{box-shadow:0 0 0 0 rgba(245,215,145,0)}}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ribbon{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:10px 16px 8px;background:var(--red);color:var(--cream);font:400 17px/1.2 var(--chunk);text-decoration:none;border-radius:6px;transform:rotate(-1.5deg);transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.ribbon:hover{transform:rotate(1deg) scale(1.03)}
 
-/* the mall directory letter board */
-.directory-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
-.board{background:#121212;border-radius:12px;padding:30px 30px 34px;border:14px solid #6b4a2f;box-shadow:inset 0 0 0 2px #000,0 24px 50px -24px rgba(0,0,0,.6);
-  background-image:repeating-linear-gradient(to bottom,#151515 0 9px,#0b0b0b 9px 11px);color:#f3f1ea}
-.board h3{margin:0 0 18px;text-align:center;font:700 22px/1.2 var(--sans);letter-spacing:.32em}
-.board ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-.board li{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;font:600 clamp(16px,2vw,21px)/1.5 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:6px 0;border-bottom:1px dashed #333}
-.board li span:last-child{color:var(--bright);letter-spacing:.1em;font-size:.82em}
-.board .foot{margin:18px 0 0;text-align:center;font:600 14px var(--sans);letter-spacing:.22em;color:#bdbab0}
+.art{position:relative;width:min(100%,520px);margin-inline:auto;aspect-ratio:4/5}
+.arch{position:absolute;inset:0 13% 4% 0;border-radius:50% 50% 20px 20px/34% 34% 20px 20px;overflow:hidden;border:5px solid var(--mint);box-shadow:0 30px 60px -24px rgba(0,0,0,.7);background:var(--night2)}
+.arch img{position:absolute;left:0;top:-6%;width:100%;height:112%;object-fit:cover;object-position:50% 35%}
+.snap{position:absolute;right:0;bottom:0;width:47%;background:#fffdf3;padding:8px 8px 0;box-shadow:0 18px 34px -12px rgba(0,0,0,.6);transform:rotate(6deg);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.snap:hover{transform:rotate(1deg) scale(1.04)}
+.snap img{aspect-ratio:1;width:100%;object-fit:cover;object-position:40% 30%}
+.snap figcaption{font:400 16px/1 var(--chunk);color:var(--night);padding:10px 4px 11px;text-align:center}
+.sticker{position:absolute;left:-3%;top:4%;width:31%;aspect-ratio:1;border-radius:50%;background:var(--butter);color:var(--red);box-shadow:0 10px 22px -8px rgba(0,0,0,.6);display:grid;place-items:center}
+.sticker svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 16s linear infinite}
+.sticker text{font:700 14px var(--caps);fill:var(--red)}
+.sticker .core{font:400 clamp(26px,7vw,40px)/1 var(--chunk);color:var(--night);transform:rotate(-8deg)}
+@keyframes spin{to{transform:rotate(1turn)}}
 
-/* inventory changes daily */
-.daily{background:var(--teal);color:var(--cream)}
-.daily .sub{color:#d9e2cf}
-.daily-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
-.quote{margin:0;font:300 clamp(30px,3.8vw,46px)/1.2 var(--sans)}
-.quote cite{display:block;font-style:normal;font-size:16px;margin-top:14px;color:#b9cbc3;letter-spacing:.04em}
-.handles{display:grid;gap:12px}
-.handle{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 22px 18px;border:2px solid var(--cream);border-radius:14px;text-decoration:none;font-weight:700;transition:background .2s,color .2s}
-.handle:hover{background:var(--cream);color:var(--teal)}
-.handle small{display:block;font-weight:400;font-size:15px;opacity:.85}
+/* marquees */
+.tape{position:relative;z-index:2;overflow:clip;padding:22px 0 34px}
+.belt{overflow:hidden;white-space:nowrap;font:400 clamp(22px,5.2vw,34px)/1 var(--chunk);padding:14px 0 11px}
+.belt span{display:flex;align-items:center;gap:26px;padding-right:26px}
+.belt i{font-style:normal;font-size:.7em}
+.belt.a{position:relative;z-index:2;background:var(--butter);color:var(--red);transform:rotate(-1.4deg);margin:0 -2%}
+.belt.b{background:var(--bright);color:var(--night);transform:rotate(1deg);margin:12px -2% 0}
+.belt .run{display:flex;width:max-content;animation:run 28s linear infinite}
+.belt.b .run{animation-direction:reverse;animation-duration:34s}
+@keyframes run{to{transform:translateX(-50%)}}
 
-/* numbers */
-.numbers{padding:72px 0}
-.num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.num{padding:8px 28px;border-left:1px solid #c9cdb8}
-.num:first-child{border-left:0;padding-left:0}
-.num b{display:block;font:400 clamp(40px,5vw,64px)/1.1 var(--stripe);color:var(--teal)}
-.num span{color:var(--muted);font-size:16px}
+/* the finds, on pegboard like their booths */
+.finds{position:relative;background:var(--cream);color:var(--ink);padding:84px 0 96px;overflow:clip;
+  background-image:radial-gradient(circle,rgba(31,11,0,.2) 2.6px,transparent 3.2px);background-size:30px 30px;background-position:15px 15px}
+.finds .kick{color:var(--red)}
+.finds h2{color:var(--night);max-width:11em}
+.finds .intro{max-width:34em;margin:18px 0 0;font-size:18px}
+.board{display:flex;flex-wrap:wrap;justify-content:center;gap:34px 16px;margin-top:54px}
+.tag{width:calc(50% - 8px);position:relative;padding-top:30px}
+.tag::before{content:"";position:absolute;top:0;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#6b6457;box-shadow:inset 0 2px 2px rgba(0,0,0,.5),0 1px 0 rgba(255,255,255,.6)}
+.tag-in{position:relative;background:#fffdf3;padding:8px 8px 0;box-shadow:0 14px 26px -14px rgba(31,11,0,.6);transform:rotate(var(--r,0deg));transform-origin:50% -26px;transition:box-shadow .3s}
+.tag-in::before{content:"";position:absolute;left:50%;top:-30px;width:1.5px;height:30px;background:#6b6457;transform:translateX(-50%)}
+.tag:nth-child(even){margin-top:40px}
+.tag img{width:100%;aspect-ratio:var(--ar,3/4);object-fit:cover}
+.tag figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:10px 3px 11px}
+.tag b{font:400 17px/1.1 var(--chunk);color:var(--night)}
+.tag span{font:700 12.5px/1 var(--caps);letter-spacing:.1em;color:var(--red);white-space:nowrap}
+.tag:hover .tag-in{animation:swing 1.2s ease-in-out;box-shadow:0 22px 34px -16px rgba(31,11,0,.7)}
+@keyframes swing{0%{transform:rotate(var(--r,0deg))}20%{transform:rotate(9deg)}40%{transform:rotate(-6deg)}60%{transform:rotate(3.5deg)}80%{transform:rotate(-1.5deg)}100%{transform:rotate(var(--r,0deg))}}
+.finds .after{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:64px;padding:24px 24px 22px;background:var(--night);color:var(--mint);border-radius:18px;transform:rotate(-.6deg)}
+.finds .after p{margin:0;flex:1 1 280px;font-size:18px}
+.finds .after b{font:400 22px/1.2 var(--chunk);color:var(--butter);display:block;margin-bottom:4px}
+
+/* booths, the four lines from their bio */
+.booths{background:var(--night);color:var(--mint);padding:90px 0 80px;position:relative}
+.booths .kick{color:var(--butter)}
+.booths h2{color:var(--cream)}
+.booths h2 em{font-style:normal;color:var(--bright)}
+.booths .intro{max-width:34em;margin:18px 0 0;font-size:18px;color:#cfe3dc}
+.booths .src{color:var(--butter)}
+.dir{display:grid;gap:20px;margin-top:48px}
+.frame{display:none}
+.item{position:relative;padding:24px 0 30px;border-top:2px solid rgba(225,243,221,.18)}
+.item .no{font:400 40px/1 var(--stripe);color:var(--teal)}
+.item h3{margin:8px 0 10px;font:400 clamp(30px,7.6vw,48px)/1 var(--chunk);color:var(--cream);transition:color .3s,transform .4s cubic-bezier(.3,1.5,.5,1)}
+.item p{margin:0;max-width:30em;color:#cfe3dc}
+.item .src{color:var(--butter);font-size:13.5px}
+.item .pic{margin-top:20px;border-radius:18px;overflow:hidden;border:4px solid var(--mint)}
+.item .pic img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.item .pic .vinyl-box{aspect-ratio:1}
+.vinyl-box{position:relative;aspect-ratio:4/5;background:var(--night2);display:grid;place-items:center;overflow:hidden}
+.sleeve{position:absolute;left:8%;top:14%;width:62%;aspect-ratio:1;background:repeating-linear-gradient(90deg,var(--bright) 0 12.5%,var(--cream) 12.5% 25%);box-shadow:0 18px 30px -10px rgba(0,0,0,.6);display:grid;place-items:end start;padding:7%;z-index:2}
+.sleeve span{font:400 clamp(16px,4vw,22px)/1.05 var(--chunk);color:var(--night);background:var(--cream);padding:6px 9px 4px;border-radius:4px}
+.vinyl{position:absolute;right:6%;top:22%;width:64%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--cream) 0 2.4%,var(--red) 2.6% 17%,#0a0a0a 17.4% 19%,transparent 19.4%),repeating-radial-gradient(circle,#131313 0 2px,#1f1f1f 2px 3.5px);box-shadow:0 18px 30px -10px rgba(0,0,0,.7);animation:spin 3.8s linear infinite}
+.vinyl::after{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 20deg,transparent 0 12%,rgba(255,255,255,.12) 16%,transparent 22% 62%,rgba(255,255,255,.09) 66%,transparent 72%)}
+
+/* welcome-ish */
+.welcome{background:var(--mint);color:var(--ink);padding:90px 0 96px;overflow:clip}
+.wel-grid{display:grid;gap:44px;align-items:center}
+.signpic{position:relative;transform:rotate(-2deg);border:8px solid #fffdf3;box-shadow:0 26px 46px -22px rgba(4,41,47,.7);background:#fff}
+.signpic img{width:100%;aspect-ratio:860/803;object-fit:cover}
+.welcome .kick{color:var(--teal-ink)}
+.wel-txt{container-type:inline-size}
+.welcome h2{font:400 11.3cqi/1.05 var(--stripe);white-space:nowrap;color:var(--night);letter-spacing:.01em}
+.welcome .sub{margin:14px 0 0;font:500 clamp(20px,5vw,26px)/1.35 var(--text);color:var(--night);max-width:22em}
+.quips{display:grid;gap:16px;margin:34px 0 0;padding:0;list-style:none;align-items:start}
+.quips li{position:relative;padding:16px 18px 14px;border-radius:14px;font:400 clamp(20px,5vw,24px)/1.2 var(--chunk);box-shadow:0 8px 0 rgba(4,41,47,.18);transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.quips li:nth-child(1){background:var(--butter);color:var(--red-ink);transform:rotate(-1.6deg)}
+.quips li:nth-child(2){background:var(--night);color:var(--mint);transform:rotate(1.2deg)}
+.quips li:nth-child(3){background:var(--red);color:var(--cream);transform:rotate(-.8deg)}
+.quips li:hover{transform:rotate(0) scale(1.03)}
+.welcome .from{display:block;margin-top:14px;font:500 14px/1.3 var(--text);color:var(--teal-ink)}
+.perks{display:grid;gap:22px;margin-top:56px;align-items:center}
+.nap{position:relative;max-width:340px;background:#fffdf3;padding:9px 9px 0;transform:rotate(2.5deg);box-shadow:0 18px 32px -16px rgba(4,41,47,.7);justify-self:center}
+.nap img{width:100%;aspect-ratio:1;object-fit:cover}
+.nap figcaption{font:400 18px/1.1 var(--chunk);color:var(--night);padding:11px 4px 13px;text-align:center}
+.perk-list{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.perk-list li{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border:2px solid var(--night);border-radius:14px}
+.perk-list b{display:block;font:400 22px/1.15 var(--chunk);color:var(--night)}
+.perk-list span{font-size:15px;color:#2b4a4a}
+.perk-list svg{flex:none;width:34px;height:34px}
+
+/* the week, in their day-named posts */
+.week{background:var(--night2);color:var(--mint);padding:90px 0 96px;overflow:clip}
+.week .kick{color:var(--butter)}
+.week h2{color:var(--cream)}
+.week .intro{max-width:32em;margin:18px 0 0;font-size:18px;color:#cfe3dc}
+.tix{display:grid;gap:12px;margin:44px 0 0;padding:0;list-style:none;perspective:900px}
+.tix li{position:relative;display:grid;grid-template-columns:62px 1fr auto;align-items:center;gap:14px;padding:16px 20px 14px 18px;background:var(--cream);color:var(--night);border-radius:10px;
+  -webkit-mask:radial-gradient(circle at 0 50%,transparent 11px,#000 11.5px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,transparent 11px,#000 11.5px) right/51% 100% no-repeat;
+          mask:radial-gradient(circle at 0 50%,transparent 11px,#000 11.5px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,transparent 11px,#000 11.5px) right/51% 100% no-repeat;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.tix li:hover{transform:translateY(-4px) rotate(-1deg)}
+.tix .d{font:700 15px/1 var(--caps);letter-spacing:.16em;color:var(--teal-ink);border-right:2px dashed rgba(4,41,47,.3);padding:6px 0 4px}
+.tix .n{font:400 22px/1.1 var(--chunk)}
+.tix .h{font:700 16px/1.2 var(--text);white-space:nowrap}
+.tix li.now{background:var(--butter)}
+.tix li.now .n::after{content:"today";display:inline-block;margin-left:10px;padding:4px 8px 3px;font:700 11.5px/1 var(--caps);letter-spacing:.14em;text-transform:uppercase;background:var(--red);color:var(--cream);border-radius:4px;vertical-align:4px;animation:wig 2.4s ease-in-out infinite}
+@keyframes wig{0%,70%,100%{transform:rotate(0)}76%{transform:rotate(-8deg)}84%{transform:rotate(7deg)}92%{transform:rotate(-4deg)}}
+.week .src{color:var(--butter);margin-top:26px}
+.week .note{margin:12px 0 0;max-width:36em;color:#cfe3dc;font-size:16px}
+
+/* holiday open house, their flyer */
+.oh{position:relative;background:var(--espresso);color:var(--cream);padding:0 0 96px;overflow:clip;text-align:center}
+.oh .awning{height:40px}
+.sparks{position:absolute;inset:0 0 auto;height:240px;pointer-events:none}
+.spark{position:absolute;top:0;width:2px;background:rgba(242,237,195,.45);transform-origin:50% 0;animation:sway 4s ease-in-out infinite alternate}
+.spark svg{position:absolute;left:50%;bottom:-11px;width:22px;height:22px;margin-left:-11px;fill:var(--cream)}
+@keyframes sway{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+.oh-in{position:relative;padding-top:120px}
+.oh .kick{color:var(--butter);justify-content:center}
+.oh h2{color:var(--bright);font-size:clamp(46px,12vw,104px)}
+.oh .when{margin:18px 0 0;font:400 clamp(24px,6vw,38px)/1.15 var(--chunk);color:var(--cream)}
+.oh blockquote{margin:22px auto 0;max-width:30em;font:500 19px/1.5 var(--text);color:#eadfc0}
+.oh .src{color:var(--butter)}
+.oh-pics{display:flex;justify-content:center;align-items:flex-start;gap:14px;margin-top:46px}
+.oh-pics figure{margin:0;width:min(44%,260px);background:#fffdf3;padding:8px 8px 0;box-shadow:0 20px 34px -14px rgba(0,0,0,.8);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.oh-pics figure:first-child{transform:rotate(-5deg)}
+.oh-pics figure:last-child{transform:rotate(4deg);margin-top:34px}
+.oh-pics figure:hover{transform:rotate(0) scale(1.05)}
+.oh-pics img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.oh-pics figcaption{font:400 15px/1.1 var(--chunk);color:var(--espresso);padding:9px 2px 10px}
+.ornament{position:relative;width:172px;margin:56px auto 0;transform-origin:50% -60px;animation:sway 3.2s ease-in-out infinite alternate}
+.ornament::before{content:"";position:absolute;left:50%;top:-58px;width:2px;height:46px;background:rgba(242,237,195,.6)}
+.ornament .cap{width:34px;height:16px;margin:0 auto;background:var(--bright);border-radius:4px 4px 0 0}
+.ornament .ball{display:grid;place-items:center;height:172px;border-radius:50%;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.55),transparent 30%),linear-gradient(var(--cream) 0 36%,var(--bright) 36% 64%,var(--cream) 64%);box-shadow:inset -10px -14px 24px rgba(31,11,0,.28),0 18px 30px -12px rgba(0,0,0,.7);color:var(--espresso);font:400 17px/1.15 var(--chunk);padding:0 12px}
+.ornament .ball span{background:var(--cream);padding:6px 10px 4px;border-radius:999px}
+
+/* new-to-you */
+.new{background:var(--bright);color:var(--night);padding:80px 0;overflow:clip}
+.new-in{display:grid;gap:26px;align-items:end}
+.new h2{font-size:clamp(44px,11.5vw,104px);color:var(--night)}
+.new h2 .sp{display:inline-block;color:var(--cream);animation:tw 2.6s ease-in-out infinite}
+@keyframes tw{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.25) rotate(18deg)}}
+.new p{margin:0;max-width:30em;font:500 19px/1.5 var(--text);color:#021b1f}
+.nw{white-space:nowrap}
+.new .btn{font-size:21px}
 
 /* visit */
-.visit{background:var(--deep);color:var(--cream)}
-.visit .sub{color:#cfd7c4}
-.visit-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px}
-.addr{font:600 28px/1.25 var(--sans);margin:24px 0 8px}
-.open{display:inline-block;margin:6px 0 26px;padding:8px 14px 6px;border:2px solid var(--bright);border-radius:999px;font-weight:700;color:var(--bright)}
-.contact{margin-top:30px;padding-top:22px;border-top:1px solid #1d4a51;display:grid;gap:8px;font-size:17px;overflow-wrap:anywhere}
-.contact a{text-underline-offset:4px}
-.map{border-radius:14px;overflow:hidden;border:2px solid var(--bright);min-height:380px;background:var(--deep2)}
-.map iframe{display:block;width:100%;height:100%;min-height:380px;border:0}
+.visit{background:var(--cream);color:var(--ink);padding:90px 0 100px;overflow:clip}
+.visit-grid{display:grid;gap:48px}
+.visit .kick{color:var(--red)}
+.pin{margin:0;font:400 clamp(48px,13vw,96px)/.95 var(--chunk);color:var(--night)}
+.addr{margin:18px 0 0;font:500 21px/1.4 var(--text)}
+.visit .actions .btn.line{color:var(--night);border-color:var(--night)}
+.contact{display:grid;gap:10px;margin:30px 0 0;padding:22px 0 0;border-top:2px solid rgba(4,41,47,.2);font-size:18px}
+.contact a{display:inline-flex;align-items:center;min-height:32px;text-underline-offset:5px;text-decoration-thickness:1.5px;overflow-wrap:anywhere}
+.hrs dl{margin:0}
+.hrs{margin:0;padding:22px 24px;background:var(--night);color:var(--mint);border-radius:18px;display:grid;gap:4px}
+.hrs div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(225,243,221,.25)}
+.hrs div:last-of-type{border-bottom:0}
+.hrs dt{font:400 20px/1.2 var(--chunk)}
+.hrs dd{margin:0;font-weight:700}
+.hrs p{margin:10px 0 0;font-size:14.5px;color:#b9d3cc}
+.post{position:relative;display:flex;flex-direction:column;align-items:center;margin-top:10px}
+.street{position:relative;display:inline-block;white-space:nowrap;padding:14px 26px 11px;background:#176b45;color:#fff;border:3px solid #fff;outline:3px solid #176b45;border-radius:8px;font:700 clamp(26px,7vw,40px)/1 var(--caps);letter-spacing:.06em;transform-origin:50% -18px;box-shadow:0 14px 24px -12px rgba(0,0,0,.5)}
+.street small{font-size:.55em;letter-spacing:.1em;vertical-align:.35em;margin-right:.3em}
+.post::after{content:"";width:10px;height:90px;background:linear-gradient(90deg,#6d7273,#a9aeaf,#6d7273);margin-top:-2px;border-radius:0 0 3px 3px}
+.post:hover .street{animation:swing 1.4s ease-in-out}
+.signoff{margin:26px 0 0;text-align:center;font:400 clamp(26px,7vw,42px)/1.1 var(--stripe);color:var(--teal-ink)}
 
-footer{background:var(--deep);color:#9fb3a9;font-size:14px;padding:0 0 30px}
-footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px}
+/* footer */
+footer{background:var(--night);color:#b9d3cc;padding:0 0 34px;font-size:15px}
+.foot{display:grid;gap:22px;padding-top:44px}
+.foot img{width:150px;height:150px;border-radius:14px}
+.foot p{margin:0}
+.foot a{color:var(--mint);display:inline-flex;align-items:center;min-height:32px}
 
-@media (max-width:860px){
-  .links{display:none}
-  .hero-grid,.directory-grid,.daily-grid,.visit-grid{grid-template-columns:1fr}
-  .hero-grid{gap:32px}
-  .logo-card{max-width:320px;order:-1}
-  section{padding:64px 0}
-  .num-grid{grid-template-columns:1fr}
-  .num{border-left:0;border-top:1px solid #c9cdb8;padding:18px 0}
-  .num:first-child{border-top:0}
+/* motion preload states (only when GSAP is running) */
+.js .h-in{opacity:0}
+
+@media (min-width:760px){
+  body{font-size:18px}
+  .hdr{padding:16px 0 12px}
+  .tag{width:calc(25% - 18px)}
+  .tag:nth-child(even){margin-top:0}
+  .tag:nth-child(4n+2),.tag:nth-child(4n+4){margin-top:46px}
+  .board{gap:44px 24px}
+  .quips{grid-template-columns:1fr 1fr}
+  .quips li:nth-child(3){grid-column:1/-1;justify-self:start}
+  .perks{grid-template-columns:auto 1fr;gap:40px}
+  .tix{display:flex;flex-wrap:wrap;justify-content:center;gap:22px 10px}
+  .tix li{flex:0 0 calc(25% - 8px)}
+  .street{font-size:clamp(22px,3vw,40px)}
+  .new h2{font-size:clamp(48px,7.2vw,104px)}
+  .tix li{grid-template-columns:1fr;text-align:center;padding:22px 12px 20px;gap:10px;min-height:200px;align-content:center;
+    -webkit-mask:radial-gradient(circle at 50% 0,transparent 11px,#000 11.5px) top/100% 51% no-repeat,radial-gradient(circle at 50% 100%,transparent 11px,#000 11.5px) bottom/100% 51% no-repeat;
+            mask:radial-gradient(circle at 50% 0,transparent 11px,#000 11.5px) top/100% 51% no-repeat,radial-gradient(circle at 50% 100%,transparent 11px,#000 11.5px) bottom/100% 51% no-repeat}
+  .tix li:nth-child(odd){transform:rotate(-1.2deg)}
+  .tix li:nth-child(even){transform:rotate(1deg) translateY(10px)}
+  .tix li:hover{transform:translateY(-8px) rotate(0)}
+  .tix .d{border-right:0;border-bottom:2px dashed rgba(4,41,47,.3);padding:0 0 10px}
+  .tix .n{font-size:21px}
+  .tix li.now .n::after{display:block;width:max-content;margin:8px auto 0}
+  .new-in{grid-template-columns:1.3fr 1fr}
+  .visit-grid{grid-template-columns:1.1fr .9fr;align-items:start}
+  .foot{grid-template-columns:auto 1fr auto;align-items:center}
+}
+@media (min-width:900px){
+  .hero-grid{grid-template-columns:1.08fr .92fr;grid-template-rows:1fr repeat(6,auto) 1fr;column-gap:56px}
+  .hero-grid > :not(.art){grid-column:1}
+  .hero-grid > .eyebrow{grid-row:2}
+  .hero-grid > .wm{grid-row:3}
+  .hero-grid > .lede{grid-row:4}
+  .hero-grid > .today{grid-row:5}
+  .hero-grid > .actions{grid-row:6}
+  .hero-grid > .ribbon{grid-row:7}
+  .hero-grid > .art{grid-column:2;grid-row:1/-1;margin:0 0 0 auto;align-self:center}
+  .wel-grid{grid-template-columns:1fr 1fr;gap:56px}
+}
+@media (min-width:1080px){
+  .nav{position:absolute;left:50%;top:22px;transform:translateX(-50%);padding:0;overflow:visible}
+  .hero{padding:40px 0 90px}
+  .dir{grid-template-columns:.95fr 1.05fr;gap:64px;align-items:start}
+  .frame{display:block;position:sticky;top:80px;aspect-ratio:4/5;border-radius:26px;overflow:hidden;border:5px solid var(--mint);background:var(--night2);box-shadow:0 30px 60px -28px rgba(0,0,0,.8)}
+  .frame > *{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .6s ease,transform 1.1s cubic-bezier(.2,.7,.2,1)}
+  .frame > .on{opacity:1;transform:none}
+  .frame .vinyl-box.on ~ .lbl{opacity:0}
+  .frame .lbl{position:absolute;inset:auto auto 18px 18px;width:auto;height:auto;opacity:1;transform:none;z-index:3;background:var(--butter);color:var(--red);font:400 18px/1 var(--chunk);padding:9px 13px 7px;border-radius:6px;rotate:-3deg;color:var(--red-ink);transition:opacity .3s}
+  .item{min-height:62vh;display:flex;flex-direction:column;justify-content:center;padding:40px 0}
+  .item .pic{display:none}
+  .io .item{opacity:.38;transition:opacity .45s}
+  .io .item.on{opacity:1}
+  .item p{font-size:20px}
+  .item.on h3{color:var(--butter);transform:translateX(10px)}
+  .wel-grid{grid-template-columns:1fr 1fr;gap:72px}
+  .oh-pics{gap:40px}
+  .tix{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+}
+@media (max-width:1079px){
+  .tag figcaption{flex-direction:column;gap:5px}
+}
+@media (min-width:760px) and (max-width:1079px){
+  .item{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto) 1fr;column-gap:36px;align-items:start}
+  .item > :not(.pic){grid-column:1;justify-self:start}
+  .item .pic{grid-column:2;grid-row:1/6;margin-top:0}
 }
 @media (max-width:420px){
-  .brand span{display:none}
   #preview-bar{font-size:12px;padding:6px 12px}
-  .board{padding:22px 16px 26px;border-width:10px}
-  .board li{letter-spacing:.08em;grid-template-columns:1fr}
-  .board li span:last-child{font-size:.75em}
+  .hdr .btn{font-size:15px;padding:10px 13px 8px}
+  .tag b{font-size:15.5px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *,*:before,*:after{animation:none!important;transition:none!important}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .h-in{opacity:1}
 }
 </style>
 </head>
 <body>
 <div id="preview-bar" role="note">Preview built by Jackson Varela, a student in Fayetteville, AR. Not affiliated with or endorsed by In Retrospect - Vintage Mall. Want it finished? <span class="bar-price" data-bar-price="founding">$299 founding price, nothing due until it is live.</span> Call or text <a href="tel:+15018176397">501-817-6397</a>.</div>
 <a class="skip" href="#main">Skip to content</a>
-<div class="top">
-  <header class="wrap nav">
-    <a class="brand" href="#top" aria-label="In Retrospect Vintage Mall, back to top"><img src="brand/logo-wide.jpg" alt="In Retrospect Vintage Mall" width="420" height="160"></a>
-    <nav class="links" aria-label="Main"><a href="#directory">What you'll find</a><a href="#new">New arrivals</a><a href="#visit">Visit</a></nav>
-    <a class="btn" href="tel:+14795212100">Call the store</a>
+<div class="top" id="top">
+  <header class="wrap">
+    <div class="hdr">
+      <a class="brand" href="#top" aria-label="In Retrospect Vintage Mall, back to top"><img src="brand/logo-wide.jpg" alt="In Retrospect Vintage Mall logo" width="420" height="160"></a>
+      <a class="btn" href="tel:+14795212100">Call the shop</a>
+    </div>
+    <nav class="nav" aria-label="Main"><a href="#finds">Finds</a><a href="#booths">Booths</a><a href="#week">Hours</a><a href="#visit">Visit</a></nav>
   </header>
-  <div class="hero" id="top">
+  <div class="awning" aria-hidden="true"></div>
+  <div class="hero">
     <div class="wrap hero-grid">
-      <div>
-        <h1>Vintage Market and Boutique <span class="st">on Township</span></h1>
-        <p class="lede">Browse a fantastic collection of items from a select group of vendors, all under one roof at 10 E Township St in Fayetteville.</p>
-        <ul class="facts">
-          <li>Open daily</li>
-          <li>In-store pickup</li>
-          <li>Fresh finds almost daily</li>
-        </ul>
-        <div class="actions">
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=10+E+Township+St,+Fayetteville,+AR+72703">Get directions</a>
-          <a class="btn ghost" href="https://www.instagram.com/in_retrospect_479/">See new arrivals</a>
+        <p class="eyebrow h-in">Vintage Market and Boutique &middot; Fayetteville, AR</p>
+        <h1 class="wm">
+          <span class="sr">In Retrospect Vintage Mall</span>
+          <span class="wm-vis" aria-hidden="true">
+            <span class="wm-in h-in"><span data-split>IN</span></span>
+            <span class="wm-main h-in"><span class="r" data-split>Retro</span><span class="s" data-split>SPECT</span></span>
+            <span class="wm-sub h-in">VINTAGE MALL</span>
+          </span>
+        </h1>
+        <p class="lede h-in">From rhinestones to lamps and everything in between. <em>You'll never know what you'll find at In Retrospect.</em></p>
+        <p class="today h-in" id="today"><span class="dot" aria-hidden="true"></span><b>Open 7 days a week</b><span>Mon to Fri 11 to 6, Sat 10 to 5, Sun 12 to 5</span><small>Hours as posted on Facebook, October to November 2026</small></p>
+        <div class="actions h-in">
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=10+E+Township+St,+Fayetteville,+AR+72703">Get directions <span class="ar" aria-hidden="true">&rarr;</span></a>
+          <a class="btn line" href="tel:+14795212100">(479) 521-2100</a>
+        </div>
+        <a class="ribbon h-in" href="#openhouse" data-until="2026-11-15">Holiday Open House &middot; Sun, Nov 15 <span aria-hidden="true">&rarr;</span></a>
+      <div class="art">
+        <div class="arch h-in"><img src="img/hero-red-gown.webp" alt="A red satin gown on a mannequin in a striped hat, beside the jewelry wall and an aisle of rugs inside In Retrospect" width="840" height="1121" fetchpriority="high"></div>
+        <figure class="snap h-in" style="margin:0"><img src="img/jewelry-wall.webp" alt="A mannequin in a purple 1960s-style dress and hat in front of a full wall of vintage jewelry" width="720" height="960"><figcaption>The jewelry wall</figcaption></figure>
+        <div class="sticker h-in" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><defs><path id="ring" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs><text><textPath href="#ring" textLength="474" lengthAdjust="spacing">VINTAGE &#10022; KITSCH &#10022; FLEA-TABULOUS &#10022;</textPath></text></svg>
+          <span class="core">479</span>
         </div>
       </div>
-      <figure class="logo-card" style="margin:0">
-        <img src="brand/logo.jpg" alt="In Retrospect Vintage Mall logo, retro striped lettering on deep teal" width="500" height="500" fetchpriority="high">
-        <figcaption>Logo: In Retrospect - Vintage Mall on Facebook</figcaption>
-      </figure>
     </div>
-    <div class="lines" aria-hidden="true"></div>
+  </div>
+  <div class="tape" aria-hidden="true">
+    <div class="belt a"><div class="run"><span>Retro clothing and jewelry! <i>&#10022;</i> Mid-century decor! <i>&#10022;</i> Gifts and home furnishings! <i>&#10022;</i> Books and records! <i>&#10022;</i></span><span>Retro clothing and jewelry! <i>&#10022;</i> Mid-century decor! <i>&#10022;</i> Gifts and home furnishings! <i>&#10022;</i> Books and records! <i>&#10022;</i></span></div></div>
+    <div class="belt b"><div class="run"><span>Let secondhand be your first choice! <i>&#10022;</i> New-to-you items added daily! <i>&#10022;</i> 10 E. Township <i>&#10022;</i></span><span>Let secondhand be your first choice! <i>&#10022;</i> New-to-you items added daily! <i>&#10022;</i> 10 E. Township <i>&#10022;</i></span></div></div>
   </div>
 </div>
+
 <main id="main">
-  <section id="directory">
-    <div class="wrap directory-grid">
-      <div>
-        <h2>Four kinds of <b>yesterday</b></h2>
-        <p class="sub">Everything comes from a select group of vendors, so every booth has its own taste. Here is what to look for inside.</p>
+  <section class="finds" id="finds">
+    <div class="wrap">
+      <p class="kick" data-rv>Spotted this fall</p>
+      <h2 data-rv>Look at all these <span class="nw">flea-tabulous</span> finds!</h2>
+      <p class="intro" data-rv>A few things our vendors put out between October 20 and November 6, 2026. The shelves turn over fast, so some of these may already have gone home with somebody. That's the hunt.</p>
+      <div class="board">
+        <figure class="tag" style="margin:0;--r:-3deg"><div class="tag-in"><img src="img/polaroid.webp" alt="Rainbow-stripe instant camera and a tan vintage case on a yellow stool" width="480" height="640" loading="lazy"><figcaption><b>Rainbow instant camera</b><span>NOV 6</span></figcaption></div></figure>
+        <figure class="tag" style="margin:0;--r:2.5deg;--ar:1/1"><div class="tag-in"><img src="img/octopus-tray.webp" alt="Carved wooden octopus serving tray" width="480" height="640" loading="lazy"><figcaption><b>Carved octopus tray</b><span>NOV 5</span></figcaption></div></figure>
+        <figure class="tag" style="margin:0;--r:-1.5deg;--ar:4/5"><div class="tag-in"><img src="img/cobalt-owls.webp" alt="Two cobalt-blue ceramic owls beside a hand-painted cherry blossom vase" width="480" height="640" loading="lazy"><figcaption><b>Cobalt owls</b><span>NOV 5</span></figcaption></div></figure>
+        <figure class="tag" style="margin:0;--r:3.5deg"><div class="tag-in"><img src="img/cowboy-boots.webp" alt="A row of vintage cowboy boots in pink, green and tan on a shelf above a clothing rack" width="480" height="640" loading="lazy"><figcaption><b>Cowboy boots</b><span>OCT 20</span></figcaption></div></figure>
+        <figure class="tag" style="margin:0;--r:2deg;--ar:4/5"><div class="tag-in"><img src="img/rainbow-tumblers.webp" alt="A stack of rainbow plastic tumblers, a yellow glass vase and a wire hedgehog holder" width="480" height="640" loading="lazy"><figcaption><b>Rainbow tumblers</b><span>NOV 5</span></figcaption></div></figure>
+        <figure class="tag" style="margin:0;--r:-3deg;--ar:1/1"><div class="tag-in"><img src="img/granny-afghan.webp" alt="A crocheted granny-square afghan under a striped wool blanket" width="480" height="640" loading="lazy"><figcaption><b>Granny-square afghan</b><span>NOV 5</span></figcaption></div></figure>
+        <figure class="tag" style="margin:0;--r:1.5deg"><div class="tag-in"><img src="img/tooled-clutch.webp" alt="A hand-tooled floral leather clutch held up in one hand" width="480" height="640" loading="lazy"><figcaption><b>Tooled leather clutch</b><span>OCT 27</span></figcaption></div></figure>
+        <figure class="tag" style="margin:0;--r:-2.5deg;--ar:4/5"><div class="tag-in"><img src="img/ceramic-turkey.webp" alt="A painted ceramic turkey figurine on a wood table" width="480" height="640" loading="lazy"><figcaption><b>Ceramic turkey</b><span>NOV 6</span></figcaption></div></figure>
       </div>
-      <div class="board" role="group" aria-label="Store directory">
-        <h3>DIRECTORY</h3>
-        <ul>
-          <li><span>Retro clothing</span><span>&amp; jewelry</span></li>
-          <li><span>Mid-century</span><span>decor</span></li>
-          <li><span>Gifts</span><span>&amp; home furnishings</span></li>
-          <li><span>Books</span><span>&amp; records</span></li>
+      <div class="after" data-rv>
+        <p><b>Saw something you love?</b>The newest finds go up on our Facebook first. Spot it there, then come get it before somebody else does.</p>
+        <a class="btn" href="https://www.facebook.com/InRetrospectVintageKitschFleaTabulous/">See what's new <span class="ar" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="booths" id="booths">
+    <div class="wrap">
+      <p class="kick" data-rv>What's inside</p>
+      <h2 data-rv>Over 30 vendors. <em>One roof.</em></h2>
+      <p class="intro" data-rv>Browse a fantastic collection of items from a select group of vendors. Every booth has its own taste, so give yourself time.</p>
+      <span class="src" data-rv>"Over 30 vendors to shop," as posted on Facebook, October 2026</span>
+      <div class="dir">
+        <div class="frame" aria-hidden="true">
+          <img class="on" src="img/dress-rack.webp" alt="" width="720" height="960" loading="lazy">
+          <img src="img/glassware-booth.webp" alt="" width="720" height="960" loading="lazy">
+          <img src="img/stained-glass-lamp.webp" alt="" width="720" height="960" loading="lazy">
+          <div class="vinyl-box"><div class="sleeve"><span>Books &amp;<br>records!</span></div><div class="vinyl"></div></div>
+          <span class="lbl">Photos from our Facebook</span>
+        </div>
+        <div class="list">
+          <article class="item on" data-i="0">
+            <span class="no" aria-hidden="true">01</span>
+            <h3>Retro clothing and jewelry!</h3>
+            <p>Racks of vintage dresses, hats, belts and shoes, cowboy boots by the row, and a whole wall of jewelry.</p>
+            <div class="pic"><img src="img/dress-rack.webp" alt="A mannequin in a blue print vintage dress and cloche hat among racks of clothing, belts and shoes" width="720" height="960" loading="lazy"></div>
+          </article>
+          <article class="item" data-i="1">
+            <span class="no" aria-hidden="true">02</span>
+            <h3>Mid-century decor!</h3>
+            <p>Glass cake stands, mixing bowls, a copper ice bucket and framed art, all set out booth after booth.</p>
+            <div class="pic"><img src="img/glassware-booth.webp" alt="A booth display of glass cake stands, vintage mixing bowls, a copper ice bucket and framed art on a round table" width="720" height="960" loading="lazy"></div>
+          </article>
+          <article class="item" data-i="2">
+            <span class="no" aria-hidden="true">03</span>
+            <h3>Gifts and home furnishings!</h3>
+            <p>Lamps, blankets, figurines and the odd carved octopus. "Christmas decor is rolling in and there are loads of turkey platters."</p>
+            <span class="src">As posted on Facebook, November 2026</span>
+            <div class="pic"><img src="img/stained-glass-lamp.webp" alt="A stained glass floral lamp on a glass table" width="720" height="960" loading="lazy"></div>
+          </article>
+          <article class="item" data-i="3">
+            <span class="no" aria-hidden="true">04</span>
+            <h3>Books and records!</h3>
+            <p>"Wanna get lost in hours of great music? Then you must come check out our record room."</p>
+            <span class="src">As posted on Facebook, September 2026</span>
+            <div class="pic" aria-hidden="true"><div class="vinyl-box"><div class="sleeve"><span>Books &amp;<br>records!</span></div><div class="vinyl"></div></div></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="welcome" id="welcome">
+    <div class="wrap">
+      <div class="wel-grid">
+        <figure class="signpic" style="margin:0" data-rv><img src="img/welcome-ish-sign.webp" alt="A black shop sign reading Welcome-ISH, depends on who you are and how long you stay, above a row of tote bags" width="860" height="803" loading="lazy"></figure>
+        <div class="wel-txt">
+          <p class="kick" data-rv>Per the sign</p>
+          <h2 data-rv>Welcome-ISH</h2>
+          <p class="sub" data-rv>Depends on who you are and how long you stay. (Stay a while.)</p>
+          <ul class="quips">
+            <li data-pop>If you need a shot of dopamine stop by!</li>
+            <li data-pop>The remedy for Monday blues? Vintage and secondhand shopping. We don't make the rules, it's science.</li>
+            <li data-pop>Let secondhand be your first choice!</li>
+          </ul>
+          <span class="from">Lines from our Facebook posts, September and October 2026</span>
+        </div>
+      </div>
+      <div class="perks">
+        <figure class="nap" style="margin:0" data-rv><img src="img/creature-napping.webp" alt="A golden puppy asleep on a purple pillow that reads Caution: Creature Napping" width="600" height="601" loading="lazy"><figcaption>Caution: creature napping.</figcaption></figure>
+        <ul class="perk-list">
+          <li data-rv><svg viewBox="0 0 34 34" aria-hidden="true"><rect x="5" y="3" width="24" height="28" rx="3" fill="none" stroke="#04292f" stroke-width="2.5"/><path d="M10 9h14M10 13h14" stroke="#ba2f36" stroke-width="2.5"/><circle cx="23" cy="21" r="2" fill="#04292f"/></svg><div><b>Free lockers for your bags</b><span>Shop with both hands. As posted on Facebook, April 2026.</span></div></li>
+          <li data-rv><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M6 12h22l-2 18H8z" fill="none" stroke="#04292f" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 12V9a5 5 0 0 1 10 0v3" fill="none" stroke="#ba2f36" stroke-width="2.5"/></svg><div><b>In-store pickup</b><span>Listed on our Facebook page, November 2026.</span></div></li>
+          <li data-rv><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="13" fill="none" stroke="#04292f" stroke-width="2.5"/><circle cx="17" cy="17" r="4" fill="#ba2f36"/></svg><div><b>A record room inside</b><span>As posted on Facebook, September 2026.</span></div></li>
         </ul>
-        <p class="foot">10 E TOWNSHIP ST</p>
       </div>
     </div>
   </section>
 
-  <section class="daily" id="new">
-    <div class="wrap daily-grid">
-      <div>
-        <blockquote class="quote">"Our inventory changes almost daily."<cite>In Retrospect - Vintage Mall</cite></blockquote>
-        <p class="sub" style="margin-top:22px">The newest pieces show up on Instagram and Facebook first. Spot something you love, then come see it in person.</p>
-      </div>
-      <div class="handles">
-        <a class="handle" href="https://www.instagram.com/in_retrospect_479/"><span>Instagram<small>@in_retrospect_479</small></span><span aria-hidden="true">&#8599;</span></a>
-        <a class="handle" href="https://www.facebook.com/InRetrospectVintageKitschFleaTabulous/"><span>Facebook<small>In Retrospect - Vintage Mall</small></span><span aria-hidden="true">&#8599;</span></a>
-      </div>
+  <section class="week" id="week">
+    <div class="wrap">
+      <p class="kick" data-rv>Every day has a name</p>
+      <h2 data-rv>Seven days of shopping</h2>
+      <p class="intro" data-rv>Our Facebook posts name the day and the hours. Here is how the week has been running lately.</p>
+      <ol class="tix">
+        <li data-day="1"><span class="d">MON</span><span class="n">Monday Vibing</span><span class="h">11am to 6pm</span></li>
+        <li data-day="2"><span class="d">TUE</span><span class="n">Tuesday Treasures</span><span class="h">11am to 6pm</span></li>
+        <li data-day="3"><span class="d">WED</span><span class="n">Wednesday wonders</span><span class="h">11am to 6pm</span></li>
+        <li data-day="4"><span class="d">THU</span><span class="n">Thursday Shopping</span><span class="h">11am to 6pm</span></li>
+        <li data-day="5"><span class="d">FRI</span><span class="n">TGIF shopping</span><span class="h">11am to 6pm</span></li>
+        <li data-day="6"><span class="d">SAT</span><span class="n">Saturday Shopping</span><span class="h">10am to 5pm</span></li>
+        <li data-day="0"><span class="d">SUN</span><span class="n">Sunday Funday</span><span class="h">12pm to 5pm</span></li>
+      </ol>
+      <span class="src">Hours as posted on Facebook, October to November 2026</span>
+      <p class="note">We close for some holidays (Labor Day, for one), and holiday hours go up on Facebook first.</p>
     </div>
   </section>
 
-  <div class="numbers">
-    <div class="wrap num-grid">
-      <div class="num"><b>4,788</b><span>check-ins at the mall on Facebook</span></div>
-      <div class="num"><b>6,961</b><span>people follow along for new finds</span></div>
-      <div class="num"><b>86%</b><span>of 280 people on Facebook recommend a visit</span></div>
+  <section class="oh" id="openhouse" data-until="2026-11-15">
+    <div class="awning" aria-hidden="true"></div>
+    <div class="sparks" aria-hidden="true">
+      <span class="spark" style="left:9%;height:120px;animation-delay:-1s"><svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+      <span class="spark" style="left:22%;height:70px;animation-delay:-2.4s"><svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+      <span class="spark" style="left:78%;height:90px;animation-delay:-.6s"><svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+      <span class="spark" style="left:90%;height:140px;animation-delay:-3s"><svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
     </div>
-  </div>
+    <div class="wrap oh-in">
+      <p class="kick" data-rv>Save the date!</p>
+      <h2 data-rv>Holiday Open House</h2>
+      <p class="when" data-rv>Sunday, November 15 &middot; <span class="nw">12pm to 5pm</span></p>
+      <blockquote data-rv>"Our annual Holiday Open House is set for Sunday, November 15th, 12-5pm. We'll have snacks and refreshments, packed booths and we can't wait to see you all."</blockquote>
+      <span class="src" data-rv>As posted on Facebook, October 2026</span>
+      <div class="oh-pics">
+        <figure data-pop><img src="img/vintage-santa.webp" alt="A vintage ceramic Santa in a sleigh with Christmas mice and bear figurines" width="560" height="747" loading="lazy"><figcaption>Christmas decor, rolling in</figcaption></figure>
+        <figure data-pop><img src="img/christmas-mugs.webp" alt="Red Christmas tree mugs dated 1986 on a shelf" width="560" height="747" loading="lazy"><figcaption>Mugs from 1986</figcaption></figure>
+      </div>
+      <div class="ornament" aria-hidden="true"><div class="cap"></div><div class="ball"><span>10 E. Township</span></div></div>
+    </div>
+  </section>
+
+  <section class="new" id="new">
+    <div class="wrap new-in">
+      <h2 data-rv><span class="nw">New-to-you,</span> every day <span class="sp" aria-hidden="true">&#10022;</span></h2>
+      <div data-rv>
+        <p>The shelves change faster than any website could keep up with, so we don't try. Follow along on Facebook for today's finds, then come see them in person.</p>
+        <div class="actions"><a class="btn dark" href="https://www.facebook.com/InRetrospectVintageKitschFleaTabulous/">Follow us on Facebook <span class="ar" aria-hidden="true">&rarr;</span></a></div>
+      </div>
+    </div>
+  </section>
 
   <section class="visit" id="visit">
     <div class="wrap visit-grid">
       <div>
-        <h2>Come <b>browse</b></h2>
-        <p class="sub">Give yourself time. With a select group of vendors under one roof, there is a lot to look through.</p>
-        <p class="addr">10 E Township St<br>Fayetteville, AR 72703</p>
-        <span class="open">Open daily</span>
-        <div class="actions">
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=10+E+Township+St,+Fayetteville,+AR+72703">Get directions</a>
-          <a class="btn ghost" href="tel:+14795212100">(479) 521-2100</a>
+        <p class="kick" data-rv>Come shop with us!</p>
+        <p class="pin" data-rv>10 E. Township</p>
+        <p class="addr" data-rv>10 E Township St<br>Fayetteville, AR 72703</p>
+        <div class="actions" data-rv>
+          <a class="btn dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=10+E+Township+St,+Fayetteville,+AR+72703">Get directions <span class="ar" aria-hidden="true">&rarr;</span></a>
+          <a class="btn line" href="tel:+14795212100">Call (479) 521-2100</a>
         </div>
-        <div class="contact">
-          <a href="tel:+14795212100">Call (479) 521-2100</a>
+        <div class="contact" data-rv>
+          <a href="tel:+14795212100">(479) 521-2100</a>
           <a href="mailto:in_retrospect_nwa@yahoo.com">in_retrospect_nwa@yahoo.com</a>
-          <span>In-store pickup available</span>
+          <a href="https://www.facebook.com/InRetrospectVintageKitschFleaTabulous/">Facebook: In Retrospect - Vintage Mall</a>
         </div>
       </div>
-      <div class="map"><iframe title="Map to In Retrospect Vintage Mall, 10 E Township St, Fayetteville" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=10+E+Township+St,+Fayetteville,+AR+72703&amp;z=15&amp;output=embed"></iframe></div>
+      <div>
+        <div class="hrs" data-rv>
+          <dl>
+            <div><dt>Mon to Fri</dt><dd>11am to 6pm</dd></div>
+            <div><dt>Saturday</dt><dd>10am to 5pm</dd></div>
+            <div><dt>Sunday</dt><dd>12pm to 5pm</dd></div>
+          </dl>
+          <p>As posted on Facebook, October to November 2026. Holiday hours go up on Facebook.</p>
+        </div>
+        <div class="post" aria-hidden="true"><span class="street"><small>E</small>TOWNSHIP ST</span></div>
+        <p class="signoff" data-rv>See you soon!</p>
+      </div>
     </div>
   </section>
 </main>
-<footer><div class="lines" aria-hidden="true"></div><div class="wrap"><span>In Retrospect - Vintage Mall, 10 E Township St, Fayetteville, AR 72703</span><span>Logo: In Retrospect - Vintage Mall on Facebook</span></div></footer>
+
+<footer>
+  <div class="awning" aria-hidden="true" style="height:22px"></div>
+  <div class="wrap foot">
+    <img src="brand/logo.jpg" alt="In Retrospect Vintage Mall logo" width="500" height="500" loading="lazy">
+    <div>
+      <p>In Retrospect - Vintage Mall &middot; 10 E Township St, Fayetteville, AR 72703 &middot; <a href="tel:+14795212100">(479) 521-2100</a></p>
+      <p>Photos: In Retrospect - Vintage Mall on Facebook. Logo: In Retrospect - Vintage Mall on Facebook.</p>
+    </div>
+    <a href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  var D=document,root=D.documentElement;
+  var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function tz(o){try{return new Intl.DateTimeFormat(o.l||'en-US',Object.assign({timeZone:'America/Chicago'},o.f)).format(new Date())}catch(e){return null}}
+
+  /* expire the open house after Nov 15, 2026 */
+  var ymd=tz({l:'en-CA',f:{year:'numeric',month:'2-digit',day:'2-digit'}});
+  if(ymd){D.querySelectorAll('[data-until]').forEach(function(el){if(ymd>el.getAttribute('data-until'))el.remove()})}
+
+  /* today's hours, in their day-named voice */
+  var W=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var day=W.indexOf(tz({f:{weekday:'long'}}));
+  if(day<0)day=new Date().getDay();
+  var li=D.querySelector('.tix li[data-day="'+day+'"]');
+  if(li){
+    li.classList.add('now');
+    var t=D.getElementById('today');
+    if(t){t.querySelector('b').textContent='Today: '+li.querySelector('.n').textContent;t.querySelector('span:not(.dot)').textContent=li.querySelector('.h').textContent+(day===5?', ready for ya!':'')}
+  }
+
+  /* booth directory: the big frame follows the line you are reading */
+  var items=D.querySelectorAll('.item'),shots=D.querySelectorAll('.frame > :not(.lbl)');
+  if('IntersectionObserver' in window&&items.length){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var i=+e.target.getAttribute('data-i');
+      items.forEach(function(x){x.classList.toggle('on',x===e.target)});shots.forEach(function(s,k){s.classList.toggle('on',k===i)})})},{rootMargin:'-45% 0px -45% 0px'});
+    items.forEach(function(x){io.observe(x)});
+    root.classList.add('io');
+  }
+
+  if(rm||!window.gsap||!window.ScrollTrigger){root.classList.remove('js');return}
+  gsap.registerPlugin(ScrollTrigger);
+  var R=gsap.utils.random;
+
+  D.querySelectorAll('[data-split]').forEach(function(el){
+    el.innerHTML=el.textContent.split('').map(function(c){return '<span class="ch">'+c+'</span>'}).join('');
+  });
+
+  /* hero: awning drops, letters get hung on the sign one at a time */
+  var tl=gsap.timeline({defaults:{ease:'power3.out'}});
+  tl.from('.top > .awning',{scaleY:0,duration:.8,ease:'back.out(2)'})
+    .set('.wm-in,.wm-main',{opacity:1})
+    .from('.wm .ch',{yPercent:-160,rotation:function(){return R(-35,35)},opacity:0,duration:1,stagger:.05,ease:'bounce.out'},'-=.3')
+    .fromTo('.eyebrow',{opacity:0,y:14},{opacity:1,y:0,duration:.6},'<.1')
+    .fromTo('.wm-sub',{opacity:0,letterSpacing:'.6em'},{opacity:1,letterSpacing:'.2em',duration:1},'-=.6')
+    .fromTo('.arch',{opacity:0,clipPath:'inset(100% 0% 0% 0%)'},{opacity:1,clipPath:'inset(0% 0% 0% 0%)',duration:1.1,ease:'expo.out',clearProps:'clipPath'},.35)
+    .fromTo('.snap',{opacity:0,x:120,rotation:28},{opacity:1,x:0,rotation:6,duration:1.1,ease:'back.out(1.4)',clearProps:'transform'},.8)
+    .fromTo('.sticker',{opacity:0,scale:0,rotation:-120},{opacity:1,scale:1,rotation:0,duration:1.1,ease:'elastic.out(1,.5)',clearProps:'transform'},1.05)
+    .fromTo('.lede',{opacity:0,y:22},{opacity:1,y:0,duration:.7},1.1)
+    .fromTo('.today',{opacity:0,y:22},{opacity:1,y:0,duration:.7},1.25)
+    .fromTo('.hero .actions',{opacity:0,y:22},{opacity:1,y:0,duration:.7},1.4);
+  if(D.querySelector('.ribbon'))tl.fromTo('.ribbon',{opacity:0,x:-40,rotation:-8},{opacity:1,x:0,rotation:-1.5,duration:.9,ease:'back.out(2)',clearProps:'transform'},1.55);
+
+  /* hero photo drifts a little as you scroll */
+  gsap.to('.arch img',{yPercent:8,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  var mq=matchMedia('(hover:hover) and (min-width:1080px)');
+  if(mq.matches){
+    var art=D.querySelector('.art'),rx=gsap.quickTo(art,'rotationY',{duration:.6}),ry=gsap.quickTo(art,'rotationX',{duration:.6});
+    gsap.set(art,{transformPerspective:900});
+    art.addEventListener('pointermove',function(e){var b=art.getBoundingClientRect();rx(((e.clientX-b.left)/b.width-.5)*10);ry(-((e.clientY-b.top)/b.height-.5)*8)});
+    art.addEventListener('pointerleave',function(){rx(0);ry(0)});
+  }
+
+  /* marquee tape leans into fast scrolling */
+  var skews=gsap.utils.toArray('.belt').map(function(b){return gsap.quickTo(b,'skewX',{duration:.4})});
+  ScrollTrigger.create({onUpdate:function(s){var v=gsap.utils.clamp(-12,12,s.getVelocity()/-180);skews.forEach(function(f){f(v)})}});
+
+  /* generic reveals */
+  gsap.utils.toArray('[data-rv]').forEach(function(el){
+    gsap.from(el,{y:40,opacity:0,duration:.85,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%',once:true}});
+  });
+
+  /* tags drop onto their hooks and bounce */
+  ScrollTrigger.batch('.tag',{start:'top 92%',once:true,onEnter:function(b){
+    gsap.from(b,{y:-110,rotation:function(){return R(-28,28)},opacity:0,duration:1.5,stagger:.09,ease:'elastic.out(1,.42)',transformOrigin:'50% 0',clearProps:'transform'});
+  }});
+
+  /* stickers slap on */
+  ScrollTrigger.batch('[data-pop]',{start:'top 90%',once:true,onEnter:function(b){
+    gsap.from(b,{scale:1.5,opacity:0,rotation:function(){return R(-14,14)},duration:.8,stagger:.14,ease:'back.out(2.4)',clearProps:'transform,scale,rotate'});
+  }});
+
+  /* tickets flip up like a ticket roll */
+  gsap.from('.tix li',{rotationX:-95,opacity:0,transformOrigin:'50% 0',duration:.9,stagger:.08,ease:'back.out(1.6)',clearProps:'transform',scrollTrigger:{trigger:'.tix',start:'top 85%',once:true}});
+
+  /* the street sign swings in */
+  gsap.from('.street',{rotation:-38,duration:2,ease:'elastic.out(1,.3)',clearProps:'transform',scrollTrigger:{trigger:'.post',start:'top 90%',once:true}});
+
+  /* open house awning unrolls */
+  if(D.querySelector('.oh'))gsap.from('.oh > .awning',{scaleY:0,duration:.9,ease:'back.out(2)',scrollTrigger:{trigger:'.oh',start:'top 85%',once:true}});
+})();
+</script>
 </body>
 </html>
